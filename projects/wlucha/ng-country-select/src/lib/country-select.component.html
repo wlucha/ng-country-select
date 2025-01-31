@@ -9,7 +9,7 @@
   >
   <mat-autocomplete 
     #auto="matAutocomplete" 
-    [displayWith]="displayFn"
+    [displayWith]="displayFn.bind(this)"
     (closed)="onAutocompleteClosed()"
   >
     <mat-option 

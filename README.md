@@ -1,59 +1,119 @@
-# NgCountrySelect
+# 🌍 Country Autocomplete Component 🌏
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.3.
+**A smart, multilingual country search with flags and codes**  
+✨ *Enhance your Angular forms with this elegant, high-performance autocomplete* ✨
 
-## Development server
+[![GitHub Stars](https://img.shields.io/github/stars/yourusername/country-autocomplete?style=for-the-badge&logo=github)](https://github.com/wlucha/country-select/stargazers)
+[![Angular Version](https://img.shields.io/badge/Angular-16+-brightgreen?style=for-the-badge&logo=angular)](https://angular.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-To start a local development server, run:
+## 🚀 Features
 
+- **🌐 Multi-language Magic**  
+  Supports German, English, French + easily extendable to any language
+
+- **🎌 Automatic Flag Emojis**  
+  Auto-generated from ISO codes (no image dependencies!)
+
+- **🔍 Smart Search**  
+  Find countries by:  
+  ✓ Local name ✓ English name ✓ Alpha2/3 codes ✓ Any translation
+
+- **🎨 Material Design Excellence**  
+  Seamless integration with Angular Material components
+
+- **⚡ Optimized Performance**  
+  RxJS-powered search with debounce & virtual scrolling ready
+
+- **🧩 Standalone Component**  
+  Zero boilerplate integration
+
+
+## 🛠️ Setup in 60 Seconds
+### 1. Install Dependencies
 ```bash
-ng serve
+npm install --save @angular/material @angular/cdk @angular/animations @wlucha/country-select
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+### 2. Import Component
+```typescript
+import { CountrySelectComponent } from '@wlucha/country-select';
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+@NgModule({
+  imports: [
+    CountrySelectComponent,
+    // ... other imports
+  ]
+})
+```
+### 3. Add Basic Usage
+```html
+<country-select
+  [lang]="'en'"
+  (countrySelected)="handleSelection($event)"
+></country-select>
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🎛️ Parameters Worth Exploring
 
-```bash
-ng generate --help
+### 🎚️ Inputs
+
+| Parameter           | Type    | Default | Description                          |
+|---------------------|---------|---------|--------------------------------------|
+| `lang`              | string  | 'en'    | Display language (ISO 639-1) (`en`/`de`/`fr`) |
+| `searchAllLanguages`| boolean | false   | Search across all translations       |
+| `showCodes`         | boolean | false   | Whether the alpha2 and alpha3 code should be displayed |
+| `debounceTime`      | number  | 300     | Input delay before search (ms)       |
+| `appearance`        | string  | 'fill'  | Material field style (`fill`/`outline`) |
+| `placeholder`       | string  | 'Search country' | Custom placeholder text     |
+
+### 🚨 Outputs
+
+| Event               | Output              | Description                         |
+|---------------------|---------------------|-------------------------------------|
+| `countrySelected`   | `Country`           | Full country object on selection    |
+| `inputChanged`      | `string`            | Live search term updates            |
+| `closed`            | `void`              | When dropdown closes                |
+
+## Power User Setup
+```html
+<country-autocomplete
+  [lang]="'en'"
+  [searchAllLanguages]="true"
+  [showCodes]="true"
+  [debounceTime]="200"
+  [appearance]="'outline'"
+  [placeholder]="'Search country'"
+  (countrySelected)="onCountrySelect($event)"
+  (inputChanged)="trackSearchTerm($event)"
+></country-autocomplete>
 ```
 
-## Building
+## 🌟 Support the Project
 
-To build the project run:
+**Love this component? Here's how you can help:**
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+1. ⭐ **Star the repo** (you're awesome!)  
+2. 🐛 **Report bugs** [here](https://github.com/yourusername/country-autocomplete/issues)  
+3. 💡 **Suggest features**  
+4. 📢 **Share with your network**
 
 ```bash
-ng test
-```
+# Your star fuels development! ⭐
+# Clone and explore:
+git clone https://github.com/wlucha/country-select.git
+````
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+📄 License: MIT  
+👨💻 Maintainer: Wilfried Lucha
 
-```bash
-ng e2e
-```
+Made with ❤️ & ☕ by Open Source Contributors
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## TODO
+- ng-add script
+- more languages
+- unit tests
+- HD flags
+- custom option template

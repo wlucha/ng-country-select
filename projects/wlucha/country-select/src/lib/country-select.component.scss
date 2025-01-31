@@ -1,0 +1,20 @@
+.country-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.flag {
+  font-size: 1.2em;
+}
+
+
+.codes {
+  margin-left: auto;
+  font-size: 0.9em;
+  color: #666;
+
+  :empty {
+    display: none;
+  }
+}

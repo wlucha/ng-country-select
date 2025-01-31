@@ -4,7 +4,12 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": [],
+    "paths": {
+      "@wlucha/country-select": [
+        "./projects/wlucha/country-select/src/public-api.ts"
+      ]
+    }
   },
   "files": [
     "src/main.ts"

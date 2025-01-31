@@ -24,7 +24,7 @@ import { CountryFlagPipe } from './country-flag.pipe';
     CountryFlagPipe
   ],
   templateUrl: './country-select.component.html',
-  styleUrls: ['./country-select.component.css'],
+  styleUrls: ['./country-select.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CountrySelectComponent {

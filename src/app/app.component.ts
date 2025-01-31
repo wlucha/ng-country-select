@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CountrySelectComponent } from '@wlucha/country-select';
+import { CountrySelectComponent } from '@wlucha/ng-country-select';
 
 @Component({
   selector: 'app-root',

@@ -32,12 +32,12 @@
 ## 🛠️ Setup in 60 Seconds
 ### 1. Install Dependencies
 ```bash
-npm install --save @angular/material @angular/cdk @angular/animations @wlucha/country-select
+npm install --save @angular/material @angular/cdk @angular/animations @wlucha/ng-country-select
 ```
 
 ### 2. Import Component
 ```typescript
-import { CountrySelectComponent } from '@wlucha/country-select';
+import { CountrySelectComponent } from '@wlucha/ng-country-select';
 
 @NgModule({
   imports: [
@@ -48,10 +48,10 @@ import { CountrySelectComponent } from '@wlucha/country-select';
 ```
 ### 3. Add Basic Usage
 ```html
-<country-select
+<ng-country-select
   [lang]="'en'"
   (countrySelected)="handleSelection($event)"
-></country-select>
+></ng-country-select>
 ```
 
 ## 🎛️ Parameters Worth Exploring
@@ -77,7 +77,7 @@ import { CountrySelectComponent } from '@wlucha/country-select';
 
 ## Power User Setup
 ```html
-<country-autocomplete
+<ng-country-select
   [lang]="'en'"
   [searchAllLanguages]="true"
   [showCodes]="true"
@@ -86,7 +86,7 @@ import { CountrySelectComponent } from '@wlucha/country-select';
   [placeholder]="'Search country'"
   (countrySelected)="onCountrySelect($event)"
   (inputChanged)="trackSearchTerm($event)"
-></country-autocomplete>
+></ng-country-select>
 ```
 
 ## 🌟 Support the Project
@@ -94,14 +94,14 @@ import { CountrySelectComponent } from '@wlucha/country-select';
 **Love this component? Here's how you can help:**
 
 1. ⭐ **Star the repo** (you're awesome!)  
-2. 🐛 **Report bugs** [here](https://github.com/yourusername/country-autocomplete/issues)  
+2. 🐛 **Report bugs** [here](https://github.com/wlucha/ng-country-select/issues)  
 3. 💡 **Suggest features**  
 4. 📢 **Share with your network**
 
 ```bash
 # Your star fuels development! ⭐
 # Clone and explore:
-git clone https://github.com/wlucha/country-select.git
+git clone https://github.com/wlucha/ng-country-select.git
 ````
 
 ---

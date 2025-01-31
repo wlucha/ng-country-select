@@ -102,21 +102,21 @@
     },
     "@wlucha/country-select": {
       "projectType": "library",
-      "root": "projects/wlucha/country-select",
-      "sourceRoot": "projects/wlucha/country-select/src",
+      "root": "projects/wlucha/ng-country-select",
+      "sourceRoot": "projects/wlucha/ng-country-select/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular/build:ng-packagr",
           "options": {
-            "project": "projects/wlucha/country-select/ng-package.json"
+            "project": "projects/wlucha/ng-country-select/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/wlucha/country-select/tsconfig.lib.prod.json"
+              "tsConfig": "projects/wlucha/ng-country-select/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/wlucha/country-select/tsconfig.lib.json"
+              "tsConfig": "projects/wlucha/ng-country-select/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -124,7 +124,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/wlucha/country-select/tsconfig.spec.json",
+            "tsConfig": "projects/wlucha/ng-country-select/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

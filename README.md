@@ -3,7 +3,7 @@
 **A smart, multilingual country search with flags and codes**  
 ✨ *Enhance your Angular forms with this elegant, high-performance autocomplete* ✨
 
-[![GitHub Stars](https://img.shields.io/github/stars/yourusername/country-autocomplete?style=for-the-badge&logo=github)](https://github.com/wlucha/country-select/stargazers)
+[![GitHub Stars](https://img.shields.io/github/stars/wlucha/ng-country-select?style=for-the-badge&logo=github)](https://github.com/wlucha/ng-country-select/stargazers)
 [![Angular Version](https://img.shields.io/badge/Angular-16+-brightgreen?style=for-the-badge&logo=angular)](https://angular.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 

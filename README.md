@@ -1,4 +1,4 @@
-# 🌍 Country Autocomplete Component 🌏
+# 🌍 Angular Material Country Autocomplete
 
 **A smart, multilingual country search with flags and codes made with Angular**  
 ✨ *Enhance your Angular forms with this elegant, high-performance autocomplete* ✨

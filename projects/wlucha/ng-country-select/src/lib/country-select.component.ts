@@ -84,7 +84,7 @@ export class CountrySelectComponent {
    * Shows alpha2/alpha3 codes in the results
    * @default false
    */
-  @Input() public showCodes = true;
+  @Input() public showCodes = false;
 
   /**
    * Emits when a country is selected

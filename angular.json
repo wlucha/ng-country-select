@@ -103,7 +103,7 @@
         }
       }
     },
-    "@wlucha/country-select": {
+    "@wlucha/ng-country-select": {
       "projectType": "library",
       "root": "projects/wlucha/ng-country-select",
       "sourceRoot": "projects/wlucha/ng-country-select/src",

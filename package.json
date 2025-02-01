@@ -22,6 +22,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:lib": "ng build @wlucha/ng-country-select",
     "watch": "ng build --watch --configuration development",
     "gh-deploy": "ng build --configuration=production --base-href '/ng-country-select/' && npx angular-cli-ghpages --dir=dist/ng-country-select --repo=https://github.com/wlucha/ng-country-select.git",
     "test": "ng test"

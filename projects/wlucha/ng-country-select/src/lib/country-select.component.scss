@@ -2,12 +2,15 @@
   display: flex;
   align-items: center;
   gap: 8px;
+
+  .flag {
+    font-size: 1.2em;
+  }
 }
 
-.flag {
+.flag-suffix {
   font-size: 1.2em;
 }
-
 
 .codes {
   margin-left: auto;

@@ -63,7 +63,7 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 | `lang`              | string  | 'en'    | Display language (ISO 639-1) (`en`/`de`/`fr`) |
 | `searchAllLanguages`| boolean | false   | Search across all translations       |
 | `showCodes`         | boolean | false   | Whether the alpha2 and alpha3 code should be displayed |
-| `debounceTime`      | number  | 300     | Input delay before search (ms)       |
+| `debounceTime`      | number  | 100     | Input delay before search (ms)       |
 | `appearance`        | string  | 'fill'  | Material field style (`fill`/`outline`) |
 | `placeholder`       | string  | 'Search country' | Custom placeholder text     |
 

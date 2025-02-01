@@ -11,6 +11,8 @@ import { map, startWith, debounceTime, tap } from 'rxjs/operators';
 import { CountryService } from './country.service';
 import { Country } from './country.interface';
 import { CountryFlagPipe } from './country-flag.pipe';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @Component({
   selector: 'ng-country-select',
@@ -21,6 +23,7 @@ import { CountryFlagPipe } from './country-flag.pipe';
     MatAutocompleteModule,
     MatInputModule,
     MatFormFieldModule,
+    MatIconModule,
     CountryFlagPipe
   ],
   templateUrl: './country-select.component.html',
@@ -55,9 +58,9 @@ export class CountrySelectComponent {
 
   /**
    * Debounce time for search input in milliseconds
-   * @default 300
+   * @default 100
    */
-  @Input() public debounceTime = 300;
+  @Input() public debounceTime = 100;
 
   /**
    * Disables the component
@@ -81,7 +84,7 @@ export class CountrySelectComponent {
    * Shows alpha2/alpha3 codes in the results
    * @default false
    */
-  @Input() public showCodes = false;
+  @Input() public showCodes = true;
 
   /**
    * Emits when a country is selected
@@ -103,6 +106,7 @@ export class CountrySelectComponent {
 
   public control = new FormControl<Country | string>('');
   public filteredCountries$: Observable<Country[]> | undefined;
+  public selectedCountryFlag: string = '';
 
   private countryService = inject(CountryService);
   private countries: Country[] = [];
@@ -137,23 +141,26 @@ export class CountrySelectComponent {
    * @returns Filtered array of countries
    */
   private filterCountries(value: string | Country | null): Country[] {
+    if (!value || typeof value === 'string' && value.trim() === '') {
+      this.selectedCountryFlag = '';
+    }
     const filterValue = typeof value === 'string' ?
       value.toLowerCase() :
       value?.translations[this.lang]?.toLowerCase() || '';
 
-      return this.countries.filter(country => {
-        const matchesCode = 
-          country.alpha2.toLowerCase().includes(filterValue) ||
-          country.alpha3.toLowerCase().includes(filterValue);
-  
-        const matchesTranslation = this.searchAllLanguages
-          ? Object.values(country.translations).some(t => 
-              t.toLowerCase().includes(filterValue)
-            )
-          : country.translations[this.lang]?.toLowerCase().includes(filterValue);
-  
-        return matchesCode || matchesTranslation;
-      });
+    return this.countries.filter(country => {
+      const matchesCode =
+        country.alpha2.toLowerCase().includes(filterValue) ||
+        country.alpha3.toLowerCase().includes(filterValue);
+
+      const matchesTranslation = this.searchAllLanguages
+        ? Object.values(country.translations).some(t =>
+          t.toLowerCase().includes(filterValue)
+        )
+        : country.translations[this.lang]?.toLowerCase().includes(filterValue);
+
+      return matchesCode || matchesTranslation;
+    });
   }
 
   /**
@@ -161,7 +168,19 @@ export class CountrySelectComponent {
    */
   private updateControlValue(country: Country): void {
     this.control.setValue(country);
+    this.selectedCountryFlag = this.getFlagEmoji(country.alpha2);
     this.countrySelected.emit(country);
+  }
+
+  /**
+   * Convert ISO 3166-1 alpha2 code to flag emoji
+   */
+  private getFlagEmoji(alpha2: string): string {
+    return alpha2
+      .toUpperCase()
+      .replace(/./g, char =>
+        String.fromCodePoint(127397 + char.charCodeAt(0))
+      );
   }
 
   /**

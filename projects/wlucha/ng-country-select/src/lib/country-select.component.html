@@ -7,6 +7,10 @@
     [disabled]="disabled"
     [required]="required"
   >
+  <mat-icon matSuffix class="flag-suffix">
+    {{ selectedCountryFlag }}
+  </mat-icon>
+
   <mat-autocomplete 
     #auto="matAutocomplete" 
     [displayWith]="displayFn.bind(this)"

@@ -3,3 +3,4 @@
  */
 
 export * from './lib/country-select.component';
+export * from './lib/country.interface';

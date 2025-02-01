@@ -1,5 +1,6 @@
 import {
-  Component, Input, Output, EventEmitter, inject, ChangeDetectionStrategy
+  Component, Input, Output, EventEmitter, inject, ChangeDetectionStrategy,
+  OnInit
 } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -30,7 +31,14 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrls: ['./country-select.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CountrySelectComponent {
+export class CountrySelectComponent implements OnInit {
+
+  /**
+   * Set initial default country
+   * @example { alpha2: 'DE', alpha3: 'DEU', translations: { de: 'Deutschland', en: 'Germany' } }
+   */
+  @Input() defaultCountry: Country | null = null;
+
   /**
    * Default language for displaying country names
    * @default 'en'
@@ -112,8 +120,15 @@ export class CountrySelectComponent {
   private countries: Country[] = [];
 
   constructor() {
-    this.countries = this.countryService.getCountries(this.lang);
+    this.countries = this.countryService.getCountries();
+  }
+
+  ngOnInit(): void {
     this.setupFilter();
+    if (this.defaultCountry) {
+      this.control.setValue(this.defaultCountry);
+      this.selectedCountryFlag = this.getFlagEmoji(this.defaultCountry.alpha2);
+    }
   }
 
   /**
@@ -123,7 +138,7 @@ export class CountrySelectComponent {
    */
   private setupFilter(): void {
     this.filteredCountries$ = this.control.valueChanges.pipe(
-      startWith(''),
+      startWith(this.defaultCountry ? this.defaultCountry :''),
       debounceTime(this.debounceTime),
       tap(value => {
         if (typeof value === 'string') {

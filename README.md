@@ -7,7 +7,7 @@
 [![Angular Version](https://img.shields.io/badge/Angular-16+-brightgreen?style=for-the-badge&logo=angular)](https://angular.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-## 🚀 Features
+## 📢 Features
 
 - **🌐 Multi-language Magic**  
   Supports German, English, French + easily extendable to any language
@@ -28,10 +28,14 @@
 - **🧩 Standalone Component**  
   Zero boilerplate integration
 
+## 🚀 Demo
+https://wlucha.github.io/ng-country-select/
+
+
 
 ## 🛠️ Setup in 60 Seconds
 ### 1. Install Dependencies
-```bash
+```sh
 npm install --save @angular/material @angular/cdk @angular/animations @wlucha/ng-country-select
 ```
 
@@ -76,7 +80,7 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 | `inputChanged`      | `string`            | Live search term updates            |
 | `closed`            | `void`              | When dropdown closes                |
 
-## Power User Setup
+## 💻 Power User Setup
 ```html
 <ng-country-select
   [lang]="'en'"

@@ -1,9 +1,26 @@
 {
   "name": "@wlucha/ng-country-select",
   "version": "0.0.1",
+  "description": "A smart, multilingual country search with flags and codes",
+  "author": "Wilfried Lucha <wilfried@lucha.at>",
+  "homepage": "https://lucha.at",
+  "license": "MIT",
+  "contributors": [
+    "Wilfried Lucha <wilfried@lucha.at>"
+  ],
+  "keywords": [
+    "ng-country-select",
+    "country-selector",
+    "country-autocomplete"
+  ],
+  "repository": "https://github.com/wlucha/ng-country-select.git",
+  "bugs": {
+    "url": "https://github.com/wlucha/ng-country-select/issues"
+  },
+  "readme": "https://github.com/wlucha/ng-country-select/blob/master/README.md",
   "peerDependencies": {
-    "@angular/common": "^19.1.0",
-    "@angular/core": "^19.1.0"
+    "@angular/common": "^16.0.0",
+    "@angular/core": "^16.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

@@ -23,6 +23,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "gh-deploy": "ng build --configuration=production --base-href '/ng-country-select/' && npx angular-cli-ghpages --dir=dist/ng-country-select --repo=https://github.com/wlucha/ng-country-select.git",
     "test": "ng test"
   },
   "private": true,
@@ -48,6 +49,7 @@
     "@angular/cli": "^19.1.5",
     "@angular/compiler-cli": "^19.1.4",
     "@types/jasmine": "~5.1.5",
+    "angular-cli-ghpages": "^2.0.3",
     "jasmine-core": "~5.5.0",
     "karma": "~6.4.4",
     "karma-chrome-launcher": "~3.2.0",

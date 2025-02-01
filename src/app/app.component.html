@@ -1,1 +1,84 @@
-<ng-country-select></ng-country-select>
+<div class="container">
+  <h1>🌍 Country Select Demo</h1>
+
+  <!-- Installation instructions -->
+  <div class="example">
+    <h2>Installation</h2>
+    <div class="code">
+      <pre><code class="language-html">
+npm install --save &#64;wlucha/ng-country-select
+        </code></pre>
+    </div>
+  </div>
+
+
+  <!-- Example 1: Grundlegende Verwendung -->
+  <div class="example">
+    <h2>1. Basic Usage</h2>
+    <div class="code">
+      <pre><code class="language-html">
+&lt;ng-country-select&gt;&lt;/ng-country-select&gt;
+      </code></pre>
+    </div>
+    <div class="preview">
+      <ng-country-select></ng-country-select>
+    </div>
+  </div>
+
+  <!-- Example 2: Appearance Outline -->
+  <div class="example">
+    <h2>2. Outline Appearance</h2>
+    <div class="code">
+      <pre><code class="language-html">
+&lt;ng-country-select
+  appearance="outline"
+&gt;&lt;/ng-country-select&gt;
+      </code></pre>
+    </div>
+    <div class="preview">
+      <ng-country-select appearance="outline"></ng-country-select>
+    </div>
+  </div>
+
+  <!-- Example 3: Standardland -->
+  <div class="example">
+    <h2>3. With Default Country</h2>
+    <div class="code">
+      <pre><code class="language-html">
+&lt;ng-country-select
+  [defaultCountry]="presetCountry"
+&gt;&lt;/ng-country-select&gt;
+      </code></pre>
+    </div>
+    <div class="preview">
+      <ng-country-select [defaultCountry]="presetCountry"></ng-country-select>
+    </div>
+  </div>
+
+  <!-- Beispiel 4: Alle Inputs und Outputs -->
+  <div class="example">
+    <h2>4. All Inputs & Outputs</h2>
+    <div class="code">
+      <pre><code class="language-html">
+&lt;ng-country-select
+  [lang]="'de'"
+  [defaultCountry]="presetCountry"
+  [showCodes]="false"
+  [appearance]="'outline'"
+  [placeholder]="'Land auswählen'"
+  [debounceTime]="200"
+  (countrySelected)="onCountrySelected($event)"
+  (inputChanged)="onInputChanged($event)"
+&gt;&lt;/ng-country-select&gt;
+      </code></pre>
+    </div>
+    <div class="preview">
+      <ng-country-select [lang]="'de'" [defaultCountry]="presetCountry" [showCodes]="false" [appearance]="'outline'"
+        [placeholder]="'Land auswählen'" [debounceTime]="200" (countrySelected)="onCountrySelected($event)"
+        (inputChanged)="onInputChanged($event)"></ng-country-select>
+      <p *ngIf="selectedCountry">
+        Selected: {{ selectedCountry.translations.de }}
+      </p>
+    </div>
+  </div>
+</div>

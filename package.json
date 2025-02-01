@@ -18,7 +18,6 @@
     "url": "https://github.com/wlucha/ng-country-select/issues"
   },
   "readme": "https://github.com/wlucha/ng-country-select/blob/master/README.md",
-
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -38,6 +37,7 @@
     "@angular/platform-browser": "^19.1.4",
     "@angular/platform-browser-dynamic": "^19.1.4",
     "@angular/router": "^19.1.4",
+    "highlight.js": "^11.11.1",
     "rxjs": "~7.8.01",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"

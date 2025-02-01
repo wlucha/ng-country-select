@@ -1,0 +1,59 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.example {
+  margin: 40px 0;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.code {
+  background: #2d2d2d;
+  color: #f8f8f8;
+  padding: 16px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  overflow-x: auto;
+}
+
+.preview {
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+pre code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.code::-webkit-scrollbar {
+  height: 8px;
+}
+
+.code::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 4px;
+}
+
+.code::-webkit-scrollbar-track {
+  background: #2d2d2d;
+}

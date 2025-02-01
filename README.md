@@ -61,6 +61,7 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 | Parameter           | Type    | Default | Description                          |
 |---------------------|---------|---------|--------------------------------------|
 | `lang`              | string  | 'en'    | Display language (ISO 639-1) (`en`/`de`/`fr`) |
+| `defaultCountry`    | Country | null    | Set an initial default country       |
 | `searchAllLanguages`| boolean | false   | Search across all translations       |
 | `showCodes`         | boolean | false   | Whether the alpha2 and alpha3 code should be displayed |
 | `debounceTime`      | number  | 100     | Input delay before search (ms)       |

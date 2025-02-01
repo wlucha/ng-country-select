@@ -24,7 +24,7 @@
     "build": "ng build",
     "build:lib": "ng build @wlucha/ng-country-select",
     "watch": "ng build --watch --configuration development",
-    "publish": "npm --prefix projects/wlucha/ng-country-select version patch && npm run build:lib && cd dist/wlucha/ng-country-select && npm publish",
+    "publish": "npm --prefix projects/wlucha/ng-country-select version patch -m 'Upgrade to %s' && npm run build:lib && cd dist/wlucha/ng-country-select && npm publish",
     "gh-deploy": "ng build --configuration=production --base-href '/ng-country-select/' && npx angular-cli-ghpages --dir=dist/ng-country-select/browser --repo=https://github.com/wlucha/ng-country-select.git",
     "test": "ng test"
   },

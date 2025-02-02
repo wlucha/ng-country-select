@@ -42,6 +42,7 @@ export class CountrySelectComponent implements OnInit {
 
   /**
    * Default language for displaying country names
+   * Currently supported: 'en', 'de', 'fr', 'es', 'it'
    * @default 'en'
    */
   @Input() public lang = 'en';

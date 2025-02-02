@@ -19,7 +19,7 @@ This library is designed to work seamlessly with the latest Angular versions (16
 It leverages modern Angular features while maintaining backward compatibility.
 
 - **🌐 Multi-language Magic**  
-  Supports German, English, French + easily extendable to any language
+  Supports German, English, French, Spanish and Italian + easily extendable to any language
 
 - **🎌 Automatic Flag Emojis**  
   Auto-generated from ISO codes (no image dependencies!)
@@ -84,7 +84,7 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 |----------------------|---------------------------|--------------------|-----------------------------------------------------------------------------|
 | `defaultCountry`     | `Country \| null`         | `null`             | Sets an initial preselected country                                        |
 | `selectedCountry`    | `Country \| null`         | -                  | If set, selects this country in the component                              |
-| `lang`               | `string`                  | `'en'`             | Language for displaying country names (e.g., `en`, `de`, `fr`)             |
+| `lang`               | `string`                  | `'en'`             | Language for displaying country names (e.g., `en`, `de`, `fr`, `es`, `it`) |
 | `searchAllLanguages` | `boolean`                 | `false`            | If `true`, searching will match in **all** available translations          |
 | `placeholder`        | `string`                  | `'Search country'` | Placeholder text for the input field                                       |
 | `debounceTime`       | `number`                  | `100`              | Debounce time in milliseconds for the search input                         |

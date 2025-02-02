@@ -63,7 +63,8 @@ npm install --save &#64;wlucha/ng-country-select
 &lt;ng-country-select
   [lang]="'de'"
   [defaultCountry]="presetCountry"
-  [showCodes]="false"
+  [showCodes]="true"
+  [color]="'primary'"
   [appearance]="'outline'"
   [placeholder]="'Land auswählen'"
   [debounceTime]="200"
@@ -73,7 +74,7 @@ npm install --save &#64;wlucha/ng-country-select
       </code></pre>
     </div>
     <div class="preview">
-      <ng-country-select [lang]="'de'" [defaultCountry]="presetCountry" [showCodes]="false" [appearance]="'outline'"
+      <ng-country-select [lang]="'de'" [defaultCountry]="presetCountry" [showCodes]="true" [color]="'primary'" [appearance]="'outline'"
         [placeholder]="'Land auswählen'" [debounceTime]="200" (countrySelected)="onCountrySelected($event)"
         (inputChanged)="onInputChanged($event)"></ng-country-select>
       <p *ngIf="selectedCountry">

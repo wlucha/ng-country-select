@@ -31,19 +31,19 @@ export class AppComponent {
     this.highlightCodeBlocks();
   }
 
+  // Event handlers
+  public onCountrySelected(country: Country): void {
+    this.selectedCountry = country;
+  }
+
+  public onInputChanged(searchTerm: string): void {
+    console.log('Search Term:', searchTerm);
+  }
+
   // Method to highlight code blocks
   private highlightCodeBlocks(): void {
     document.querySelectorAll('pre code').forEach((block) => {
       hljs.highlightBlock(block as any);
     });
-  }
-
-  // Event handlers
-  onCountrySelected(country: Country): void {
-    this.selectedCountry = country;
-  }
-
-  onInputChanged(searchTerm: string): void {
-    console.log('Search Term:', searchTerm);
   }
 }

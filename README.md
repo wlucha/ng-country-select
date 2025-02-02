@@ -88,6 +88,7 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 | `showCodes`         | boolean | false   | Whether the alpha2 and alpha3 code should be displayed |
 | `debounceTime`      | number  | 100     | Input delay before search (ms)       |
 | `appearance`        | string  | 'fill'  | Material field style (`fill`/`outline`) |
+| `color`             | ThemePalette | 'primary' | Angular Material color palette to use for the component. Options are 'primary', 'accent' or 'warn'. |
 | `placeholder`       | string  | 'Search country' | Custom placeholder text     |
 
 ### 🚨 Outputs

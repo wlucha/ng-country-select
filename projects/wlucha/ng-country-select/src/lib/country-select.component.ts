@@ -13,6 +13,7 @@ import { CountryService } from './country.service';
 import { Country } from './country.interface';
 import { CountryFlagPipe } from './country-flag.pipe';
 import { MatIconModule } from '@angular/material/icon';
+import { ThemePalette } from '@angular/material/core';
 
 
 @Component({
@@ -71,16 +72,22 @@ export class CountrySelectComponent implements OnInit {
   @Input() public debounceTime = 100;
 
   /**
-   * Disables the component
-   * @default false
-   */
-  @Input() public disabled = false;
-
-  /**
    * Appearance style of the form field
    * @default 'fill'
    */
   @Input() public appearance: 'fill' | 'outline' = 'fill';
+
+  /**
+   * Angular Material color palette (primary, accent, warn)
+   * @default 'primary'
+   */
+  @Input() public color: ThemePalette = 'primary';
+
+  /**
+   * Disables the component
+   * @default false
+   */
+  @Input() public disabled = false;
 
   /**
    * Marks the field as required

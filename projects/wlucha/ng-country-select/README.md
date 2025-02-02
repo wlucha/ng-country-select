@@ -1,4 +1,4 @@
-# 🌍 Country Autocomplete Component 🌏
+# 🌍 Angular Material Country Autocomplete
 
 **A smart, multilingual country search with flags and codes made with Angular**  
 ✨ *Enhance your Angular forms with this elegant, high-performance autocomplete* ✨
@@ -6,6 +6,11 @@
 [![GitHub Stars](https://img.shields.io/github/stars/wlucha/ng-country-select?style=for-the-badge&logo=github)](https://github.com/wlucha/ng-country-select/stargazers)
 [![Angular Version](https://img.shields.io/badge/Angular-16+-brightgreen?style=for-the-badge&logo=angular)](https://angular.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/27c60301-aedc-4d97-8eb0-015912bab4b2">
+</p>
+
 
 ## 📢 Features
 
@@ -83,6 +88,7 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 | `showCodes`         | boolean | false   | Whether the alpha2 and alpha3 code should be displayed |
 | `debounceTime`      | number  | 100     | Input delay before search (ms)       |
 | `appearance`        | string  | 'fill'  | Material field style (`fill`/`outline`) |
+| `color`             | ThemePalette | 'primary' | Angular Material color palette to use for the component. Options are 'primary', 'accent' or 'warn'. |
 | `placeholder`       | string  | 'Search country' | Custom placeholder text     |
 
 ### 🚨 Outputs

@@ -132,13 +132,50 @@ export class CountrySelectComponent implements OnInit {
   }
 
   /**
+   * Handle option selection
+   */
+  public onOptionSelected(country: Country): void {
+    this.updateControlValue(country);
+  }
+
+  /**
+   * Displays the country name in selected language
+   * @public
+   * @param country - Country object or null
+   * @returns Display name string
+   */
+  public displayFn(country: Country | null): string {
+    return country?.translations ? country?.translations[this.lang] : '';
+  }
+
+  /**
+   * Handles autocomplete panel close event
+   * @public
+   * @returns void
+   */
+  public onAutocompleteClosed(): void {
+    this.closed.emit();
+  }
+
+  /**
+   * TrackBy function for country list optimization
+   * @public
+   * @param index - Array index
+   * @param country - Country object
+   * @returns Unique alpha2 code
+   */
+  public trackByAlpha2(index: number, country: Country): string {
+    return country.alpha2;
+  }
+
+  /**
    * Initializes the filter stream with debounce
    * @private
    * @returns void
    */
   private setupFilter(): void {
     this.filteredCountries$ = this.control.valueChanges.pipe(
-      startWith(this.defaultCountry ? this.defaultCountry :''),
+      startWith(this.defaultCountry ? this.defaultCountry : ''),
       debounceTime(this.debounceTime),
       tap(value => {
         if (typeof value === 'string') {
@@ -198,40 +235,4 @@ export class CountrySelectComponent implements OnInit {
       );
   }
 
-  /**
-   * Handle option selection
-   */
-  public onOptionSelected(country: Country): void {
-    this.updateControlValue(country);
-  }
-
-  /**
-   * Displays the country name in selected language
-   * @public
-   * @param country - Country object or null
-   * @returns Display name string
-   */
-  public displayFn(country: Country | null): string {
-    return country?.translations[this.lang] || '';
-  }
-
-  /**
-   * Handles autocomplete panel close event
-   * @public
-   * @returns void
-   */
-  public onAutocompleteClosed(): void {
-    this.closed.emit();
-  }
-
-  /**
-   * TrackBy function for country list optimization
-   * @public
-   * @param index - Array index
-   * @param country - Country object
-   * @returns Unique alpha2 code
-   */
-  public trackByAlpha2(index: number, country: Country): string {
-    return country.alpha2;
-  }
 }

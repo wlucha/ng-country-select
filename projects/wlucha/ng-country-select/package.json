@@ -19,8 +19,8 @@
   },
   "readme": "https://github.com/wlucha/ng-country-select/blob/master/README.md",
   "peerDependencies": {
-    "@angular/common": "^16.0.0",
-    "@angular/core": "^16.0.0"
+    "@angular/common": ">=16.0.0 <20.0.0",
+    "@angular/core": ">=16.0.0 <20.0.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"

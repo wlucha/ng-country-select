@@ -137,6 +137,5 @@ Made with ❤️ & ☕ by Open Source Contributors
 ## TODO
 - ng-add script
 - more languages
-- unit tests
 - HD flags
 - custom option template

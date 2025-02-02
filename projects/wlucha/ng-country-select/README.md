@@ -1,6 +1,6 @@
 # 🌍 Country Autocomplete Component 🌏
 
-**A smart, multilingual country search with flags and codes**  
+**A smart, multilingual country search with flags and codes made with Angular**  
 ✨ *Enhance your Angular forms with this elegant, high-performance autocomplete* ✨
 
 [![GitHub Stars](https://img.shields.io/github/stars/wlucha/ng-country-select?style=for-the-badge&logo=github)](https://github.com/wlucha/ng-country-select/stargazers)
@@ -8,6 +8,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 ## 📢 Features
+
+- **🌍 Fully Compatible with Angular 16-19**  
+This library is designed to work seamlessly with the latest Angular versions (16, 17, 18, and 19).  
+It leverages modern Angular features while maintaining backward compatibility.
 
 - **🌐 Multi-language Magic**  
   Supports German, English, French + easily extendable to any language
@@ -30,6 +34,15 @@
 
 ## 🚀 Demo
 https://wlucha.github.io/ng-country-select/
+
+## 🌍 Compatibility
+
+| Angular Version | ✅ Supported |
+|----------------|-------------|
+| ![Angular 16](https://img.shields.io/badge/Angular-16-red) | ✅ Yes |
+| ![Angular 17](https://img.shields.io/badge/Angular-17-orange) | ✅ Yes |
+| ![Angular 18](https://img.shields.io/badge/Angular-18-yellow) | ✅ Yes |
+| ![Angular 19](https://img.shields.io/badge/Angular-19-green) | ✅ Yes |
 
 
 

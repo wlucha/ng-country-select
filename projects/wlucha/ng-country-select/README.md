@@ -84,7 +84,7 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 |----------------------|---------------------------|--------------------|-----------------------------------------------------------------------------|
 | `defaultCountry`     | `Country \| null`         | `null`             | Sets an initial preselected country                                        |
 | `selectedCountry`    | `Country \| null`         | -                  | If set, selects this country in the component                              |
-| `lang`               | `string`                  | `'en'`             | Language for displaying country names (e.g., `en`, `de`, `fr`)             |
+| `lang`               | `string`                  | `'en'`             | Language for displaying country names (e.g., `en`, `de`, `fr`, `it`, `es`) |
 | `searchAllLanguages` | `boolean`                 | `false`            | If `true`, searching will match in **all** available translations          |
 | `placeholder`        | `string`                  | `'Search country'` | Placeholder text for the input field                                       |
 | `debounceTime`       | `number`                  | `100`              | Debounce time in milliseconds for the search input                         |

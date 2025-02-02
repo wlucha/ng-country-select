@@ -80,16 +80,19 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 
 ### 🎚️ Inputs
 
-| Parameter           | Type    | Default | Description                          |
-|---------------------|---------|---------|--------------------------------------|
-| `lang`              | string  | 'en'    | Display language (ISO 639-1) (`en`/`de`/`fr`) |
-| `defaultCountry`    | Country | null    | Set an initial default country       |
-| `searchAllLanguages`| boolean | false   | Search across all translations       |
-| `showCodes`         | boolean | false   | Whether the alpha2 and alpha3 code should be displayed |
-| `debounceTime`      | number  | 100     | Input delay before search (ms)       |
-| `appearance`        | string  | 'fill'  | Material field style (`fill`/`outline`) |
-| `color`             | ThemePalette | 'primary' | Angular Material color palette to use for the component. Options are 'primary', 'accent' or 'warn'. |
-| `placeholder`       | string  | 'Search country' | Custom placeholder text     |
+| Parameter            | Type                      | Default            | Description                                                                 |
+|----------------------|---------------------------|--------------------|-----------------------------------------------------------------------------|
+| `defaultCountry`     | `Country \| null`         | `null`             | Sets an initial preselected country                                        |
+| `selectedCountry`    | `Country \| null`         | -                  | If set, selects this country in the component                              |
+| `lang`               | `string`                  | `'en'`             | Language for displaying country names (e.g., `en`, `de`, `fr`)             |
+| `searchAllLanguages` | `boolean`                 | `false`            | If `true`, searching will match in **all** available translations          |
+| `placeholder`        | `string`                  | `'Search country'` | Placeholder text for the input field                                       |
+| `debounceTime`       | `number`                  | `100`              | Debounce time in milliseconds for the search input                         |
+| `disabled`           | `boolean`                 | `false`            | Disables the component if `true`                                           |
+| `appearance`         | `'fill' \| 'outline'`     | `'fill'`           | Appearance style of the form field                                         |
+| `required`           | `boolean`                 | `false`            | Marks the field as required if `true`                                      |
+| `showCodes`          | `boolean`                 | `false`            | If `true`, shows alpha2/alpha3 codes in the autocomplete results           |
+| `color`              | `ThemePalette`            | `'primary'`        | Angular Material color palette to use (`'primary'`, `'accent'`, `'warn'`)  |
 
 ### 🚨 Outputs
 
@@ -140,3 +143,4 @@ Made with ❤️ & ☕ by Open Source Contributors
 - more languages
 - HD flags
 - custom option template
+- FormControl input

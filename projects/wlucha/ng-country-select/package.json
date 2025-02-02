@@ -1,6 +1,6 @@
 {
   "name": "@wlucha/ng-country-select",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A smart, multilingual country search with flags and codes",
   "author": "Wilfried Lucha <wilfried@lucha.at>",
   "homepage": "https://wlucha.github.io/ng-country-select/",

@@ -1,5 +1,5 @@
 import {
-  Component, Input, Output, EventEmitter, inject, ChangeDetectionStrategy,
+  Component, Input, Output, EventEmitter, ChangeDetectionStrategy,
   OnInit
 } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
@@ -9,11 +9,11 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 import { map, startWith, debounceTime, tap } from 'rxjs/operators';
-import { CountryService } from './country.service';
 import { Country } from './country.interface';
 import { CountryFlagPipe } from './country-flag.pipe';
 import { MatIconModule } from '@angular/material/icon';
 import { ThemePalette } from '@angular/material/core';
+import { countries } from './data/COUNTRIES';
 
 
 @Component({
@@ -60,11 +60,16 @@ export class CountrySelectComponent implements OnInit {
   @Input() public placeholder = 'Search country';
 
   /**
-   * Preselected country object
+   * Set a country programmatically
    */
   @Input() public set selectedCountry(country: Country | null) {
-    this.control.setValue(country);
+    this.formControl.setValue(country);
   }
+
+  /**
+   * Form control for the country select
+   */
+  @Input() public formControl = new FormControl<Country | null>(null);
 
   /**
    * Debounce time for search input in milliseconds
@@ -120,22 +125,13 @@ export class CountrySelectComponent implements OnInit {
    */
   @Output() public closed = new EventEmitter<void>();
 
-  public control = new FormControl<Country | string>('');
   public filteredCountries$: Observable<Country[]> | undefined;
-  public selectedCountryFlag: string = '';
-
-  private countryService = inject(CountryService);
-  private countries: Country[] = [];
-
-  constructor() {
-    this.countries = this.countryService.getCountries();
-  }
+  private countries: Country[] = countries.slice();
 
   ngOnInit(): void {
     this.setupFilter();
     if (this.defaultCountry) {
-      this.control.setValue(this.defaultCountry);
-      this.selectedCountryFlag = this.getFlagEmoji(this.defaultCountry.alpha2);
+      this.formControl.setValue(this.defaultCountry);
     }
   }
 
@@ -143,7 +139,8 @@ export class CountrySelectComponent implements OnInit {
    * Handle option selection
    */
   public onOptionSelected(country: Country): void {
-    this.updateControlValue(country);
+    this.formControl.setValue(country);
+    this.countrySelected.emit(country);
   }
 
   /**
@@ -182,7 +179,7 @@ export class CountrySelectComponent implements OnInit {
    * @returns void
    */
   private setupFilter(): void {
-    this.filteredCountries$ = this.control.valueChanges.pipe(
+    this.filteredCountries$ = this.formControl.valueChanges.pipe(
       startWith(this.defaultCountry ? this.defaultCountry : ''),
       debounceTime(this.debounceTime),
       tap(value => {
@@ -201,9 +198,6 @@ export class CountrySelectComponent implements OnInit {
    * @returns Filtered array of countries
    */
   private filterCountries(value: string | Country | null): Country[] {
-    if (!value || typeof value === 'string' && value.trim() === '') {
-      this.selectedCountryFlag = '';
-    }
     const filterValue = typeof value === 'string' ?
       value.toLowerCase() :
       value?.translations[this.lang]?.toLowerCase() || '';
@@ -222,25 +216,4 @@ export class CountrySelectComponent implements OnInit {
       return matchesCode || matchesTranslation;
     });
   }
-
-  /**
-   * Update form control value when country is selected
-   */
-  private updateControlValue(country: Country): void {
-    this.control.setValue(country);
-    this.selectedCountryFlag = this.getFlagEmoji(country.alpha2);
-    this.countrySelected.emit(country);
-  }
-
-  /**
-   * Convert ISO 3166-1 alpha2 code to flag emoji
-   */
-  private getFlagEmoji(alpha2: string): string {
-    return alpha2
-      .toUpperCase()
-      .replace(/./g, char =>
-        String.fromCodePoint(127397 + char.charCodeAt(0))
-      );
-  }
-
 }

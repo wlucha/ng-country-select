@@ -2,13 +2,13 @@
   <mat-label>{{ placeholder }}</mat-label>
   <input
     matInput
-    [formControl]="control"
+    [formControl]="formControl"
     [matAutocomplete]="auto"
     [disabled]="disabled"
     [required]="required"
   >
   <mat-icon matSuffix class="flag-suffix">
-    {{ selectedCountryFlag }}
+    {{ formControl.value | countryFlag }}
   </mat-icon>
 
   <mat-autocomplete 
@@ -22,7 +22,7 @@
       (onSelectionChange)="onOptionSelected(country)"
     >
       <div class="country-option">
-        <span class="flag">{{ country.alpha2 | countryFlag }}</span>
+        <span class="flag">{{ country | countryFlag }}</span>
         <span class="name">{{ country.translations[lang] }}</span>
         <span *ngIf="showCodes" class="codes">
           ({{ country.alpha2 }} / {{ country.alpha3 }})

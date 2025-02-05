@@ -80,10 +80,11 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 
 ### 🎚️ Inputs
 
-| Parameter            | Type                      | Default            | Description                                                                 |
-|----------------------|---------------------------|--------------------|-----------------------------------------------------------------------------|
+| Parameter            | Type                      | Default            | Description                                                                |
+|----------------------|---------------------------|--------------------|----------------------------------------------------------------------------|
 | `defaultCountry`     | `Country \| null`         | `null`             | Sets an initial preselected country                                        |
-| `selectedCountry`    | `Country \| null`         | -                  | If set, selects this country in the component                              |
+| `formControl`        | `FormControl<Country \| null`>         | `null`                  | Sets an initial preselected country (FormControl)             |
+| `selectedCountry`    | `Country \| null`         | -                  | Sets a country programmatically (after init)                               |
 | `lang`               | `string`                  | `'en'`             | Language for displaying country names (e.g., `en`, `de`, `fr`, `es`, `it`) |
 | `searchAllLanguages` | `boolean`                 | `false`            | If `true`, searching will match in **all** available translations          |
 | `placeholder`        | `string`                  | `'Search country'` | Placeholder text for the input field                                       |
@@ -106,6 +107,7 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 ```html
 <ng-country-select
   [lang]="'en'"
+  [formControl]="countryControl"
   [searchAllLanguages]="true"
   [showCodes]="true"
   [debounceTime]="200"
@@ -143,4 +145,3 @@ Made with ❤️ & ☕ by Open Source Contributors
 - more languages
 - HD flags
 - custom option template
-- FormControl input

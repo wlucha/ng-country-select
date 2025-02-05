@@ -1,5 +1,6 @@
-import { NgIf } from '@angular/common';
+import { JsonPipe } from '@angular/common';
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { CountrySelectComponent, Country } from '@wlucha/ng-country-select';
 import hljs from 'highlight.js';
 
@@ -7,7 +8,7 @@ import hljs from 'highlight.js';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CountrySelectComponent, NgIf],
+  imports: [CountrySelectComponent, JsonPipe],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -22,6 +23,8 @@ export class AppComponent {
       fr: 'Allemagne'
     }
   };
+
+  countryControl = new FormControl<Country>(this.presetCountry);
 
   // For simple event handling example
   selectedCountry?: Country;

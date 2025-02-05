@@ -40,9 +40,9 @@ npm install --save &#64;wlucha/ng-country-select
     </div>
   </div>
 
-  <!-- Example 3: Standardland -->
+  <!-- Example 3: Default country (non-FormControl) -->
   <div class="example">
-    <h2>3. With Default Country</h2>
+    <h2>3. With Default Country (non-FormControl)</h2>
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select
@@ -55,16 +55,32 @@ npm install --save &#64;wlucha/ng-country-select
     </div>
   </div>
 
-  <!-- Beispiel 4: Alle Inputs und Outputs -->
+    <!-- Example 4: Default country (FormControl) -->
+    <div class="example">
+      <h2>4. With Default Country (FormControl)</h2>
+      <div class="code">
+        <pre><code class="language-html">
+  &lt;ng-country-select
+    [defaultCountry]="presetCountry"
+  &gt;&lt;/ng-country-select&gt;
+        </code></pre>
+      </div>
+      <div class="preview">
+        <ng-country-select [formControl]="countryControl"></ng-country-select>
+      </div>
+    </div>
+
+  <!-- Beispiel 5: All Inputs and Outputs -->
   <div class="example">
-    <h2>4. All Inputs & Outputs</h2>
+    <h2>5. All Inputs & Outputs</h2>
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select
   [lang]="'de'"
-  [defaultCountry]="presetCountry"
+  [formControl]="countryControl"
   [showCodes]="true"
   [color]="'primary'"
+  [searchAllLanguages]="true"
   [appearance]="'outline'"
   [placeholder]="'Land auswählen'"
   [debounceTime]="200"
@@ -74,12 +90,12 @@ npm install --save &#64;wlucha/ng-country-select
       </code></pre>
     </div>
     <div class="preview">
-      <ng-country-select [lang]="'de'" [defaultCountry]="presetCountry" [showCodes]="true" [color]="'primary'" [appearance]="'outline'"
+      <ng-country-select [lang]="'de'" [formControl]="countryControl" [defaultCountry]="presetCountry" [showCodes]="true" [color]="'primary'" [searchAllLanguages]="true" [appearance]="'outline'"
         [placeholder]="'Land auswählen'" [debounceTime]="200" (countrySelected)="onCountrySelected($event)"
         (inputChanged)="onInputChanged($event)"></ng-country-select>
-      <p *ngIf="selectedCountry">
-        Selected: {{ selectedCountry.translations.de }}
-      </p>
+        <div>
+          Selected: {{ countryControl.value | json }}
+        </div>
     </div>
   </div>
 </div>

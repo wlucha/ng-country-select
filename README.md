@@ -18,7 +18,7 @@
 This library is designed to work seamlessly with the latest Angular versions (16, 17, 18, and 19).  
 It leverages modern Angular features while maintaining backward compatibility.
 
-- **🌐 Multi-language Magic**  
+- **🌐 Multi-language Magic** 🇺🇸 🇩🇪 🇫🇷 🇪🇸 🇮🇹  
   Supports German, English, French, Spanish and Italian + easily extendable to any language
 
 - **🎌 Automatic Flag Emojis**  
@@ -38,7 +38,9 @@ It leverages modern Angular features while maintaining backward compatibility.
   Zero boilerplate integration
 
 ## 🚀 Demo
-https://wlucha.github.io/ng-country-select/
+Live Demo: [**https://wlucha.github.io/ng-country-select**](https://wlucha.github.io/ng-country-select)
+
+Stackblitz: [https://stackblitz.com/~/github.com/wlucha/ng-country-select](https://stackblitz.com/~/github.com/wlucha/ng-country-select)
 
 ## 🌍 Compatibility
 

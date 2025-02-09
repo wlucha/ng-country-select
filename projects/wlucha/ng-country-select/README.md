@@ -18,7 +18,7 @@
 This library is designed to work seamlessly with the latest Angular versions (16, 17, 18, and 19).  
 It leverages modern Angular features while maintaining backward compatibility.
 
-- **🌐 Multi-language Magic**  
+- **🌐 Multi-language Magic** 🇺🇸 🇩🇪 🇫🇷 🇪🇸 🇮🇹  
   Supports German, English, French, Spanish and Italian + easily extendable to any language
 
 - **🎌 Automatic Flag Emojis**  
@@ -38,7 +38,9 @@ It leverages modern Angular features while maintaining backward compatibility.
   Zero boilerplate integration
 
 ## 🚀 Demo
-https://wlucha.github.io/ng-country-select/
+Live Demo: [**https://wlucha.github.io/ng-country-select**](https://wlucha.github.io/ng-country-select)
+
+Stackblitz: [https://stackblitz.com/~/github.com/wlucha/ng-country-select](https://stackblitz.com/~/github.com/wlucha/ng-country-select)
 
 ## 🌍 Compatibility
 
@@ -50,9 +52,16 @@ https://wlucha.github.io/ng-country-select/
 | ![Angular 19](https://img.shields.io/badge/Angular-19-green) | ✅ Yes |
 
 
-
 ## 🛠️ Setup in 60 Seconds
-### 1. Install Dependencies
+## 1. Install Dependencies
+### Quick Installation (`ng add`)
+```sh
+ng add @wlucha/ng-country-select
+```
+
+This command will install the `@wlucha/ng-country-select` library + all required dependencies.  
+
+#### (Alternative) Install Dependencies manually
 ```sh
 npm install --save @angular/material @angular/cdk @angular/animations @wlucha/ng-country-select
 ```
@@ -141,7 +150,7 @@ git clone https://github.com/wlucha/ng-country-select.git
 Made with ❤️ & ☕ by Open Source Contributors
 
 ## TODO
-- ng-add script
 - more languages
 - HD flags
 - custom option template
+- semantic release

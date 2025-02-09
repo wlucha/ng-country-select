@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "lib": [
+            "es2018",
+            "dom"
+        ],
+        "outDir": "../../../dist/wlucha/ng-country-select/schematics",
+        "rootDir": "./schematics",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "target": "es2018",
+    },
+    "include": [
+        "schematics/**/*.ts"
+    ]
+}

@@ -52,9 +52,16 @@ Stackblitz: [https://stackblitz.com/~/github.com/wlucha/ng-country-select](https
 | ![Angular 19](https://img.shields.io/badge/Angular-19-green) | ✅ Yes |
 
 
-
 ## 🛠️ Setup in 60 Seconds
-### 1. Install Dependencies
+## 1. Install Dependencies
+### Quick Installation (`ng add`)
+```sh
+ng add @wlucha/ng-country-select
+```
+
+This command will install the `@wlucha/ng-country-select` library + all required dependencies.  
+
+#### (Alternative) Install Dependencies manually
 ```sh
 npm install --save @angular/material @angular/cdk @angular/animations @wlucha/ng-country-select
 ```

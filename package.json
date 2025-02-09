@@ -22,9 +22,14 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:lib": "ng build @wlucha/ng-country-select",
     "watch": "ng build --watch --configuration development",
-    "publish": "npm --prefix projects/wlucha/ng-country-select version patch -m 'Upgrade to %s' && npm run build:lib && cd dist/wlucha/ng-country-select && npm publish",
+    "build:lib": "ng build @wlucha/ng-country-select",
+    "build:schematics": "tsc -p projects/wlucha/ng-country-select/tsconfig.schematics.json",
+    "publish:patch": "npm --prefix projects/wlucha/ng-country-select version patch -m \"Upgrade to %s \" && npm run publish",
+    "publish:minor": "npm --prefix projects/wlucha/ng-country-select version minor -m \"Upgrade to %s \" && npm run publish",
+    "publish:major": "npm --prefix projects/wlucha/ng-country-select version major -m \"Upgrade to %s \" && npm run publish",
+    "publish": "npm run build:lib && npm run build:schematics && cd dist/wlucha/ng-country-select && npm publish",
+    "publish:test": "npm --prefix projects/wlucha/ng-country-select version patch && npm run build:lib && npm run build:schematics && cd dist/wlucha/ng-country-select && npm publish --registry http://localhost:4873/",
     "gh-deploy": "ng build --configuration=production --base-href '/ng-country-select/' && npx angular-cli-ghpages --dir=dist/ng-country-select/browser --repo=https://github.com/wlucha/ng-country-select.git",
     "test": "jest"
   },
@@ -47,6 +52,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.1.5",
+    "@angular-devkit/schematics": "^19.1.6",
     "@angular/build": "^19.1.5",
     "@angular/cli": "^19.1.5",
     "@angular/compiler-cli": "^19.1.4",
@@ -55,6 +61,7 @@
     "jest": "^29.7.0",
     "jest-preset-angular": "^14.5.1",
     "ng-packagr": "^19.1.2",
+    "recursive-copy-cli": "^1.0.20",
     "ts-node": "^10.9.2",
     "typescript": "~5.7.3"
   }

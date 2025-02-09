@@ -14,6 +14,7 @@
     "country-autocomplete"
   ],
   "repository": "https://github.com/wlucha/ng-country-select.git",
+  "schematics": "./schematics/collection.json",
   "bugs": {
     "url": "https://github.com/wlucha/ng-country-select/issues"
   },

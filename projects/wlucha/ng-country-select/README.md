@@ -150,7 +150,7 @@ git clone https://github.com/wlucha/ng-country-select.git
 Made with ❤️ & ☕ by Open Source Contributors
 
 ## TODO
-- ng-add script
 - more languages
 - HD flags
 - custom option template
+- semantic release

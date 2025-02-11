@@ -11,23 +11,9 @@ ng add &#64;wlucha/ng-country-select
     </div>
   </div>
 
-
-  <!-- Example 1: Grundlegende Verwendung -->
+  <!-- Example 1: Appearance Outline -->
   <div class="example">
-    <h2>1. Basic Usage</h2>
-    <div class="code">
-      <pre><code class="language-html">
-&lt;ng-country-select&gt;&lt;/ng-country-select&gt;
-      </code></pre>
-    </div>
-    <div class="preview">
-      <ng-country-select></ng-country-select>
-    </div>
-  </div>
-
-  <!-- Example 2: Appearance Outline -->
-  <div class="example">
-    <h2>2. Outline Appearance</h2>
+    <h2>1. Outline Appearance</h2>
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select
@@ -40,9 +26,39 @@ ng add &#64;wlucha/ng-country-select
     </div>
   </div>
 
-  <!-- Example 3: Default country (non-FormControl) -->
+  <!-- Example 2: Exclude countries -->
   <div class="example">
-    <h2>3. With Default Country (non-FormControl)</h2>
+    <h2>2. Exclude countries</h2>
+    <div class="code">
+      <pre><code class="language-html">
+&lt;ng-country-select
+  [excludeCountries]="['US', 'DE', 'FR']"
+&gt;&lt;/ng-country-select&gt;
+      </code></pre>
+    </div>
+    <div class="preview">
+      <ng-country-select [excludeCountries]="['US', 'DE', 'FR']"></ng-country-select>
+    </div>
+  </div>
+
+  <!-- Example 3: Include countries -->
+  <div class="example">
+    <h2>3. Include countries</h2>
+    <div class="code">
+      <pre><code class="language-html">
+&lt;ng-country-select
+  [includeCountries]="['US', 'DE', 'FR']"
+&gt;&lt;/ng-country-select&gt;
+      </code></pre>
+    </div>
+    <div class="preview">
+      <ng-country-select [includeCountries]="['US', 'DE', 'FR']"></ng-country-select>
+    </div>
+  </div>
+
+  <!-- Example 4: Default country (non-FormControl) -->
+  <div class="example">
+    <h2>4. Set Default Country (non-FormControl)</h2>
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select
@@ -55,24 +71,57 @@ ng add &#64;wlucha/ng-country-select
     </div>
   </div>
 
-    <!-- Example 4: Default country (FormControl) -->
-    <div class="example">
-      <h2>4. With Default Country (FormControl)</h2>
-      <div class="code">
-        <pre><code class="language-html">
-  &lt;ng-country-select
-    [defaultCountry]="presetCountry"
-  &gt;&lt;/ng-country-select&gt;
-        </code></pre>
-      </div>
-      <div class="preview">
-        <ng-country-select [formControl]="countryControl"></ng-country-select>
-      </div>
-    </div>
-
-  <!-- Beispiel 5: All Inputs and Outputs -->
+  <!-- Example 5: Default country (FormControl) -->
   <div class="example">
-    <h2>5. All Inputs & Outputs</h2>
+    <h2>5. Set Default Country (FormControl)</h2>
+    <div class="code">
+      <pre><code class="language-html">
+&lt;ng-country-select
+  [formControl]="countryControl"
+&gt;&lt;/ng-country-select&gt;
+        </code></pre>
+    </div>
+    <div class="preview">
+      <ng-country-select [formControl]="countryControl"></ng-country-select>
+    </div>
+  </div>
+
+  <!-- Example 6: Set language & placeholder -->
+  <div class="example">
+    <h2>6. Set language & placeholder</h2>
+    <div class="code">
+      <pre><code class="language-html">
+&lt;ng-country-select
+  [lang]="'es'" // Set spanish as language
+  [placeholder]="'Seleccionar país'"
+  [defaultCountry]="presetCountry"
+&gt;&lt;/ng-country-select&gt;
+            </code></pre>
+    </div>
+    <div class="preview">
+      <ng-country-select [lang]="'es'" [placeholder]="'Seleccionar país'"
+        [defaultCountry]="presetCountry"></ng-country-select>
+    </div>
+  </div>
+
+  <!-- Example 7: Show alpha2/alpha3 codes -->
+  <div class="example">
+    <h2>7. Show Alpha2/Alpha3 Codes</h2>
+    <div class="code">
+      <pre><code class="language-html">
+&lt;ng-country-select
+  [showCodes]="true"
+&gt;&lt;/ng-country-select&gt;
+              </code></pre>
+    </div>
+    <div class="preview">
+      <ng-country-select [showCodes]="true"></ng-country-select>
+    </div>
+  </div>
+
+  <!-- Example 8: All Inputs and Outputs -->
+  <div class="example">
+    <h2>8. All Inputs & Outputs</h2>
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select
@@ -82,6 +131,8 @@ ng add &#64;wlucha/ng-country-select
   [color]="'primary'"
   [searchAllLanguages]="true"
   [appearance]="'outline'"
+  [required]="true"
+  [disabled]="false"
   [placeholder]="'Land auswählen'"
   [debounceTime]="200"
   (countrySelected)="onCountrySelected($event)"
@@ -90,12 +141,13 @@ ng add &#64;wlucha/ng-country-select
       </code></pre>
     </div>
     <div class="preview">
-      <ng-country-select [lang]="'de'" [formControl]="countryControl" [defaultCountry]="presetCountry" [showCodes]="true" [color]="'primary'" [searchAllLanguages]="true" [appearance]="'outline'"
+      <ng-country-select [lang]="'de'" [formControl]="countryControl" [defaultCountry]="presetCountry" [required]="true"
+        [disabled]="false" [showCodes]="true" [color]="'primary'" [searchAllLanguages]="true" [appearance]="'outline'"
         [placeholder]="'Land auswählen'" [debounceTime]="200" (countrySelected)="onCountrySelected($event)"
         (inputChanged)="onInputChanged($event)"></ng-country-select>
-        <div>
-          Selected: {{ countryControl.value | json }}
-        </div>
+      <div>
+        Selected: {{ countryControl.value | json }}
+      </div>
     </div>
   </div>
 </div>

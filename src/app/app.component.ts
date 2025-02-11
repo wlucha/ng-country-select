@@ -20,7 +20,9 @@ export class AppComponent {
     translations: {
       de: 'Deutschland',
       en: 'Germany',
-      fr: 'Allemagne'
+      fr: 'Allemagne',
+      es: 'Alemania',
+      it: 'Germania'
     }
   };
 

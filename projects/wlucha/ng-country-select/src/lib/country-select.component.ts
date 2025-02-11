@@ -108,6 +108,18 @@ export class CountrySelectComponent implements OnInit {
   @Input() public showCodes = false;
 
   /**
+   * List of country alpha2 codes to include in the filter
+   * @default []
+   */
+  @Input() public includeCountries: string[] = [];
+
+  /**
+   * List of country alpha2 codes to exclude from the filter
+   * @default []
+   */
+  @Input() public excludeCountries: string[] = [];
+
+  /**
    * Emits when a country is selected
    * @emits Country - Selected country object
    */
@@ -130,6 +142,7 @@ export class CountrySelectComponent implements OnInit {
 
   ngOnInit(): void {
     this.setupFilter();
+    this.filterCountryList();
     if (this.defaultCountry) {
       this.formControl.setValue(this.defaultCountry);
     }
@@ -189,6 +202,25 @@ export class CountrySelectComponent implements OnInit {
       }),
       map(value => this.filterCountries(value))
     );
+  }
+
+  /**
+   * Filters the list of countries based on include and exclude lists
+   * @private
+   * @returns void
+   */
+  private filterCountryList(): void {
+    if (this.includeCountries.length > 0) {
+      this.countries = this.countries.filter(country =>
+        this.includeCountries.includes(country.alpha2)
+      );
+    }
+
+    if (this.excludeCountries.length > 0) {
+      this.countries = this.countries.filter(country =>
+        !this.excludeCountries.includes(country.alpha2)
+      );
+    }
   }
 
   /**

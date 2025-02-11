@@ -103,6 +103,8 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 | `required`           | `boolean`                 | `false`            | Marks the field as required if `true`                                      |
 | `showCodes`          | `boolean`                 | `false`            | If `true`, shows alpha2/alpha3 codes in the autocomplete results           |
 | `color`              | `ThemePalette`            | `'primary'`        | Angular Material color palette to use (`'primary'`, `'accent'`, `'warn'`)  |
+| `includeCountries`   | `string[]`                | `[]`               | List of country codes to include in the dropdown (e.g., `['US', 'DE', 'FR']`) |
+| `excludeCountries`   | `string[]`                | `[]`               | List of country codes to exclude from the dropdown (e.g., `['US', 'DE', 'FR']`) |
 
 ### 🚨 Outputs
 
@@ -120,8 +122,12 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
   [searchAllLanguages]="true"
   [showCodes]="true"
   [debounceTime]="200"
+  [required]="true"
+  [disabled]="false"
   [appearance]="'outline'"
   [placeholder]="'Search country'"
+  [color]="primary"
+  [excludeCountries]="['US', 'DE', 'FR']"
   (countrySelected)="onCountrySelect($event)"
   (inputChanged)="trackSearchTerm($event)"
 ></ng-country-select>

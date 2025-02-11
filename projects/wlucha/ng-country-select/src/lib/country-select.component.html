@@ -14,12 +14,12 @@
   <mat-autocomplete 
     #auto="matAutocomplete" 
     [displayWith]="displayFn.bind(this)"
+    (optionSelected)="onOptionSelected($event.option.value)"
     (closed)="onAutocompleteClosed()"
   >
     <mat-option 
       *ngFor="let country of filteredCountries$ | async; trackBy: trackByAlpha2"
       [value]="country"
-      (onSelectionChange)="onOptionSelected(country)"
     >
       <div class="country-option">
         <span class="flag">{{ country | countryFlag }}</span>

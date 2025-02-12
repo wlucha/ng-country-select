@@ -105,6 +105,9 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 | `color`              | `ThemePalette`            | `'primary'`        | Angular Material color palette to use (`'primary'`, `'accent'`, `'warn'`)  |
 | `includeCountries`   | `string[]`                | `[]`               | List of country codes to include in the dropdown (e.g., `['US', 'DE', 'FR']`) |
 | `excludeCountries`   | `string[]`                | `[]`               | List of country codes to exclude from the dropdown (e.g., `['US', 'DE', 'FR']`) |
+| `alpha2Only`         | `boolean`                 | `false`            | Show only alpha2 codes in the results                                      |
+| `alpha3Only`         | `boolean`                 | `false`            | Show only alpha3 codes in the results                                      |
+| `showFlag`           | `boolean`                 | `true`             | Whether the flag should be displayed                                       |
 
 ### 🚨 Outputs
 
@@ -127,6 +130,9 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
   [appearance]="'outline'"
   [placeholder]="'Search country'"
   [color]="primary"
+  [alpha2Only]="false"
+  [alpha3Only]="false"
+  [showFlag]="true"
   [excludeCountries]="['US', 'DE', 'FR']"
   (countrySelected)="onCountrySelect($event)"
   (inputChanged)="trackSearchTerm($event)"

@@ -7,9 +7,11 @@
     [disabled]="disabled"
     [required]="required"
   >
-  <mat-icon matSuffix class="flag-suffix">
-    {{ formControl.value | countryFlag }}
-  </mat-icon>
+  @if (showFlag === true) {
+    <mat-icon matSuffix class="flag-suffix">
+      {{ formControl.value | countryFlag }}
+    </mat-icon>
+  }
 
   <mat-autocomplete 
     #auto="matAutocomplete" 
@@ -22,11 +24,19 @@
       [value]="country"
     >
       <div class="country-option">
-        <span class="flag">{{ country | countryFlag }}</span>
-        <span class="name">{{ country.translations[lang] }}</span>
-        <span *ngIf="showCodes" class="codes">
-          ({{ country.alpha2 }} / {{ country.alpha3 }})
-        </span>
+        @if (showFlag === true) {
+          <span class="flag">{{ country | countryFlag }}</span>
+        }
+        @if (alpha2Only === true) {
+          <span class="name">{{ country.alpha2 }}</span>
+        } @else if (alpha3Only === true) {
+          <span class="name">{{ country.alpha3 }}</span>
+        } @else {
+          <span class="name">{{ country.translations[lang] }}</span>
+          <span *ngIf="showCodes" class="codes">
+            ({{ country.alpha2 }} / {{ country.alpha3 }})
+          </span>
+        }
       </div>
     </mat-option>
   </mat-autocomplete>

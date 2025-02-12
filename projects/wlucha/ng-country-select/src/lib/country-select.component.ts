@@ -120,6 +120,24 @@ export class CountrySelectComponent implements OnInit {
   @Input() public excludeCountries: string[] = [];
 
   /**
+   * Show only alpha2 codes in the results
+   * @default false
+   */
+  @Input() public alpha2Only = false;
+
+  /**
+   * Show only alpha3 codes in the results
+   * @default false
+   */
+  @Input() public alpha3Only = false;
+
+  /**
+   * Whether the flag should be displayed
+   * @default false
+   */
+  @Input() public showFlag = true;  
+
+  /**
    * Emits when a country is selected
    * @emits Country - Selected country object
    */
@@ -157,13 +175,19 @@ export class CountrySelectComponent implements OnInit {
   }
 
   /**
-   * Displays the country name in selected language
+   * Displays the alpha2- or alpha3 code or country name in selected language
    * @public
    * @param country - Country object or null
    * @returns Display name string
    */
   public displayFn(country: Country | null): string {
-    return country?.translations ? country?.translations[this.lang] : '';
+    if (this.alpha2Only) {
+      return country?.alpha2 || '';
+    } else if (this.alpha3Only) {
+      return country?.alpha3 || '';
+    } else {
+      return country?.translations ? country?.translations[this.lang] : '';
+    }
   }
 
   /**

@@ -119,9 +119,39 @@ ng add &#64;wlucha/ng-country-select
     </div>
   </div>
 
-  <!-- Example 8: All Inputs and Outputs -->
+  <!-- Example 8: Hide flag -->
   <div class="example">
-    <h2>8. All Inputs & Outputs</h2>
+    <h2>8. Hide Flag</h2>
+    <div class="code">
+      <pre><code class="language-html">
+&lt;ng-country-select
+  [showFlag]="false"
+&gt;&lt;/ng-country-select&gt;
+                </code></pre>
+    </div>
+    <div class="preview">
+      <ng-country-select [showFlag]="false"></ng-country-select>
+    </div>
+  </div>
+
+  <!-- Example 9: Show Alpha2 -->
+  <div class="example">
+    <h2>9. Show Alpha2</h2>
+    <div class="code">
+      <pre><code class="language-html">
+&lt;ng-country-select
+  [alpha2Only]="true"
+&gt;&lt;/ng-country-select&gt;
+                </code></pre>
+    </div>
+    <div class="preview">
+      <ng-country-select [alpha2Only]="true"></ng-country-select>
+    </div>
+  </div>
+
+  <!-- Example 10: All Inputs and Outputs -->
+  <div class="example">
+    <h2>9. All Inputs & Outputs</h2>
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select

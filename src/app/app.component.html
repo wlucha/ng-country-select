@@ -151,7 +151,7 @@ ng add &#64;wlucha/ng-country-select
 
   <!-- Example 10: All Inputs and Outputs -->
   <div class="example">
-    <h2>9. All Inputs & Outputs</h2>
+    <h2>10. All Inputs & Outputs</h2>
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select
@@ -163,6 +163,9 @@ ng add &#64;wlucha/ng-country-select
   [appearance]="'outline'"
   [required]="true"
   [disabled]="false"
+  [alpha2Only]="false"
+  [alpha3Only]="false"
+  [showFlag]="true"
   [placeholder]="'Land auswählen'"
   [debounceTime]="200"
   (countrySelected)="onCountrySelected($event)"
@@ -173,7 +176,8 @@ ng add &#64;wlucha/ng-country-select
     <div class="preview">
       <ng-country-select [lang]="'de'" [formControl]="countryControl" [defaultCountry]="presetCountry" [required]="true"
         [disabled]="false" [showCodes]="true" [color]="'primary'" [searchAllLanguages]="true" [appearance]="'outline'"
-        [placeholder]="'Land auswählen'" [debounceTime]="200" (countrySelected)="onCountrySelected($event)"
+        [alpha2Only]="false" [alpha3Only]="false" [placeholder]="'Land auswählen'" [debounceTime]="200"
+        [showFlag]="true" (countrySelected)="onCountrySelected($event)"
         (inputChanged)="onInputChanged($event)"></ng-country-select>
       <div>
         Selected: {{ countryControl.value | json }}

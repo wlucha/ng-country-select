@@ -37,7 +37,7 @@
     "cpy:readme": "cpy 'README.md' dist/wlucha/ng-country-select",
     "publish": "npm run build:lib && npm run build:schematics && npm run cpy:readme && cd dist/wlucha/ng-country-select && npm publish",
     "publish:test": "npm --prefix projects/wlucha/ng-country-select version patch && npm run build:lib && npm run build:schematics && npm run cpy:readme && cd dist/wlucha/ng-country-select && npm publish --registry http://localhost:4873/",
-    "gh-deploy": "ng build --configuration=production --base-href '/ng-country-select/' && npx angular-cli-ghpages --dir=dist/ng-country-select/browser --repo=https://github.com/wlucha/ng-country-select.git",
+    "gh-deploy": "ng deploy --base-href=/ng-country-select/ --repo=https://github.com/wlucha/ng-country-select.git",
     "test": "jest"
   },
   "private": true,

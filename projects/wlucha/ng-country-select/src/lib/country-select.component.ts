@@ -1,6 +1,8 @@
 import {
   Component, Input, Output, EventEmitter, ChangeDetectionStrategy,
-  OnInit
+  OnInit,
+  OnChanges,
+  SimpleChanges
 } from '@angular/core';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -32,7 +34,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
   styleUrls: ['./country-select.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class CountrySelectComponent implements OnInit {
+export class CountrySelectComponent implements OnInit, OnChanges {
 
   /**
    * Set initial default country
@@ -42,7 +44,7 @@ export class CountrySelectComponent implements OnInit {
 
   /**
    * Default language for displaying country names
-   * Currently supported: 'en', 'de', 'fr', 'es', 'it'
+   * Currently supported: 'en', 'de', 'fr', 'es', 'it', 'ar', 'zh', 'hi', 'bn', 'pt' and 'ru'
    * @default 'en'
    */
   @Input() public lang = 'en';
@@ -167,6 +169,16 @@ export class CountrySelectComponent implements OnInit {
     }
   }
 
+
+  /**
+   * Handle changes of Input properties
+   */
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['lang']) {
+      this.updateLanguage();
+    }
+  }
+
   /**
    * Handle option selection
    */
@@ -209,6 +221,28 @@ export class CountrySelectComponent implements OnInit {
    */
   public trackByAlpha2(index: number, country: Country): string {
     return country.alpha2;
+  }
+
+  /**
+   * Update the displayed language for countries
+   */
+  private updateLanguage(): void {
+    // Trigger Neuberechnung der gefilterten Länder
+    this.filteredCountries$ = this.formControl.valueChanges.pipe(
+      startWith(this.formControl.value || ''),
+      debounceTime(this.debounceTime),
+      tap(value => {
+        if (typeof value === 'string') {
+          this.inputChanged.emit(value);
+        }
+      }),
+      map(value => this.filterCountries(value))
+    );
+
+    // Aktualisiere das angezeigte Land im Input
+    if (this.formControl.value) {
+      this.formControl.setValue(this.formControl.value);
+    }
   }
 
   /**

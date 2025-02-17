@@ -215,9 +215,9 @@ export class CountrySelectComponent implements OnInit {
    */
   public displayFn(country: Country | null): string {
     if (this.alpha2Only) {
-      return country?.alpha2 || '';
+      return country?.alpha2?.toUpperCase() || '';
     } else if (this.alpha3Only) {
-      return country?.alpha3 || '';
+      return country?.alpha3?.toUpperCase() || '';
     } else {
       return country?.translations ? country?.translations[this.lang] : '';
     }

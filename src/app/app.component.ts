@@ -15,8 +15,8 @@ import hljs from 'highlight.js';
 export class AppComponent {
   // Example preset country for demonstration
   presetCountry: Country = {
-    alpha2: 'DE',
-    alpha3: 'DEU',
+    alpha2: 'de',
+    alpha3: 'deu',
     translations: {
       de: 'Deutschland',
       en: 'Germany',

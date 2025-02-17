@@ -10,10 +10,10 @@ import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 import { map, startWith, debounceTime, tap } from 'rxjs/operators';
 import { Country } from './country.interface';
-import { CountryFlagPipe } from './country-flag.pipe';
 import { MatIconModule } from '@angular/material/icon';
 import { ThemePalette } from '@angular/material/core';
 import { countries } from './data/COUNTRIES';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 
 @Component({
@@ -26,7 +26,7 @@ import { countries } from './data/COUNTRIES';
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
-    CountryFlagPipe
+    ScrollingModule
   ],
   templateUrl: './country-select.component.html',
   styleUrls: ['./country-select.component.scss'],
@@ -36,7 +36,7 @@ export class CountrySelectComponent implements OnInit {
 
   /**
    * Set initial default country
-   * @example { alpha2: 'DE', alpha3: 'DEU', translations: { de: 'Deutschland', en: 'Germany' } }
+   * @example { alpha2: 'de', alpha3: 'deu', translations: { de: 'Deutschland', en: 'Germany', fr: 'Allemagne', es: 'Alemania', it: 'Germania' } }
    */
   @Input() defaultCountry: Country | null = null;
 
@@ -133,9 +133,9 @@ export class CountrySelectComponent implements OnInit {
 
   /**
    * Whether the flag should be displayed
-   * @default false
+   * @default true
    */
-  @Input() public showFlag = true;  
+  @Input() public showFlag = true;
 
   /**
    * Emits when a country is selected
@@ -157,6 +157,7 @@ export class CountrySelectComponent implements OnInit {
 
   public filteredCountries$: Observable<Country[]> | undefined;
   private countries: Country[] = countries.slice();
+  public height!: string;
 
   ngOnInit(): void {
     this.setupFilter();
@@ -258,7 +259,7 @@ export class CountrySelectComponent implements OnInit {
       value.toLowerCase() :
       value?.translations[this.lang]?.toLowerCase() || '';
 
-    return this.countries.filter(country => {
+    const filteredCountries = this.countries.filter(country => {
       const matchesCode =
         country.alpha2.toLowerCase().includes(filterValue) ||
         country.alpha3.toLowerCase().includes(filterValue);
@@ -271,5 +272,13 @@ export class CountrySelectComponent implements OnInit {
 
       return matchesCode || matchesTranslation;
     });
+
+    if (filteredCountries.length < 4) {
+      this.height = filteredCountries.length * 50 + 'px';
+    } else {
+      this.height = '200px';
+    }
+
+    return filteredCountries;
   }
 }

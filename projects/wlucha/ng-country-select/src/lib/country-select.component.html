@@ -1,43 +1,30 @@
 <mat-form-field [appearance]="appearance" [color]="color">
   <mat-label>{{ placeholder }}</mat-label>
-  <input
-    matInput
-    [formControl]="formControl"
-    [matAutocomplete]="auto"
-    [disabled]="disabled"
-    [required]="required"
-  >
+  <input matInput [formControl]="formControl" [matAutocomplete]="auto" [disabled]="disabled" [required]="required">
   @if (showFlag === true) {
-    <mat-icon matSuffix class="flag-suffix">
-      {{ formControl.value | countryFlag }}
-    </mat-icon>
+  <mat-icon matSuffix class="flag-suffix fi" [ngClass]="'fi-' + formControl.value?.alpha2"></mat-icon>
   }
 
-  <mat-autocomplete 
-    #auto="matAutocomplete" 
-    [displayWith]="displayFn.bind(this)"
-    (optionSelected)="onOptionSelected($event.option.value)"
-    (closed)="onAutocompleteClosed()"
-  >
-    <mat-option 
-      *ngFor="let country of filteredCountries$ | async; trackBy: trackByAlpha2"
-      [value]="country"
-    >
-      <div class="country-option">
-        @if (showFlag === true) {
-          <span class="flag">{{ country | countryFlag }}</span>
-        }
-        @if (alpha2Only === true) {
-          <span class="name">{{ country.alpha2 }}</span>
-        } @else if (alpha3Only === true) {
-          <span class="name">{{ country.alpha3 }}</span>
-        } @else {
+  <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn.bind(this)"
+    (optionSelected)="onOptionSelected($event.option.value)" (closed)="onAutocompleteClosed()">
+    <cdk-virtual-scroll-viewport [itemSize]="'25'" [ngStyle]="{'height': height}">
+      <mat-option *cdkVirtualFor="let country of filteredCountries$ | async; trackBy: trackByAlpha2" [value]="country">
+        <div class="country-option">
+          @if (showFlag === true) {
+          <span class="flag fi" [ngClass]="'fi-' + country?.alpha2"></span>
+          }
+          @if (alpha2Only === true) {
+          <span class="name">{{ country.alpha2 | uppercase }}</span>
+          } @else if (alpha3Only === true) {
+          <span class="name">{{ country.alpha3 | uppercase }}</span>
+          } @else {
           <span class="name">{{ country.translations[lang] }}</span>
           <span *ngIf="showCodes" class="codes">
-            ({{ country.alpha2 }} / {{ country.alpha3 }})
+            ({{ country.alpha2 | uppercase }} / {{ country.alpha3 | uppercase }})
           </span>
-        }
-      </div>
-    </mat-option>
+          }
+        </div>
+      </mat-option>
+    </cdk-virtual-scroll-viewport>
   </mat-autocomplete>
 </mat-form-field>

@@ -1,10 +1,9 @@
 import {
   Component, Input, Output, EventEmitter, ChangeDetectionStrategy,
   OnInit,
-  OnChanges,
-  SimpleChanges
+  forwardRef
 } from '@angular/core';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -32,9 +31,16 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
   ],
   templateUrl: './country-select.component.html',
   styleUrls: ['./country-select.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => CountrySelectComponent),
+      multi: true
+    }
+  ]
 })
-export class CountrySelectComponent implements OnInit, OnChanges {
+export class CountrySelectComponent implements OnInit {
 
   /**
    * Set initial default country
@@ -47,7 +53,15 @@ export class CountrySelectComponent implements OnInit, OnChanges {
    * Currently supported: 'en', 'de', 'fr', 'es', 'it', 'ar', 'zh', 'hi', 'bn', 'pt' and 'ru'
    * @default 'en'
    */
-  @Input() public lang = 'en';
+  private _lang = 'en';
+  @Input()
+  set lang(value: string) {
+    this._lang = value;
+    this.updateLanguage();
+  }
+  get lang(): string {
+    return this._lang;
+  }
 
   /**
    * Search in all available languages or only in the selected language
@@ -160,6 +174,8 @@ export class CountrySelectComponent implements OnInit, OnChanges {
   public filteredCountries$: Observable<Country[]> | undefined;
   private countries: Country[] = countries.slice();
   public height!: string;
+  private onChange: any = () => { };
+  private onTouched: any = () => { };
 
   ngOnInit(): void {
     this.setupFilter();
@@ -169,14 +185,18 @@ export class CountrySelectComponent implements OnInit, OnChanges {
     }
   }
 
-
-  /**
-   * Handle changes of Input properties
-   */
-  ngOnChanges(changes: SimpleChanges): void {
-    if (changes['lang']) {
-      this.updateLanguage();
+  public writeValue(country: Country | null): void {
+    if (country && !this.formControl.value || country?.alpha2 !== this.formControl.value?.alpha2) {
+      this.formControl.setValue(country);
     }
+  }
+
+  public registerOnChange(fn: any): void {
+    this.onChange = fn;
+  }
+
+  public registerOnTouched(fn: any): void {
+    this.onTouched = fn;
   }
 
   /**
@@ -227,7 +247,6 @@ export class CountrySelectComponent implements OnInit, OnChanges {
    * Update the displayed language for countries
    */
   private updateLanguage(): void {
-    // Trigger Neuberechnung der gefilterten Länder
     this.filteredCountries$ = this.formControl.valueChanges.pipe(
       startWith(this.formControl.value || ''),
       debounceTime(this.debounceTime),
@@ -239,7 +258,6 @@ export class CountrySelectComponent implements OnInit, OnChanges {
       map(value => this.filterCountries(value))
     );
 
-    // Aktualisiere das angezeigte Land im Input
     if (this.formControl.value) {
       this.formControl.setValue(this.formControl.value);
     }

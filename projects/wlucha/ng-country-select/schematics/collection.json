@@ -3,7 +3,7 @@
     "schematics": {
         "ng-add": {
             "description": "Add and configure @wlucha/ng-country-select",
-            "factory": "./ng-add/index#ngAdd"
+            "factory": "./ng-add/index#default"
         }
     }
 }

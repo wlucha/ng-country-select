@@ -14,25 +14,24 @@
 
 ## 📢 Features
 
-- **🌍 Fully Compatible with Angular 16-19**  
+- **🅰️ Fully Compatible with Angular 16-19**  
 This library is designed to work seamlessly with the latest Angular versions (16, 17, 18, and 19).  
 It leverages modern Angular features while maintaining backward compatibility.
 
-- **🌐 Multi-language Magic** 🇺🇸 🇩🇪 🇫🇷 🇪🇸 🇮🇹  
+- **🌍 Multi-language Magic**  
   Supports German, English, French, Spanish and Italian + easily extendable to any language
 
-- **🎌 Automatic Flag Emojis**  
-  Auto-generated from ISO codes (no image dependencies!)
+- **🎌 Flag Images** 🇺🇸 🇩🇪 🇫🇷 🇪🇸 🇮🇹  
+  OS & Browser independent flag images
+
+- **⚡ Optimized Performance**  
+  RxJS-powered search with debounce & virtual scrolling
 
 - **🔍 Smart Search**  
-  Find countries by:  
-  ✓ Local name ✓ English name ✓ Alpha2/3 codes ✓ Any translation
+  Search countries by: ✓ Localized name  ✓ Any translation  ✓ Alpha2/3 codes  
 
 - **🎨 Material Design Excellence**  
   Seamless integration with Angular Material components
-
-- **⚡ Optimized Performance**  
-  RxJS-powered search with debounce & virtual scrolling ready
 
 - **🧩 Standalone Component**  
   Zero boilerplate integration
@@ -61,10 +60,26 @@ ng add @wlucha/ng-country-select
 
 This command will install the `@wlucha/ng-country-select` library + all required dependencies.  
 
-#### (Alternative) Install Dependencies manually
+#### (Alternative) Install Dependencies manually & update Angular.json styles
 ```sh
-npm install --save @angular/material @angular/cdk @angular/animations @wlucha/ng-country-select
+# Install dependencies
+npm install --save @angular/material @angular/cdk @angular/animations flag-icons @wlucha/ng-country-select
+
+# Add the flag icon styles to Angular.json "styles" array
+"architect": {
+   "build": {
+      "options": {
+        ...,
+        "styles": [
+          ...,
+          "flag-icons/css/flag-icons.min.css"
+        ]
+      }
+    }
+  }
+}    
 ```
+
 
 ### 2. Import Component
 ```typescript
@@ -77,6 +92,7 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
   ]
 })
 ```
+
 ### 3. Add Basic Usage
 ```html
 <ng-country-select
@@ -163,6 +179,5 @@ Made with ❤️ & ☕ by Open Source Contributors
 
 ## TODO
 - more languages
-- HD flags
 - custom option template
 - semantic release

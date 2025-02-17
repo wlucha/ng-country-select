@@ -1,7 +1,7 @@
 export const countries = [
   {
-    alpha2: 'AF',
-    alpha3: 'AFG',
+    alpha2: 'af',
+    alpha3: 'afg',
     translations: {
       de: 'Afghanistan',
       en: 'Afghanistan',
@@ -11,8 +11,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'AX',
-    alpha3: 'ALA',
+    alpha2: 'ax',
+    alpha3: 'ala',
     translations: {
       de: 'Ålandinseln',
       en: 'Åland Islands',
@@ -22,8 +22,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'AL',
-    alpha3: 'ALB',
+    alpha2: 'al',
+    alpha3: 'alb',
     translations: {
       de: 'Albanien',
       en: 'Albania',
@@ -33,8 +33,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'DZ',
-    alpha3: 'DZA',
+    alpha2: 'dz',
+    alpha3: 'dza',
     translations: {
       de: 'Algerien',
       en: 'Algeria',
@@ -44,8 +44,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'AS',
-    alpha3: 'ASM',
+    alpha2: 'as',
+    alpha3: 'asm',
     translations: {
       de: 'Amerikanisch-Samoa',
       en: 'American Samoa',
@@ -55,8 +55,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'AD',
-    alpha3: 'AND',
+    alpha2: 'ad',
+    alpha3: 'and',
     translations: {
       de: 'Andorra',
       en: 'Andorra',
@@ -66,8 +66,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'AO',
-    alpha3: 'AGO',
+    alpha2: 'ao',
+    alpha3: 'ago',
     translations: {
       de: 'Angola',
       en: 'Angola',
@@ -77,8 +77,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'AI',
-    alpha3: 'AIA',
+    alpha2: 'ai',
+    alpha3: 'aia',
     translations: {
       de: 'Anguilla',
       en: 'Anguilla',
@@ -88,8 +88,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'AQ',
-    alpha3: 'ATA',
+    alpha2: 'aq',
+    alpha3: 'ata',
     translations: {
       de: 'Antarktis',
       en: 'Antarctica',
@@ -99,8 +99,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'AG',
-    alpha3: 'ATG',
+    alpha2: 'ag',
+    alpha3: 'atg',
     translations: {
       de: 'Antigua und Barbuda',
       en: 'Antigua and Barbuda',
@@ -110,8 +110,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'AR',
-    alpha3: 'ARG',
+    alpha2: 'ar',
+    alpha3: 'arg',
     translations: {
       de: 'Argentinien',
       en: 'Argentina',
@@ -121,8 +121,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'AM',
-    alpha3: 'ARM',
+    alpha2: 'am',
+    alpha3: 'arm',
     translations: {
       de: 'Armenien',
       en: 'Armenia',
@@ -132,8 +132,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'AW',
-    alpha3: 'ABW',
+    alpha2: 'aw',
+    alpha3: 'abw',
     translations: {
       de: 'Aruba',
       en: 'Aruba',
@@ -143,8 +143,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'AU',
-    alpha3: 'AUS',
+    alpha2: 'au',
+    alpha3: 'aus',
     translations: {
       de: 'Australien',
       en: 'Australia',
@@ -154,8 +154,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'AT',
-    alpha3: 'AUT',
+    alpha2: 'at',
+    alpha3: 'aut',
     translations: {
       de: 'Österreich',
       en: 'Austria',
@@ -165,8 +165,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'AZ',
-    alpha3: 'AZE',
+    alpha2: 'az',
+    alpha3: 'aze',
     translations: {
       de: 'Aserbaidschan',
       en: 'Azerbaijan',
@@ -176,8 +176,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BS',
-    alpha3: 'BHS',
+    alpha2: 'bs',
+    alpha3: 'bhs',
     translations: {
       de: 'Bahamas',
       en: 'Bahamas',
@@ -187,8 +187,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BH',
-    alpha3: 'BHR',
+    alpha2: 'bh',
+    alpha3: 'bhr',
     translations: {
       de: 'Bahrain',
       en: 'Bahrain',
@@ -198,8 +198,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BD',
-    alpha3: 'BGD',
+    alpha2: 'bd',
+    alpha3: 'bgd',
     translations: {
       de: 'Bangladesch',
       en: 'Bangladesh',
@@ -209,8 +209,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BB',
-    alpha3: 'BRB',
+    alpha2: 'bb',
+    alpha3: 'brb',
     translations: {
       de: 'Barbados',
       en: 'Barbados',
@@ -220,8 +220,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BY',
-    alpha3: 'BLR',
+    alpha2: 'by',
+    alpha3: 'blr',
     translations: {
       de: 'Belarus',
       en: 'Belarus',
@@ -231,8 +231,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BE',
-    alpha3: 'BEL',
+    alpha2: 'be',
+    alpha3: 'bel',
     translations: {
       de: 'Belgien',
       en: 'Belgium',
@@ -242,8 +242,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BZ',
-    alpha3: 'BLZ',
+    alpha2: 'bz',
+    alpha3: 'blz',
     translations: {
       de: 'Belize',
       en: 'Belize',
@@ -253,8 +253,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BJ',
-    alpha3: 'BEN',
+    alpha2: 'bj',
+    alpha3: 'ben',
     translations: {
       de: 'Benin',
       en: 'Benin',
@@ -264,8 +264,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BM',
-    alpha3: 'BMU',
+    alpha2: 'bm',
+    alpha3: 'bmu',
     translations: {
       de: 'Bermuda',
       en: 'Bermuda',
@@ -275,8 +275,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BT',
-    alpha3: 'BTN',
+    alpha2: 'bt',
+    alpha3: 'btn',
     translations: {
       de: 'Bhutan',
       en: 'Bhutan',
@@ -286,8 +286,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BO',
-    alpha3: 'BOL',
+    alpha2: 'bo',
+    alpha3: 'bol',
     translations: {
       de: 'Bolivien',
       en: 'Bolivia',
@@ -297,8 +297,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BQ',
-    alpha3: 'BES',
+    alpha2: 'bq',
+    alpha3: 'bes',
     translations: {
       de: 'Bonaire, Sint Eustatius und Saba',
       en: 'Bonaire, Sint Eustatius and Saba',
@@ -308,8 +308,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BA',
-    alpha3: 'BIH',
+    alpha2: 'ba',
+    alpha3: 'bih',
     translations: {
       de: 'Bosnien und Herzegowina',
       en: 'Bosnia and Herzegovina',
@@ -319,8 +319,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BW',
-    alpha3: 'BWA',
+    alpha2: 'bw',
+    alpha3: 'bwa',
     translations: {
       de: 'Botsuana',
       en: 'Botswana',
@@ -330,8 +330,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BV',
-    alpha3: 'BVT',
+    alpha2: 'bv',
+    alpha3: 'bvt',
     translations: {
       de: 'Bouvetinsel',
       en: 'Bouvet Island',
@@ -341,8 +341,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BR',
-    alpha3: 'BRA',
+    alpha2: 'br',
+    alpha3: 'bra',
     translations: {
       de: 'Brasilien',
       en: 'Brazil',
@@ -352,8 +352,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'IO',
-    alpha3: 'IOT',
+    alpha2: 'io',
+    alpha3: 'iot',
     translations: {
       de: 'Britisches Territorium im Indischen Ozean',
       en: 'British Indian Ocean Territory',
@@ -363,8 +363,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BN',
-    alpha3: 'BRN',
+    alpha2: 'bn',
+    alpha3: 'brn',
     translations: {
       de: 'Brunei Darussalam',
       en: 'Brunei Darussalam',
@@ -374,8 +374,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BG',
-    alpha3: 'BGR',
+    alpha2: 'bg',
+    alpha3: 'bgr',
     translations: {
       de: 'Bulgarien',
       en: 'Bulgaria',
@@ -385,8 +385,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BF',
-    alpha3: 'BFA',
+    alpha2: 'bf',
+    alpha3: 'bfa',
     translations: {
       de: 'Burkina Faso',
       en: 'Burkina Faso',
@@ -396,8 +396,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BI',
-    alpha3: 'BDI',
+    alpha2: 'bi',
+    alpha3: 'bdi',
     translations: {
       de: 'Burundi',
       en: 'Burundi',
@@ -407,8 +407,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CV',
-    alpha3: 'CPV',
+    alpha2: 'cv',
+    alpha3: 'cpv',
     translations: {
       de: 'Cabo Verde',
       en: 'Cabo Verde',
@@ -418,8 +418,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'KH',
-    alpha3: 'KHM',
+    alpha2: 'kh',
+    alpha3: 'khm',
     translations: {
       de: 'Kambodscha',
       en: 'Cambodia',
@@ -429,8 +429,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CM',
-    alpha3: 'CMR',
+    alpha2: 'cm',
+    alpha3: 'cmr',
     translations: {
       de: 'Kamerun',
       en: 'Cameroon',
@@ -440,8 +440,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CA',
-    alpha3: 'CAN',
+    alpha2: 'ca',
+    alpha3: 'can',
     translations: {
       de: 'Kanada',
       en: 'Canada',
@@ -451,8 +451,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'KY',
-    alpha3: 'CYM',
+    alpha2: 'ky',
+    alpha3: 'cym',
     translations: {
       de: 'Kaimaninseln',
       en: 'Cayman Islands',
@@ -462,8 +462,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CF',
-    alpha3: 'CAF',
+    alpha2: 'cf',
+    alpha3: 'caf',
     translations: {
       de: 'Zentralafrikanische Republik',
       en: 'Central African Republic',
@@ -473,8 +473,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'TD',
-    alpha3: 'TCD',
+    alpha2: 'td',
+    alpha3: 'tcd',
     translations: {
       de: 'Tschad',
       en: 'Chad',
@@ -484,8 +484,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CL',
-    alpha3: 'CHL',
+    alpha2: 'cl',
+    alpha3: 'chl',
     translations: {
       de: 'Chile',
       en: 'Chile',
@@ -495,8 +495,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CN',
-    alpha3: 'CHN',
+    alpha2: 'cn',
+    alpha3: 'chn',
     translations: {
       de: 'China',
       en: 'China',
@@ -506,8 +506,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CX',
-    alpha3: 'CXR',
+    alpha2: 'cx',
+    alpha3: 'cxr',
     translations: {
       de: 'Weihnachtsinsel',
       en: 'Christmas Island',
@@ -517,8 +517,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CC',
-    alpha3: 'CCK',
+    alpha2: 'cc',
+    alpha3: 'cck',
     translations: {
       de: 'Kokosinseln',
       en: 'Cocos (Keeling) Islands',
@@ -528,8 +528,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CO',
-    alpha3: 'COL',
+    alpha2: 'co',
+    alpha3: 'col',
     translations: {
       de: 'Kolumbien',
       en: 'Colombia',
@@ -539,8 +539,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'KM',
-    alpha3: 'COM',
+    alpha2: 'km',
+    alpha3: 'com',
     translations: {
       de: 'Union der Komoren',
       en: 'Comoros',
@@ -550,8 +550,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CD',
-    alpha3: 'COD',
+    alpha2: 'cd',
+    alpha3: 'cod',
     translations: {
       de: 'Demokratische Republik Kongo',
       en: 'Congo, Democratic Republic of the',
@@ -561,8 +561,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CG',
-    alpha3: 'COG',
+    alpha2: 'cg',
+    alpha3: 'cog',
     translations: {
       de: 'Republik Kongo',
       en: 'Congo',
@@ -572,8 +572,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CK',
-    alpha3: 'COK',
+    alpha2: 'ck',
+    alpha3: 'cok',
     translations: {
       de: 'Cookinseln',
       en: 'Cook Islands',
@@ -583,8 +583,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CR',
-    alpha3: 'CRI',
+    alpha2: 'cr',
+    alpha3: 'cri',
     translations: {
       de: 'Costa Rica',
       en: 'Costa Rica',
@@ -594,8 +594,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CI',
-    alpha3: 'CIV',
+    alpha2: 'ci',
+    alpha3: 'civ',
     translations: {
       de: 'Côte d’Ivoire',
       en: 'Côte d’Ivoire',
@@ -605,8 +605,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'HR',
-    alpha3: 'HRV',
+    alpha2: 'hr',
+    alpha3: 'hrv',
     translations: {
       de: 'Kroatien',
       en: 'Croatia',
@@ -616,8 +616,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CU',
-    alpha3: 'CUB',
+    alpha2: 'cu',
+    alpha3: 'cub',
     translations: {
       de: 'Kuba',
       en: 'Cuba',
@@ -627,8 +627,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CW',
-    alpha3: 'CUW',
+    alpha2: 'cw',
+    alpha3: 'cuw',
     translations: {
       de: 'Curaçao',
       en: 'Curaçao',
@@ -638,8 +638,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CY',
-    alpha3: 'CYP',
+    alpha2: 'cy',
+    alpha3: 'cyp',
     translations: {
       de: 'Zypern',
       en: 'Cyprus',
@@ -649,8 +649,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CZ',
-    alpha3: 'CZE',
+    alpha2: 'cz',
+    alpha3: 'cze',
     translations: {
       de: 'Tschechien',
       en: 'Czechia',
@@ -660,8 +660,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'DK',
-    alpha3: 'DNK',
+    alpha2: 'dk',
+    alpha3: 'dnk',
     translations: {
       de: 'Dänemark',
       en: 'Denmark',
@@ -671,8 +671,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'DJ',
-    alpha3: 'DJI',
+    alpha2: 'dj',
+    alpha3: 'dji',
     translations: {
       de: 'Dschibuti',
       en: 'Djibouti',
@@ -682,8 +682,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'DM',
-    alpha3: 'DMA',
+    alpha2: 'dm',
+    alpha3: 'dma',
     translations: {
       de: 'Dominica',
       en: 'Dominica',
@@ -693,8 +693,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'DO',
-    alpha3: 'DOM',
+    alpha2: 'do',
+    alpha3: 'dom',
     translations: {
       de: 'Dominikanische Republik',
       en: 'Dominican Republic',
@@ -704,8 +704,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'EC',
-    alpha3: 'ECU',
+    alpha2: 'ec',
+    alpha3: 'ecu',
     translations: {
       de: 'Ecuador',
       en: 'Ecuador',
@@ -715,8 +715,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'EG',
-    alpha3: 'EGY',
+    alpha2: 'eg',
+    alpha3: 'egy',
     translations: {
       de: 'Ägypten',
       en: 'Egypt',
@@ -726,8 +726,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SV',
-    alpha3: 'SLV',
+    alpha2: 'sv',
+    alpha3: 'slv',
     translations: {
       de: 'El Salvador',
       en: 'El Salvador',
@@ -737,8 +737,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GQ',
-    alpha3: 'GNQ',
+    alpha2: 'gq',
+    alpha3: 'gnq',
     translations: {
       de: 'Äquatorialguinea',
       en: 'Equatorial Guinea',
@@ -748,8 +748,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'ER',
-    alpha3: 'ERI',
+    alpha2: 'er',
+    alpha3: 'eri',
     translations: {
       de: 'Eritrea',
       en: 'Eritrea',
@@ -759,8 +759,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'EE',
-    alpha3: 'EST',
+    alpha2: 'ee',
+    alpha3: 'est',
     translations: {
       de: 'Estland',
       en: 'Estonia',
@@ -770,8 +770,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'ET',
-    alpha3: 'ETH',
+    alpha2: 'et',
+    alpha3: 'eth',
     translations: {
       de: 'Äthiopien',
       en: 'Ethiopia',
@@ -781,8 +781,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'FK',
-    alpha3: 'FLK',
+    alpha2: 'fk',
+    alpha3: 'flk',
     translations: {
       de: 'Falklandinseln',
       en: 'Falkland Islands (Malvinas)',
@@ -792,8 +792,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'FO',
-    alpha3: 'FRO',
+    alpha2: 'fo',
+    alpha3: 'fro',
     translations: {
       de: 'Färöer',
       en: 'Faroe Islands',
@@ -803,8 +803,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'FJ',
-    alpha3: 'FJI',
+    alpha2: 'fj',
+    alpha3: 'fji',
     translations: {
       de: 'Fidschi',
       en: 'Fiji',
@@ -814,8 +814,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'FI',
-    alpha3: 'FIN',
+    alpha2: 'fi',
+    alpha3: 'fin',
     translations: {
       de: 'Finnland',
       en: 'Finland',
@@ -825,8 +825,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'FR',
-    alpha3: 'FRA',
+    alpha2: 'fr',
+    alpha3: 'fra',
     translations: {
       de: 'Frankreich',
       en: 'France',
@@ -836,8 +836,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GF',
-    alpha3: 'GUF',
+    alpha2: 'gf',
+    alpha3: 'guf',
     translations: {
       de: 'Französisch-Guayana',
       en: 'French Guiana',
@@ -847,8 +847,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'PF',
-    alpha3: 'PYF',
+    alpha2: 'pf',
+    alpha3: 'pyf',
     translations: {
       de: 'Französisch-Polynesien',
       en: 'French Polynesia',
@@ -858,8 +858,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'TF',
-    alpha3: 'ATF',
+    alpha2: 'tf',
+    alpha3: 'atf',
     translations: {
       de: 'Französische Süd- und Antarktisgebiete',
       en: 'French Southern Territories',
@@ -869,8 +869,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GA',
-    alpha3: 'GAB',
+    alpha2: 'ga',
+    alpha3: 'gab',
     translations: {
       de: 'Gabun',
       en: 'Gabon',
@@ -880,8 +880,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GM',
-    alpha3: 'GMB',
+    alpha2: 'gm',
+    alpha3: 'gmb',
     translations: {
       de: 'Gambia',
       en: 'Gambia',
@@ -891,8 +891,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GE',
-    alpha3: 'GEO',
+    alpha2: 'ge',
+    alpha3: 'geo',
     translations: {
       de: 'Georgien',
       en: 'Georgia',
@@ -902,8 +902,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'DE',
-    alpha3: 'DEU',
+    alpha2: 'de',
+    alpha3: 'deu',
     translations: {
       de: 'Deutschland',
       en: 'Germany',
@@ -913,8 +913,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GH',
-    alpha3: 'GHA',
+    alpha2: 'gh',
+    alpha3: 'gha',
     translations: {
       de: 'Ghana',
       en: 'Ghana',
@@ -924,8 +924,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GI',
-    alpha3: 'GIB',
+    alpha2: 'gi',
+    alpha3: 'gib',
     translations: {
       de: 'Gibraltar',
       en: 'Gibraltar',
@@ -935,8 +935,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GR',
-    alpha3: 'GRC',
+    alpha2: 'gr',
+    alpha3: 'grc',
     translations: {
       de: 'Griechenland',
       en: 'Greece',
@@ -946,8 +946,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GL',
-    alpha3: 'GRL',
+    alpha2: 'gl',
+    alpha3: 'grl',
     translations: {
       de: 'Grönland',
       en: 'Greenland',
@@ -957,8 +957,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GD',
-    alpha3: 'GRD',
+    alpha2: 'gd',
+    alpha3: 'grd',
     translations: {
       de: 'Grenada',
       en: 'Grenada',
@@ -968,8 +968,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GP',
-    alpha3: 'GLP',
+    alpha2: 'gp',
+    alpha3: 'glp',
     translations: {
       de: 'Guadeloupe',
       en: 'Guadeloupe',
@@ -979,8 +979,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GU',
-    alpha3: 'GUM',
+    alpha2: 'gu',
+    alpha3: 'gum',
     translations: {
       de: 'Guam',
       en: 'Guam',
@@ -990,8 +990,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GT',
-    alpha3: 'GTM',
+    alpha2: 'gt',
+    alpha3: 'gtm',
     translations: {
       de: 'Guatemala',
       en: 'Guatemala',
@@ -1001,8 +1001,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GG',
-    alpha3: 'GGY',
+    alpha2: 'gg',
+    alpha3: 'ggy',
     translations: {
       de: 'Guernsey',
       en: 'Guernsey',
@@ -1012,8 +1012,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GN',
-    alpha3: 'GIN',
+    alpha2: 'gn',
+    alpha3: 'gin',
     translations: {
       de: 'Guinea',
       en: 'Guinea',
@@ -1023,8 +1023,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GW',
-    alpha3: 'GNB',
+    alpha2: 'gw',
+    alpha3: 'gnb',
     translations: {
       de: 'Guinea-Bissau',
       en: 'Guinea-Bissau',
@@ -1034,8 +1034,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GY',
-    alpha3: 'GUY',
+    alpha2: 'gy',
+    alpha3: 'guy',
     translations: {
       de: 'Guyana',
       en: 'Guyana',
@@ -1045,8 +1045,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'HT',
-    alpha3: 'HTI',
+    alpha2: 'ht',
+    alpha3: 'hti',
     translations: {
       de: 'Haiti',
       en: 'Haiti',
@@ -1056,8 +1056,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'HM',
-    alpha3: 'HMD',
+    alpha2: 'hm',
+    alpha3: 'hmd',
     translations: {
       de: 'Heard und McDonaldinseln',
       en: 'Heard Island and McDonald Islands',
@@ -1067,8 +1067,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'VA',
-    alpha3: 'VAT',
+    alpha2: 'va',
+    alpha3: 'vat',
     translations: {
       de: 'Heiliger Stuhl (Vatikanstadt)',
       en: 'Holy See',
@@ -1078,8 +1078,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'HN',
-    alpha3: 'HND',
+    alpha2: 'hn',
+    alpha3: 'hnd',
     translations: {
       de: 'Honduras',
       en: 'Honduras',
@@ -1089,8 +1089,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'HK',
-    alpha3: 'HKG',
+    alpha2: 'hk',
+    alpha3: 'hkg',
     translations: {
       de: 'Sonderverwaltungszone Hongkong',
       en: 'Hong Kong',
@@ -1100,8 +1100,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'HU',
-    alpha3: 'HUN',
+    alpha2: 'hu',
+    alpha3: 'hun',
     translations: {
       de: 'Ungarn',
       en: 'Hungary',
@@ -1111,8 +1111,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'IS',
-    alpha3: 'ISL',
+    alpha2: 'is',
+    alpha3: 'isl',
     translations: {
       de: 'Island',
       en: 'Iceland',
@@ -1122,8 +1122,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'IN',
-    alpha3: 'IND',
+    alpha2: 'in',
+    alpha3: 'ind',
     translations: {
       de: 'Indien',
       en: 'India',
@@ -1133,8 +1133,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'ID',
-    alpha3: 'IDN',
+    alpha2: 'id',
+    alpha3: 'idn',
     translations: {
       de: 'Indonesien',
       en: 'Indonesia',
@@ -1144,8 +1144,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'IR',
-    alpha3: 'IRN',
+    alpha2: 'ir',
+    alpha3: 'irn',
     translations: {
       de: 'Iran',
       en: 'Iran (Islamic Republic of)',
@@ -1155,8 +1155,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'IQ',
-    alpha3: 'IRQ',
+    alpha2: 'iq',
+    alpha3: 'irq',
     translations: {
       de: 'Irak',
       en: 'Iraq',
@@ -1166,8 +1166,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'IE',
-    alpha3: 'IRL',
+    alpha2: 'ie',
+    alpha3: 'irl',
     translations: {
       de: 'Irland',
       en: 'Ireland',
@@ -1177,8 +1177,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'IM',
-    alpha3: 'IMN',
+    alpha2: 'im',
+    alpha3: 'imn',
     translations: {
       de: 'Isle of Man',
       en: 'Isle of Man',
@@ -1188,8 +1188,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'IL',
-    alpha3: 'ISR',
+    alpha2: 'il',
+    alpha3: 'isr',
     translations: {
       de: 'Israel',
       en: 'Israel',
@@ -1199,8 +1199,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'IT',
-    alpha3: 'ITA',
+    alpha2: 'it',
+    alpha3: 'ita',
     translations: {
       de: 'Italien',
       en: 'Italy',
@@ -1210,8 +1210,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'JM',
-    alpha3: 'JAM',
+    alpha2: 'jm',
+    alpha3: 'jam',
     translations: {
       de: 'Jamaika',
       en: 'Jamaica',
@@ -1221,8 +1221,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'JP',
-    alpha3: 'JPN',
+    alpha2: 'jp',
+    alpha3: 'jpn',
     translations: {
       de: 'Japan',
       en: 'Japan',
@@ -1232,8 +1232,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'JE',
-    alpha3: 'JEY',
+    alpha2: 'je',
+    alpha3: 'jey',
     translations: {
       de: 'Jersey',
       en: 'Jersey',
@@ -1243,8 +1243,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'JO',
-    alpha3: 'JOR',
+    alpha2: 'jo',
+    alpha3: 'jor',
     translations: {
       de: 'Jordanien',
       en: 'Jordan',
@@ -1254,8 +1254,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'KZ',
-    alpha3: 'KAZ',
+    alpha2: 'kz',
+    alpha3: 'kaz',
     translations: {
       de: 'Kasachstan',
       en: 'Kazakhstan',
@@ -1265,8 +1265,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'KE',
-    alpha3: 'KEN',
+    alpha2: 'ke',
+    alpha3: 'ken',
     translations: {
       de: 'Kenia',
       en: 'Kenya',
@@ -1276,8 +1276,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'KI',
-    alpha3: 'KIR',
+    alpha2: 'ki',
+    alpha3: 'kir',
     translations: {
       de: 'Kiribati',
       en: 'Kiribati',
@@ -1287,8 +1287,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'KP',
-    alpha3: 'PRK',
+    alpha2: 'kp',
+    alpha3: 'prk',
     translations: {
       de: 'Nordkorea',
       en: 'Korea (Democratic People’s Republic of)',
@@ -1298,8 +1298,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'KR',
-    alpha3: 'KOR',
+    alpha2: 'kr',
+    alpha3: 'kor',
     translations: {
       de: 'Südkorea',
       en: 'Korea, Republic of',
@@ -1309,8 +1309,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'KW',
-    alpha3: 'KWT',
+    alpha2: 'kw',
+    alpha3: 'kwt',
     translations: {
       de: 'Kuwait',
       en: 'Kuwait',
@@ -1320,8 +1320,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'KG',
-    alpha3: 'KGZ',
+    alpha2: 'kg',
+    alpha3: 'kgz',
     translations: {
       de: 'Kirgisistan',
       en: 'Kyrgyzstan',
@@ -1331,8 +1331,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'LA',
-    alpha3: 'LAO',
+    alpha2: 'la',
+    alpha3: 'lao',
     translations: {
       de: 'Laos',
       en: 'Lao People’s Democratic Republic',
@@ -1342,8 +1342,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'LV',
-    alpha3: 'LVA',
+    alpha2: 'lv',
+    alpha3: 'lva',
     translations: {
       de: 'Lettland',
       en: 'Latvia',
@@ -1353,8 +1353,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'LB',
-    alpha3: 'LBN',
+    alpha2: 'lb',
+    alpha3: 'lbn',
     translations: {
       de: 'Libanon',
       en: 'Lebanon',
@@ -1364,8 +1364,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'LS',
-    alpha3: 'LSO',
+    alpha2: 'ls',
+    alpha3: 'lso',
     translations: {
       de: 'Lesotho',
       en: 'Lesotho',
@@ -1375,8 +1375,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'LR',
-    alpha3: 'LBR',
+    alpha2: 'lr',
+    alpha3: 'lbr',
     translations: {
       de: 'Liberia',
       en: 'Liberia',
@@ -1386,8 +1386,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'LY',
-    alpha3: 'LBY',
+    alpha2: 'ly',
+    alpha3: 'lby',
     translations: {
       de: 'Libyen',
       en: 'Libya',
@@ -1397,8 +1397,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'LI',
-    alpha3: 'LIE',
+    alpha2: 'li',
+    alpha3: 'lie',
     translations: {
       de: 'Liechtenstein',
       en: 'Liechtenstein',
@@ -1408,8 +1408,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'LT',
-    alpha3: 'LTU',
+    alpha2: 'lt',
+    alpha3: 'ltu',
     translations: {
       de: 'Litauen',
       en: 'Lithuania',
@@ -1419,8 +1419,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'LU',
-    alpha3: 'LUX',
+    alpha2: 'lu',
+    alpha3: 'lux',
     translations: {
       de: 'Luxemburg',
       en: 'Luxembourg',
@@ -1430,8 +1430,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MO',
-    alpha3: 'MAC',
+    alpha2: 'mo',
+    alpha3: 'mac',
     translations: {
       de: 'Sonderverwaltungszone Macao',
       en: 'Macao',
@@ -1441,8 +1441,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MG',
-    alpha3: 'MDG',
+    alpha2: 'mg',
+    alpha3: 'mdg',
     translations: {
       de: 'Madagaskar',
       en: 'Madagascar',
@@ -1452,8 +1452,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MW',
-    alpha3: 'MWI',
+    alpha2: 'mw',
+    alpha3: 'mwi',
     translations: {
       de: 'Malawi',
       en: 'Malawi',
@@ -1463,8 +1463,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MY',
-    alpha3: 'MYS',
+    alpha2: 'my',
+    alpha3: 'mys',
     translations: {
       de: 'Malaysia',
       en: 'Malaysia',
@@ -1474,8 +1474,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MV',
-    alpha3: 'MDV',
+    alpha2: 'mv',
+    alpha3: 'mdv',
     translations: {
       de: 'Malediven',
       en: 'Maldives',
@@ -1485,8 +1485,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'ML',
-    alpha3: 'MLI',
+    alpha2: 'ml',
+    alpha3: 'mli',
     translations: {
       de: 'Mali',
       en: 'Mali',
@@ -1496,8 +1496,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MT',
-    alpha3: 'MLT',
+    alpha2: 'mt',
+    alpha3: 'mlt',
     translations: {
       de: 'Malta',
       en: 'Malta',
@@ -1507,8 +1507,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MH',
-    alpha3: 'MHL',
+    alpha2: 'mh',
+    alpha3: 'mhl',
     translations: {
       de: 'Marshallinseln',
       en: 'Marshall Islands',
@@ -1518,8 +1518,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MQ',
-    alpha3: 'MTQ',
+    alpha2: 'mq',
+    alpha3: 'mtq',
     translations: {
       de: 'Martinique',
       en: 'Martinique',
@@ -1529,8 +1529,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MR',
-    alpha3: 'MRT',
+    alpha2: 'mr',
+    alpha3: 'mrt',
     translations: {
       de: 'Mauretanien',
       en: 'Mauritania',
@@ -1540,8 +1540,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MU',
-    alpha3: 'MUS',
+    alpha2: 'mu',
+    alpha3: 'mus',
     translations: {
       de: 'Mauritius',
       en: 'Mauritius',
@@ -1551,8 +1551,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'YT',
-    alpha3: 'MYT',
+    alpha2: 'yt',
+    alpha3: 'myt',
     translations: {
       de: 'Mayotte',
       en: 'Mayotte',
@@ -1562,8 +1562,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MX',
-    alpha3: 'MEX',
+    alpha2: 'mx',
+    alpha3: 'mex',
     translations: {
       de: 'Mexiko',
       en: 'Mexico',
@@ -1573,8 +1573,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'FM',
-    alpha3: 'FSM',
+    alpha2: 'fm',
+    alpha3: 'fsm',
     translations: {
       de: 'Mikronesien',
       en: 'Micronesia (Federated States of)',
@@ -1584,8 +1584,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MD',
-    alpha3: 'MDA',
+    alpha2: 'md',
+    alpha3: 'mda',
     translations: {
       de: 'Republik Moldau',
       en: 'Moldova (Republic of)',
@@ -1595,8 +1595,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MC',
-    alpha3: 'MCO',
+    alpha2: 'mc',
+    alpha3: 'mco',
     translations: {
       de: 'Monaco',
       en: 'Monaco',
@@ -1606,8 +1606,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MN',
-    alpha3: 'MNG',
+    alpha2: 'mn',
+    alpha3: 'mng',
     translations: {
       de: 'Mongolei',
       en: 'Mongolia',
@@ -1617,8 +1617,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'ME',
-    alpha3: 'MNE',
+    alpha2: 'me',
+    alpha3: 'mne',
     translations: {
       de: 'Montenegro',
       en: 'Montenegro',
@@ -1628,8 +1628,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MS',
-    alpha3: 'MSR',
+    alpha2: 'ms',
+    alpha3: 'msr',
     translations: {
       de: 'Montserrat',
       en: 'Montserrat',
@@ -1639,8 +1639,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MA',
-    alpha3: 'MAR',
+    alpha2: 'ma',
+    alpha3: 'mar',
     translations: {
       de: 'Marokko',
       en: 'Morocco',
@@ -1650,8 +1650,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MZ',
-    alpha3: 'MOZ',
+    alpha2: 'mz',
+    alpha3: 'moz',
     translations: {
       de: 'Mosambik',
       en: 'Mozambique',
@@ -1661,8 +1661,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MM',
-    alpha3: 'MMR',
+    alpha2: 'mm',
+    alpha3: 'mmr',
     translations: {
       de: 'Myanmar',
       en: 'Myanmar',
@@ -1672,8 +1672,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'NA',
-    alpha3: 'NAM',
+    alpha2: 'na',
+    alpha3: 'nam',
     translations: {
       de: 'Namibia',
       en: 'Namibia',
@@ -1683,8 +1683,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'NR',
-    alpha3: 'NRU',
+    alpha2: 'nr',
+    alpha3: 'nru',
     translations: {
       de: 'Nauru',
       en: 'Nauru',
@@ -1694,8 +1694,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'NP',
-    alpha3: 'NPL',
+    alpha2: 'np',
+    alpha3: 'npl',
     translations: {
       de: 'Nepal',
       en: 'Nepal',
@@ -1705,8 +1705,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'NL',
-    alpha3: 'NLD',
+    alpha2: 'nl',
+    alpha3: 'nld',
     translations: {
       de: 'Niederlande',
       en: 'Netherlands',
@@ -1716,8 +1716,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'NC',
-    alpha3: 'NCL',
+    alpha2: 'nc',
+    alpha3: 'ncl',
     translations: {
       de: 'Neukaledonien',
       en: 'New Caledonia',
@@ -1727,8 +1727,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'NZ',
-    alpha3: 'NZL',
+    alpha2: 'nz',
+    alpha3: 'nzl',
     translations: {
       de: 'Neuseeland',
       en: 'New Zealand',
@@ -1738,8 +1738,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'NI',
-    alpha3: 'NIC',
+    alpha2: 'ni',
+    alpha3: 'nic',
     translations: {
       de: 'Nicaragua',
       en: 'Nicaragua',
@@ -1749,8 +1749,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'NE',
-    alpha3: 'NER',
+    alpha2: 'ne',
+    alpha3: 'ner',
     translations: {
       de: 'Niger',
       en: 'Niger',
@@ -1760,8 +1760,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'NG',
-    alpha3: 'NGA',
+    alpha2: 'ng',
+    alpha3: 'nga',
     translations: {
       de: 'Nigeria',
       en: 'Nigeria',
@@ -1771,8 +1771,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'NU',
-    alpha3: 'NIU',
+    alpha2: 'nu',
+    alpha3: 'niu',
     translations: {
       de: 'Niue',
       en: 'Niue',
@@ -1782,8 +1782,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'NF',
-    alpha3: 'NFK',
+    alpha2: 'nf',
+    alpha3: 'nfk',
     translations: {
       de: 'Norfolkinsel',
       en: 'Norfolk Island',
@@ -1793,8 +1793,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MK',
-    alpha3: 'MKD',
+    alpha2: 'mk',
+    alpha3: 'mkd',
     translations: {
       de: 'Nordmazedonien',
       en: 'North Macedonia',
@@ -1804,8 +1804,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MP',
-    alpha3: 'MNP',
+    alpha2: 'mp',
+    alpha3: 'mnp',
     translations: {
       de: 'Nördliche Marianen',
       en: 'Northern Mariana Islands',
@@ -1815,8 +1815,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'NO',
-    alpha3: 'NOR',
+    alpha2: 'no',
+    alpha3: 'nor',
     translations: {
       de: 'Norwegen',
       en: 'Norway',
@@ -1826,8 +1826,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'OM',
-    alpha3: 'OMN',
+    alpha2: 'om',
+    alpha3: 'omn',
     translations: {
       de: 'Oman',
       en: 'Oman',
@@ -1837,8 +1837,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'PK',
-    alpha3: 'PAK',
+    alpha2: 'pk',
+    alpha3: 'pak',
     translations: {
       de: 'Pakistan',
       en: 'Pakistan',
@@ -1848,8 +1848,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'PW',
-    alpha3: 'PLW',
+    alpha2: 'pw',
+    alpha3: 'plw',
     translations: {
       de: 'Palau',
       en: 'Palau',
@@ -1859,8 +1859,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'PS',
-    alpha3: 'PSE',
+    alpha2: 'ps',
+    alpha3: 'pse',
     translations: {
       de: 'Palästina',
       en: 'Palestine, State of',
@@ -1870,8 +1870,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'PA',
-    alpha3: 'PAN',
+    alpha2: 'pa',
+    alpha3: 'pan',
     translations: {
       de: 'Panama',
       en: 'Panama',
@@ -1881,8 +1881,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'PG',
-    alpha3: 'PNG',
+    alpha2: 'pg',
+    alpha3: 'png',
     translations: {
       de: 'Papua-Neuguinea',
       en: 'Papua New Guinea',
@@ -1892,8 +1892,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'PY',
-    alpha3: 'PRY',
+    alpha2: 'py',
+    alpha3: 'pry',
     translations: {
       de: 'Paraguay',
       en: 'Paraguay',
@@ -1903,8 +1903,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'PE',
-    alpha3: 'PER',
+    alpha2: 'pe',
+    alpha3: 'per',
     translations: {
       de: 'Peru',
       en: 'Peru',
@@ -1914,8 +1914,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'PH',
-    alpha3: 'PHL',
+    alpha2: 'ph',
+    alpha3: 'phl',
     translations: {
       de: 'Philippinen',
       en: 'Philippines',
@@ -1925,8 +1925,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'PN',
-    alpha3: 'PCN',
+    alpha2: 'pn',
+    alpha3: 'pcn',
     translations: {
       de: 'Pitcairninseln',
       en: 'Pitcairn',
@@ -1936,8 +1936,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'PL',
-    alpha3: 'POL',
+    alpha2: 'pl',
+    alpha3: 'pol',
     translations: {
       de: 'Polen',
       en: 'Poland',
@@ -1947,8 +1947,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'PT',
-    alpha3: 'PRT',
+    alpha2: 'pt',
+    alpha3: 'prt',
     translations: {
       de: 'Portugal',
       en: 'Portugal',
@@ -1958,8 +1958,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'PR',
-    alpha3: 'PRI',
+    alpha2: 'pr',
+    alpha3: 'pri',
     translations: {
       de: 'Puerto Rico',
       en: 'Puerto Rico',
@@ -1969,8 +1969,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'QA',
-    alpha3: 'QAT',
+    alpha2: 'qa',
+    alpha3: 'qat',
     translations: {
       de: 'Katar',
       en: 'Qatar',
@@ -1980,8 +1980,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'RE',
-    alpha3: 'REU',
+    alpha2: 're',
+    alpha3: 'reu',
     translations: {
       de: 'Réunion',
       en: 'Réunion',
@@ -1991,8 +1991,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'RO',
-    alpha3: 'ROU',
+    alpha2: 'ro',
+    alpha3: 'rou',
     translations: {
       de: 'Rumänien',
       en: 'Romania',
@@ -2002,8 +2002,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'RU',
-    alpha3: 'RUS',
+    alpha2: 'ru',
+    alpha3: 'rus',
     translations: {
       de: 'Russland',
       en: 'Russian Federation',
@@ -2013,8 +2013,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'RW',
-    alpha3: 'RWA',
+    alpha2: 'rw',
+    alpha3: 'rwa',
     translations: {
       de: 'Ruanda',
       en: 'Rwanda',
@@ -2024,8 +2024,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'BL',
-    alpha3: 'BLM',
+    alpha2: 'bl',
+    alpha3: 'blm',
     translations: {
       de: 'Saint-Barthélemy',
       en: 'Saint Barthélemy',
@@ -2035,8 +2035,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SH',
-    alpha3: 'SHN',
+    alpha2: 'sh',
+    alpha3: 'shn',
     translations: {
       de: 'St. Helena, Ascension und Tristan da Cunha',
       en: 'Saint Helena, Ascension and Tristan da Cunha',
@@ -2046,8 +2046,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'KN',
-    alpha3: 'KNA',
+    alpha2: 'kn',
+    alpha3: 'kna',
     translations: {
       de: 'St. Kitts und Nevis',
       en: 'Saint Kitts and Nevis',
@@ -2057,8 +2057,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'LC',
-    alpha3: 'LCA',
+    alpha2: 'lc',
+    alpha3: 'lca',
     translations: {
       de: 'St. Lucia',
       en: 'Saint Lucia',
@@ -2068,8 +2068,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'MF',
-    alpha3: 'MAF',
+    alpha2: 'mf',
+    alpha3: 'maf',
     translations: {
       de: 'Saint-Martin (franz. Teil)',
       en: 'Saint Martin (French part)',
@@ -2079,8 +2079,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'PM',
-    alpha3: 'SPM',
+    alpha2: 'pm',
+    alpha3: 'spm',
     translations: {
       de: 'Saint-Pierre und Miquelon',
       en: 'Saint Pierre and Miquelon',
@@ -2090,8 +2090,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'VC',
-    alpha3: 'VCT',
+    alpha2: 'vc',
+    alpha3: 'vct',
     translations: {
       de: 'St. Vincent und die Grenadinen',
       en: 'Saint Vincent and the Grenadines',
@@ -2101,8 +2101,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'WS',
-    alpha3: 'WSM',
+    alpha2: 'ws',
+    alpha3: 'wsm',
     translations: {
       de: 'Samoa',
       en: 'Samoa',
@@ -2112,8 +2112,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SM',
-    alpha3: 'SMR',
+    alpha2: 'sm',
+    alpha3: 'smr',
     translations: {
       de: 'San Marino',
       en: 'San Marino',
@@ -2123,8 +2123,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'ST',
-    alpha3: 'STP',
+    alpha2: 'st',
+    alpha3: 'stp',
     translations: {
       de: 'São Tomé und Príncipe',
       en: 'Sao Tome and Principe',
@@ -2134,8 +2134,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SA',
-    alpha3: 'SAU',
+    alpha2: 'sa',
+    alpha3: 'sau',
     translations: {
       de: 'Saudi-Arabien',
       en: 'Saudi Arabia',
@@ -2145,8 +2145,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SN',
-    alpha3: 'SEN',
+    alpha2: 'sn',
+    alpha3: 'sen',
     translations: {
       de: 'Senegal',
       en: 'Senegal',
@@ -2156,8 +2156,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'RS',
-    alpha3: 'SRB',
+    alpha2: 'rs',
+    alpha3: 'srb',
     translations: {
       de: 'Serbien',
       en: 'Serbia',
@@ -2167,8 +2167,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SC',
-    alpha3: 'SYC',
+    alpha2: 'sc',
+    alpha3: 'syc',
     translations: {
       de: 'Seychellen',
       en: 'Seychelles',
@@ -2178,8 +2178,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SL',
-    alpha3: 'SLE',
+    alpha2: 'sl',
+    alpha3: 'sle',
     translations: {
       de: 'Sierra Leone',
       en: 'Sierra Leone',
@@ -2189,8 +2189,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SG',
-    alpha3: 'SGP',
+    alpha2: 'sg',
+    alpha3: 'sgp',
     translations: {
       de: 'Singapur',
       en: 'Singapore',
@@ -2200,8 +2200,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SX',
-    alpha3: 'SXM',
+    alpha2: 'sx',
+    alpha3: 'sxm',
     translations: {
       de: 'Sint Maarten (niederl. Teil)',
       en: 'Sint Maarten (Dutch part)',
@@ -2211,8 +2211,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SK',
-    alpha3: 'SVK',
+    alpha2: 'sk',
+    alpha3: 'svk',
     translations: {
       de: 'Slowakei',
       en: 'Slovakia',
@@ -2222,8 +2222,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SI',
-    alpha3: 'SVN',
+    alpha2: 'si',
+    alpha3: 'svn',
     translations: {
       de: 'Slowenien',
       en: 'Slovenia',
@@ -2233,8 +2233,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SB',
-    alpha3: 'SLB',
+    alpha2: 'sb',
+    alpha3: 'slb',
     translations: {
       de: 'Salomonen',
       en: 'Solomon Islands',
@@ -2244,8 +2244,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SO',
-    alpha3: 'SOM',
+    alpha2: 'so',
+    alpha3: 'som',
     translations: {
       de: 'Somalia',
       en: 'Somalia',
@@ -2255,8 +2255,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'ZA',
-    alpha3: 'ZAF',
+    alpha2: 'za',
+    alpha3: 'zaf',
     translations: {
       de: 'Südafrika',
       en: 'South Africa',
@@ -2266,8 +2266,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GS',
-    alpha3: 'SGS',
+    alpha2: 'gs',
+    alpha3: 'sgs',
     translations: {
       de: 'Südgeorgien und die Südlichen Sandwichinseln',
       en: 'South Georgia and the South Sandwich Islands',
@@ -2277,8 +2277,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'KR',
-    alpha3: 'KOR',
+    alpha2: 'kr',
+    alpha3: 'kor',
     translations: {
       de: 'Südkorea',
       en: 'Korea, Republic of',
@@ -2288,8 +2288,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SS',
-    alpha3: 'SSD',
+    alpha2: 'ss',
+    alpha3: 'ssd',
     translations: {
       de: 'Südsudan',
       en: 'South Sudan',
@@ -2299,8 +2299,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'ES',
-    alpha3: 'ESP',
+    alpha2: 'es',
+    alpha3: 'esp',
     translations: {
       de: 'Spanien',
       en: 'Spain',
@@ -2310,8 +2310,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'LK',
-    alpha3: 'LKA',
+    alpha2: 'lk',
+    alpha3: 'lka',
     translations: {
       de: 'Sri Lanka',
       en: 'Sri Lanka',
@@ -2321,8 +2321,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SD',
-    alpha3: 'SDN',
+    alpha2: 'sd',
+    alpha3: 'sdn',
     translations: {
       de: 'Sudan',
       en: 'Sudan',
@@ -2332,8 +2332,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SR',
-    alpha3: 'SUR',
+    alpha2: 'sr',
+    alpha3: 'sur',
     translations: {
       de: 'Suriname',
       en: 'Suriname',
@@ -2343,8 +2343,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SJ',
-    alpha3: 'SJM',
+    alpha2: 'sj',
+    alpha3: 'sjm',
     translations: {
       de: 'Svalbard und Jan Mayen',
       en: 'Svalbard and Jan Mayen',
@@ -2354,8 +2354,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SE',
-    alpha3: 'SWE',
+    alpha2: 'se',
+    alpha3: 'swe',
     translations: {
       de: 'Schweden',
       en: 'Sweden',
@@ -2365,8 +2365,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'CH',
-    alpha3: 'CHE',
+    alpha2: 'ch',
+    alpha3: 'che',
     translations: {
       de: 'Schweiz',
       en: 'Switzerland',
@@ -2376,8 +2376,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'SY',
-    alpha3: 'SYR',
+    alpha2: 'sy',
+    alpha3: 'syr',
     translations: {
       de: 'Syrien',
       en: 'Syrian Arab Republic',
@@ -2387,8 +2387,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'TW',
-    alpha3: 'TWN',
+    alpha2: 'tw',
+    alpha3: 'twn',
     translations: {
       de: 'Taiwan',
       en: 'Taiwan',
@@ -2398,8 +2398,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'TJ',
-    alpha3: 'TJK',
+    alpha2: 'tj',
+    alpha3: 'tjk',
     translations: {
       de: 'Tadschikistan',
       en: 'Tajikistan',
@@ -2409,8 +2409,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'TZ',
-    alpha3: 'TZA',
+    alpha2: 'tz',
+    alpha3: 'tza',
     translations: {
       de: 'Tansania',
       en: 'Tanzania, United Republic of',
@@ -2420,8 +2420,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'TH',
-    alpha3: 'THA',
+    alpha2: 'th',
+    alpha3: 'tha',
     translations: {
       de: 'Thailand',
       en: 'Thailand',
@@ -2431,8 +2431,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'TL',
-    alpha3: 'TLS',
+    alpha2: 'tl',
+    alpha3: 'tls',
     translations: {
       de: 'Timor-Leste',
       en: 'Timor-Leste',
@@ -2442,8 +2442,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'TG',
-    alpha3: 'TGO',
+    alpha2: 'tg',
+    alpha3: 'tgo',
     translations: {
       de: 'Togo',
       en: 'Togo',
@@ -2453,8 +2453,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'TK',
-    alpha3: 'TKL',
+    alpha2: 'tk',
+    alpha3: 'tkl',
     translations: {
       de: 'Tokelau',
       en: 'Tokelau',
@@ -2464,8 +2464,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'TO',
-    alpha3: 'TON',
+    alpha2: 'to',
+    alpha3: 'ton',
     translations: {
       de: 'Tonga',
       en: 'Tonga',
@@ -2475,8 +2475,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'TT',
-    alpha3: 'TTO',
+    alpha2: 'tt',
+    alpha3: 'tto',
     translations: {
       de: 'Trinidad und Tobago',
       en: 'Trinidad and Tobago',
@@ -2486,8 +2486,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'TN',
-    alpha3: 'TUN',
+    alpha2: 'tn',
+    alpha3: 'tun',
     translations: {
       de: 'Tunesien',
       en: 'Tunisia',
@@ -2497,8 +2497,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'TR',
-    alpha3: 'TUR',
+    alpha2: 'tr',
+    alpha3: 'tur',
     translations: {
       de: 'Türkei',
       en: 'Türkiye',
@@ -2508,8 +2508,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'TM',
-    alpha3: 'TKM',
+    alpha2: 'tm',
+    alpha3: 'tkm',
     translations: {
       de: 'Turkmenistan',
       en: 'Turkmenistan',
@@ -2519,8 +2519,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'TC',
-    alpha3: 'TCA',
+    alpha2: 'tc',
+    alpha3: 'tca',
     translations: {
       de: 'Turks- und Caicosinseln',
       en: 'Turks and Caicos Islands',
@@ -2530,8 +2530,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'TV',
-    alpha3: 'TUV',
+    alpha2: 'tv',
+    alpha3: 'tuv',
     translations: {
       de: 'Tuvalu',
       en: 'Tuvalu',
@@ -2541,8 +2541,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'UG',
-    alpha3: 'UGA',
+    alpha2: 'ug',
+    alpha3: 'uga',
     translations: {
       de: 'Uganda',
       en: 'Uganda',
@@ -2552,8 +2552,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'UA',
-    alpha3: 'UKR',
+    alpha2: 'ua',
+    alpha3: 'ukr',
     translations: {
       de: 'Ukraine',
       en: 'Ukraine',
@@ -2563,8 +2563,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'AE',
-    alpha3: 'ARE',
+    alpha2: 'ae',
+    alpha3: 'are',
     translations: {
       de: 'Vereinigte Arabische Emirate',
       en: 'United Arab Emirates',
@@ -2574,8 +2574,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'GB',
-    alpha3: 'GBR',
+    alpha2: 'gb',
+    alpha3: 'gbr',
     translations: {
       de: 'Vereinigtes Königreich',
       en: 'United Kingdom',
@@ -2585,8 +2585,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'UM',
-    alpha3: 'UMI',
+    alpha2: 'um',
+    alpha3: 'umi',
     translations: {
       de: 'Amerikanische Überseeinseln',
       en: 'United States Minor Outlying Islands',
@@ -2596,8 +2596,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'US',
-    alpha3: 'USA',
+    alpha2: 'us',
+    alpha3: 'usa',
     translations: {
       de: 'Vereinigte Staaten von Amerika',
       en: 'United States of America',
@@ -2607,8 +2607,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'UY',
-    alpha3: 'URY',
+    alpha2: 'uy',
+    alpha3: 'ury',
     translations: {
       de: 'Uruguay',
       en: 'Uruguay',
@@ -2618,8 +2618,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'UZ',
-    alpha3: 'UZB',
+    alpha2: 'uz',
+    alpha3: 'uzb',
     translations: {
       de: 'Usbekistan',
       en: 'Uzbekistan',
@@ -2629,8 +2629,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'VU',
-    alpha3: 'VUT',
+    alpha2: 'vu',
+    alpha3: 'vut',
     translations: {
       de: 'Vanuatu',
       en: 'Vanuatu',
@@ -2640,8 +2640,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'VE',
-    alpha3: 'VEN',
+    alpha2: 've',
+    alpha3: 'ven',
     translations: {
       de: 'Venezuela',
       en: 'Venezuela (Bolivarian Republic of)',
@@ -2651,8 +2651,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'VN',
-    alpha3: 'VNM',
+    alpha2: 'vn',
+    alpha3: 'vnm',
     translations: {
       de: 'Vietnam',
       en: 'Viet Nam',
@@ -2662,8 +2662,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'VG',
-    alpha3: 'VGB',
+    alpha2: 'vg',
+    alpha3: 'vgb',
     translations: {
       de: 'Britische Jungferninseln',
       en: 'Virgin Islands (British)',
@@ -2673,8 +2673,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'VI',
-    alpha3: 'VIR',
+    alpha2: 'vi',
+    alpha3: 'vir',
     translations: {
       de: 'Amerikanische Jungferninseln',
       en: 'Virgin Islands (U.S.)',
@@ -2684,8 +2684,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'WF',
-    alpha3: 'WLF',
+    alpha2: 'wf',
+    alpha3: 'wlf',
     translations: {
       de: 'Wallis und Futuna',
       en: 'Wallis and Futuna',
@@ -2695,8 +2695,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'EH',
-    alpha3: 'ESH',
+    alpha2: 'eh',
+    alpha3: 'esh',
     translations: {
       de: 'Westsahara',
       en: 'Western Sahara',
@@ -2706,8 +2706,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'YE',
-    alpha3: 'YEM',
+    alpha2: 'ye',
+    alpha3: 'yem',
     translations: {
       de: 'Jemen',
       en: 'Yemen',
@@ -2717,8 +2717,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'ZM',
-    alpha3: 'ZMB',
+    alpha2: 'zm',
+    alpha3: 'zmb',
     translations: {
       de: 'Sambia',
       en: 'Zambia',
@@ -2728,8 +2728,8 @@ export const countries = [
     }
   },
   {
-    alpha2: 'ZW',
-    alpha3: 'ZWE',
+    alpha2: 'zw',
+    alpha3: 'zwe',
     translations: {
       de: 'Simbabwe',
       en: 'Zimbabwe',

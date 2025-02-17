@@ -19,7 +19,7 @@ This library is designed to work seamlessly with the latest Angular versions (16
 It leverages modern Angular features while maintaining backward compatibility.
 
 - **🌍 Multi-language Magic**  
-  Supports German, English, French, Spanish and Italian + easily extendable to any language
+  Supports English, French, Spanish, Italian, German, Arabic, Chinese, Hindi, Bengali, Portuguese and Russian + easily extendable to any language
 
 - **🎌 Flag Images** 🇺🇸 🇩🇪 🇫🇷 🇪🇸 🇮🇹  
   OS & Browser independent flag images

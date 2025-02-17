@@ -57,3 +57,35 @@ pre code {
 .code::-webkit-scrollbar-track {
   background: #2d2d2d;
 }
+
+t.two-column-layout {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.left-column {
+  flex: 1;
+  max-width: 300px;
+}
+
+.right-column {
+  flex: 2;
+  display: flex;
+  flex-wrap: wrap; /* Erlaubt das Umbrücken der Spalten */
+  gap: 20px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row; /* Stellt sicher, dass wir die Radio Buttons horizontal anzeigen */
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.radio-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 140px; /* Platz für 5 Radio Buttons in einer Spalte */
+}

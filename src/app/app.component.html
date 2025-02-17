@@ -32,12 +32,12 @@ ng add &#64;wlucha/ng-country-select
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select
-  [excludeCountries]="['US', 'DE', 'FR']"
+  [excludeCountries]="['us', 'de', 'fr']"
 &gt;&lt;/ng-country-select&gt;
       </code></pre>
     </div>
     <div class="preview">
-      <ng-country-select [excludeCountries]="['US', 'DE', 'FR']"></ng-country-select>
+      <ng-country-select [excludeCountries]="['us', 'de', 'fr']"></ng-country-select>
     </div>
   </div>
 
@@ -47,12 +47,12 @@ ng add &#64;wlucha/ng-country-select
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select
-  [includeCountries]="['US', 'DE', 'FR']"
+  [includeCountries]="['us', 'de', 'fr']"
 &gt;&lt;/ng-country-select&gt;
       </code></pre>
     </div>
     <div class="preview">
-      <ng-country-select [includeCountries]="['US', 'DE', 'FR']"></ng-country-select>
+      <ng-country-select [includeCountries]="['us', 'de', 'fr']"></ng-country-select>
     </div>
   </div>
 
@@ -89,18 +89,81 @@ ng add &#64;wlucha/ng-country-select
   <!-- Example 6: Set language & placeholder -->
   <div class="example">
     <h2>6. Set language & placeholder</h2>
-    <div class="code">
-      <pre><code class="language-html">
-&lt;ng-country-select
-  [lang]="'es'" // Set spanish as language
-  [placeholder]="'Seleccionar país'"
-  [defaultCountry]="presetCountry"
-&gt;&lt;/ng-country-select&gt;
+    
+    <mat-tab-group>
+      <mat-tab label="HTML">
+        <div class="code">
+          <pre><code class="language-html">
+  &lt;ng-country-select
+    [lang]="selectedLang"
+    [placeholder]="placeholderMap[selectedLang]"
+    [defaultCountry]="presetCountry"
+  &gt;&lt;/ng-country-select&gt;
+          </code></pre>
+        </div>
+      </mat-tab>
+  
+      <mat-tab label="TypeScript">
+        <div class="code">
+          <pre><code class="language-typescript">
+  import &#123; Component &#125; from '&#64;angular/core';
+  import &#123; CountrySelectComponent, Country &#125; from '&#64;wlucha/ng-country-select';
+            
+  &#64;Component&#123; 
+      selector: 'app-country-select', 
+      templateUrl: './country-select.component.html', 
+      styleUrls: ['./country-select.component.css'],
+      imports: [CountrySelectComponent]
+    &#125;
+    export class CountrySelectComponent &#123;
+      selectedLang: string = 'en';
+      placeholderMap = &#123;
+        'en': 'Select Country',
+        'de': 'Land auswählen',
+        'fr': 'Choisir un pays',
+        'es': 'Seleccionar país',
+        'zh': '选择国家',
+        'ar': 'اختر الدولة',
+        'hi': 'देश चुनें',
+        'bn': 'দেশ নির্বাচন করুন',
+        'pt': 'Selecionar país',
+        'ru': 'Выберите страну'
+      &#125;;
+      presetCountry: string = 'US';
+  &#125;
             </code></pre>
-    </div>
-    <div class="preview">
-      <ng-country-select [lang]="'es'" [placeholder]="'Seleccionar país'"
-        [defaultCountry]="presetCountry"></ng-country-select>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  
+    <div class="preview two-column-layout">
+      <div class="left-column">
+        <ng-country-select 
+          [lang]="selectedLang" 
+          [placeholder]="placeholderMap[selectedLang]"
+          [defaultCountry]="presetCountry">
+        </ng-country-select>
+      </div>
+  
+      <div class="right-column">
+        <mat-radio-group [(ngModel)]="selectedLang" class="radio-group">
+          <div class="radio-column">
+            <mat-radio-button [value]="'en'">English</mat-radio-button>
+            <mat-radio-button [value]="'de'">Deutsch</mat-radio-button>
+            <mat-radio-button [value]="'fr'">Français</mat-radio-button>
+            <mat-radio-button [value]="'es'">Español</mat-radio-button>
+            <mat-radio-button [value]="'zh'">中文</mat-radio-button>
+          </div>
+          
+          <div class="radio-column">
+            <mat-radio-button [value]="'ar'">العربية</mat-radio-button>
+            <mat-radio-button [value]="'hi'">हिंदी</mat-radio-button>
+            <mat-radio-button [value]="'bn'">বাংলা</mat-radio-button>
+            <mat-radio-button [value]="'pt'">Português</mat-radio-button>
+            <mat-radio-button [value]="'ru'">Русский</mat-radio-button>
+          </div>
+        </mat-radio-group>
+      </div>
     </div>
   </div>
 

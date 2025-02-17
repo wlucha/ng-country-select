@@ -1,8 +1,9 @@
 import {
   Component, Input, Output, EventEmitter, ChangeDetectionStrategy,
-  OnInit
+  OnInit,
+  forwardRef
 } from '@angular/core';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -30,7 +31,14 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
   ],
   templateUrl: './country-select.component.html',
   styleUrls: ['./country-select.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => CountrySelectComponent),
+      multi: true
+    }
+  ]
 })
 export class CountrySelectComponent implements OnInit {
 
@@ -42,10 +50,18 @@ export class CountrySelectComponent implements OnInit {
 
   /**
    * Default language for displaying country names
-   * Currently supported: 'en', 'de', 'fr', 'es', 'it'
+   * Currently supported: 'en', 'de', 'fr', 'es', 'it', 'ar', 'zh', 'hi', 'bn', 'pt' and 'ru'
    * @default 'en'
    */
-  @Input() public lang = 'en';
+  private _lang = 'en';
+  @Input()
+  set lang(value: string) {
+    this._lang = value;
+    this.updateLanguage();
+  }
+  get lang(): string {
+    return this._lang;
+  }
 
   /**
    * Search in all available languages or only in the selected language
@@ -158,6 +174,8 @@ export class CountrySelectComponent implements OnInit {
   public filteredCountries$: Observable<Country[]> | undefined;
   private countries: Country[] = countries.slice();
   public height!: string;
+  private onChange: any = () => { };
+  private onTouched: any = () => { };
 
   ngOnInit(): void {
     this.setupFilter();
@@ -165,6 +183,20 @@ export class CountrySelectComponent implements OnInit {
     if (this.defaultCountry) {
       this.formControl.setValue(this.defaultCountry);
     }
+  }
+
+  public writeValue(country: Country | null): void {
+    if (country && !this.formControl.value || country?.alpha2 !== this.formControl.value?.alpha2) {
+      this.formControl.setValue(country);
+    }
+  }
+
+  public registerOnChange(fn: any): void {
+    this.onChange = fn;
+  }
+
+  public registerOnTouched(fn: any): void {
+    this.onTouched = fn;
   }
 
   /**
@@ -183,9 +215,9 @@ export class CountrySelectComponent implements OnInit {
    */
   public displayFn(country: Country | null): string {
     if (this.alpha2Only) {
-      return country?.alpha2 || '';
+      return country?.alpha2?.toUpperCase() || '';
     } else if (this.alpha3Only) {
-      return country?.alpha3 || '';
+      return country?.alpha3?.toUpperCase() || '';
     } else {
       return country?.translations ? country?.translations[this.lang] : '';
     }
@@ -209,6 +241,26 @@ export class CountrySelectComponent implements OnInit {
    */
   public trackByAlpha2(index: number, country: Country): string {
     return country.alpha2;
+  }
+
+  /**
+   * Update the displayed language for countries
+   */
+  private updateLanguage(): void {
+    this.filteredCountries$ = this.formControl.valueChanges.pipe(
+      startWith(this.formControl.value || ''),
+      debounceTime(this.debounceTime),
+      tap(value => {
+        if (typeof value === 'string') {
+          this.inputChanged.emit(value);
+        }
+      }),
+      map(value => this.filterCountries(value))
+    );
+
+    if (this.formControl.value) {
+      this.formControl.setValue(this.formControl.value);
+    }
   }
 
   /**

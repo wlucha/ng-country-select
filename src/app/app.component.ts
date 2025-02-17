@@ -1,19 +1,21 @@
 import { JsonPipe } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CountrySelectComponent, Country } from '@wlucha/ng-country-select';
 import hljs from 'highlight.js';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatTabsModule } from '@angular/material/tabs';
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CountrySelectComponent, JsonPipe],
+  imports: [FormsModule, ReactiveFormsModule, MatRadioModule, MatTabsModule, JsonPipe, CountrySelectComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  // Example preset country for demonstration
+
   presetCountry: Country = {
     alpha2: 'de',
     alpha3: 'deu',
@@ -21,15 +23,35 @@ export class AppComponent {
       de: 'Deutschland',
       en: 'Germany',
       fr: 'Allemagne',
+      it: 'Germania',
       es: 'Alemania',
-      it: 'Germania'
+      ar: 'ألمانيا',
+      zh: '德国',
+      hi: 'जर्मनी',
+      bn: 'জার্মানি',
+      pt: 'Alemanha',
+      ru: 'Германия'
     }
+  };
+
+  placeholderMap: any = {
+    'en': 'Search country',
+    'de': 'Land suchen',
+    'fr': 'Chercher un pays',
+    'es': 'Buscar país',
+    'zh': '搜索国家',
+    'ar': 'بحث عن البلد',
+    'hi': 'देश खोजें',
+    'bn': 'দেশ অনুসন্ধান',
+    'pt': 'Buscar país',
+    'ru': 'Поиск страны'
   };
 
   countryControl = new FormControl<Country>(this.presetCountry);
 
-  // For simple event handling example
   selectedCountry?: Country;
+
+  selectedLang: string = 'en';
 
   // Lifecycle hook to highlight code blocks after view initialization
   ngAfterViewInit(): void {
@@ -48,7 +70,7 @@ export class AppComponent {
   // Method to highlight code blocks
   private highlightCodeBlocks(): void {
     document.querySelectorAll('pre code').forEach((block) => {
-      hljs.highlightBlock(block as any);
+      hljs.highlightElement(block as any);
     });
   }
 }

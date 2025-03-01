@@ -8,7 +8,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/27c60301-aedc-4d97-8eb0-015912bab4b2">
+<img src="https://github.com/user-attachments/assets/e7946ea0-14ea-414c-8f48-c11dd257bfd1">
 </p>
 
 

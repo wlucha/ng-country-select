@@ -141,7 +141,7 @@ function addStylesToAngularJson(): Rule {
     }
 
     // Add the flag-icons stylesheet if it doesn't already exist
-    const stylePath = 'flag-icons/sass/flag-icons.min.css';
+    const stylePath = 'flag-icons/css/flag-icons.min.css';
     if (!styles.includes(stylePath)) {
       styles.push(stylePath);
       context.logger.info(`Added "${stylePath}" to angular.json styles.`);

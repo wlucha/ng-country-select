@@ -1,5 +1,5 @@
 import { JsonPipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit, viewChild } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CountrySelectComponent, Country } from '@wlucha/ng-country-select';
 import hljs from 'highlight.js';
@@ -14,7 +14,7 @@ import { MatTabsModule } from '@angular/material/tabs';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   presetCountry: Country = {
     alpha2: 'de',
@@ -52,6 +52,12 @@ export class AppComponent {
   selectedCountry?: Country;
 
   selectedLang: string = 'en';
+
+  countrySelect = viewChild<CountrySelectComponent>;
+
+  ngOnInit(): void {
+    this.countrySelect.selectedCountryByAlpha2 = 'de';
+  }
 
   // Lifecycle hook to highlight code blocks after view initialization
   ngAfterViewInit(): void {

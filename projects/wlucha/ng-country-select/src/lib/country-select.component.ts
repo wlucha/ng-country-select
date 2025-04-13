@@ -83,6 +83,39 @@ export class CountrySelectComponent implements OnInit {
   }
 
   /**
+   * Set a country programmatically by its alpha2 code
+   */
+  @Input() public set selectedCountryByAlpha2(alpha2: string) {
+    const country: Country | undefined = countries.find(c => c.alpha2 === alpha2);
+
+    if (country) {
+      this.formControl.setValue(country);
+    }
+  }
+
+  /**
+   * Set a country programmatically by its alpha3 code
+   */
+  @Input() public set selectedCountryByAlpha3(alpha3: string) {
+    const country: Country | undefined = countries.find(c => c.alpha3 === alpha3);
+
+    if (country) {
+      this.formControl.setValue(country);
+    }
+  }
+
+  /**
+   * Set a country programmatically by its name in the current language
+   */
+  @Input() public set selectedCountryByCurrentTranslation(name: string) {
+    const country: Country | undefined = countries.find((c: Country) => c.translations[this.lang] === name);
+
+    if (country) {
+      this.formControl.setValue(country);
+    }
+  }
+
+  /**
    * Form control for the country select
    */
   @Input() public formControl = new FormControl<Country | null>(null);

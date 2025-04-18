@@ -89,7 +89,7 @@ ng add &#64;wlucha/ng-country-select
   <!-- Example 6: Set language & placeholder -->
   <div class="example">
     <h2>6. Set language & placeholder</h2>
-    
+
     <mat-tab-group>
       <mat-tab label="HTML">
         <div class="code">
@@ -102,7 +102,7 @@ ng add &#64;wlucha/ng-country-select
           </code></pre>
         </div>
       </mat-tab>
-  
+
       <mat-tab label="TypeScript">
         <div class="code">
           <pre><code class="language-typescript">
@@ -135,16 +135,14 @@ ng add &#64;wlucha/ng-country-select
         </div>
       </mat-tab>
     </mat-tab-group>
-  
+
     <div class="preview two-column-layout">
       <div class="left-column">
-        <ng-country-select 
-          [lang]="selectedLang" 
-          [placeholder]="placeholderMap[selectedLang]"
+        <ng-country-select [lang]="selectedLang" [placeholder]="placeholderMap[selectedLang]"
           [defaultCountry]="presetCountry">
         </ng-country-select>
       </div>
-  
+
       <div class="right-column">
         <mat-radio-group [(ngModel)]="selectedLang" class="radio-group">
           <div class="radio-column">
@@ -154,7 +152,7 @@ ng add &#64;wlucha/ng-country-select
             <mat-radio-button [value]="'es'">Español</mat-radio-button>
             <mat-radio-button [value]="'zh'">中文</mat-radio-button>
           </div>
-          
+
           <div class="radio-column">
             <mat-radio-button [value]="'ar'">العربية</mat-radio-button>
             <mat-radio-button [value]="'hi'">हिंदी</mat-radio-button>
@@ -212,9 +210,42 @@ ng add &#64;wlucha/ng-country-select
     </div>
   </div>
 
-  <!-- Example 10: All Inputs and Outputs -->
+  <!-- Example 10: Set a country programmatically by Alpha2 -->
   <div class="example">
-    <h2>10. All Inputs & Outputs</h2>
+    <h2>10. Set a country programmatically by Alpha2</h2>
+    <div class="code">
+      <pre><code class="language-html">
+  &lt;ng-country-select
+    [selectedCountryByAlpha2]="alpha2Country"
+  &gt;&lt;/ng-country-select&gt;
+                  </code></pre>
+    </div>
+    <div class="preview">
+      <ng-country-select [selectedCountryByAlpha2]="alpha2Country"></ng-country-select>
+      <div> <button mat-raised-button (click)="setCountryByAlpha2()">Set Germany as country</button></div>
+    </div>
+  </div>
+
+    <!-- Example 11: Set a country programmatically by Alpha3 -->
+    <div class="example">
+      <h2>11. Set a country programmatically by Alpha3</h2>
+      <div class="code">
+        <pre><code class="language-html">
+    &lt;ng-country-select
+      [selectedCountryByAlpha3]="alpha3Country"
+    &gt;&lt;/ng-country-select&gt;
+                    </code></pre>
+      </div>
+      <div class="preview">
+        <ng-country-select [selectedCountryByAlpha3]="alpha3Country"></ng-country-select>
+        <div> <button mat-raised-button (click)="setCountryByAlpha3()">Set Germany as country</button></div>
+      </div>
+    </div>
+
+
+  <!-- Example 12: All Inputs and Outputs -->
+  <div class="example">
+    <h2>12. All Inputs & Outputs</h2>
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select
@@ -248,35 +279,4 @@ ng add &#64;wlucha/ng-country-select
     </div>
   </div>
 
-  <!-- Example 11: Set country by Alpha2 -->
-  <div class="example">
-    <h2>11. Set country programmatically</h2>
-    <div class="code">
-      <pre><code class="language-html">
-&lt;ng-country-select #countrySelect
-&gt;&lt;/ng-country-select&gt;
-      </code></pre>
-      <pre><code class="language-typescript">
-        import &#123; Component, OnInit, viewChild &#125; from '&#64;angular/core';
-        import &#123; CountrySelectComponent, Country &#125; from '&#64;wlucha/ng-country-select';
-                  
-        &#64;Component&#123; 
-            selector: 'app-country-select', 
-            templateUrl: './country-select.component.html', 
-            styleUrls: ['./country-select.component.css'],
-            imports: [CountrySelectComponent]
-          &#125;
-          export class CountrySelectExampleComponent implements OnInit &#123;
-            countrySelect = viewChild&#60;CountrySelectComponent&#62;;
-
-            ngOnInit(): &#123;
-              this.countrySelect.selectedCountryByAlpha2 = 'de';
-            &#125;    
-        &#125;
-                  </code></pre>
-    </div>
-    <div class="preview">
-      <ng-country-select #countrySelect ></ng-country-select>
-    </div>
-  </div>
 </div>

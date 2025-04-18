@@ -1,20 +1,23 @@
 import { JsonPipe } from '@angular/common';
-import { Component, OnInit, viewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CountrySelectComponent, Country } from '@wlucha/ng-country-select';
 import hljs from 'highlight.js';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatTabsModule } from '@angular/material/tabs';
+import {MatButtonModule} from '@angular/material/button';
+
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FormsModule, ReactiveFormsModule, MatRadioModule, MatTabsModule, JsonPipe, CountrySelectComponent],
+  imports: [FormsModule, ReactiveFormsModule, MatRadioModule, MatTabsModule, MatButtonModule, JsonPipe, CountrySelectComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
   presetCountry: Country = {
     alpha2: 'de',
@@ -52,12 +55,8 @@ export class AppComponent implements OnInit {
   selectedCountry?: Country;
 
   selectedLang: string = 'en';
-
-  countrySelect = viewChild<CountrySelectComponent>;
-
-  ngOnInit(): void {
-    this.countrySelect.selectedCountryByAlpha2 = 'de';
-  }
+  alpha2Country: string = '';
+  alpha3Country: string = '';
 
   // Lifecycle hook to highlight code blocks after view initialization
   ngAfterViewInit(): void {
@@ -68,6 +67,14 @@ export class AppComponent implements OnInit {
   public onCountrySelected(country: Country): void {
     this.selectedCountry = country;
   }
+
+  public setCountryByAlpha2(): void {
+   this.alpha2Country = 'de';
+  }
+
+  public setCountryByAlpha3(): void {
+    this.alpha3Country = 'deu';
+   }
 
   public onInputChanged(searchTerm: string): void {
     console.log('Search Term:', searchTerm);

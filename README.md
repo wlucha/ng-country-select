@@ -108,8 +108,11 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 | Parameter            | Type                      | Default            | Description                                                                |
 |----------------------|---------------------------|--------------------|----------------------------------------------------------------------------|
 | `defaultCountry`     | `Country \| null`         | `null`             | Sets an initial preselected country                                        |
-| `formControl`        | `FormControl<Country \| null`>         | `null`                  | Sets an initial preselected country (FormControl)             |
+| `formControl`        | `FormControl<Country \| null`>         | `null`                  | Sets an initial preselected country (FormControl)        |
 | `selectedCountry`    | `Country \| null`         | -                  | Sets a country programmatically (after init)                               |
+| `selectedCountryByAlpha2` | `string`             | -                  | Set a country programmatically by its alpha2 code                          |
+| `selectedCountryByAlpha3` | `string`             | -                  | Set a country programmatically by its alpha3 code                          |
+| `selectedCountryByCurrentTranslation` |          | -                  | Set a country programmatically by its name in the current language         |
 | `lang`               | `string`                  | `'en'`             | Language for displaying country names (e.g., `en`, `de`, `fr`, `es`, `it`) |
 | `searchAllLanguages` | `boolean`                 | `false`            | If `true`, searching will match in **all** available translations          |
 | `placeholder`        | `string`                  | `'Search country'` | Placeholder text for the input field                                       |

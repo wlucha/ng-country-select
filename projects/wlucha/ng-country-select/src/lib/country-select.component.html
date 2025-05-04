@@ -5,6 +5,12 @@
   <mat-icon matSuffix class="flag-suffix fi" [ngClass]="'fi-' + formControl.value?.alpha2"></mat-icon>
   }
 
+  @if (showRequiredErrorMessage && !isFieldValid()) {
+  <mat-error>
+    {{ requiredErrorMessage }}
+  </mat-error>
+  }
+
   <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn.bind(this)"
     (optionSelected)="onOptionSelected($event.option.value)" (closed)="onAutocompleteClosed()">
     <cdk-virtual-scroll-viewport [itemSize]="'25'" [ngStyle]="{'height': height}">

@@ -105,28 +105,30 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 
 ### 🎚️ Inputs
 
-| Parameter            | Type                      | Default            | Description                                                                |
-|----------------------|---------------------------|--------------------|----------------------------------------------------------------------------|
-| `defaultCountry`     | `Country \| null`         | `null`             | Sets an initial preselected country                                        |
-| `formControl`        | `FormControl<Country \| null`>         | `null`                  | Sets an initial preselected country (FormControl)        |
-| `selectedCountry`    | `Country \| null`         | -                  | Sets a country programmatically (after init)                               |
-| `selectedCountryByAlpha2` | `string`             | -                  | Set a country programmatically by its alpha2 code                          |
-| `selectedCountryByAlpha3` | `string`             | -                  | Set a country programmatically by its alpha3 code                          |
-| `selectedCountryByCurrentTranslation` |          | -                  | Set a country programmatically by its name in the current language         |
-| `lang`               | `string`                  | `'en'`             | Language for displaying country names (e.g., `en`, `de`, `fr`, `es`, `it`) |
-| `searchAllLanguages` | `boolean`                 | `false`            | If `true`, searching will match in **all** available translations          |
-| `placeholder`        | `string`                  | `'Search country'` | Placeholder text for the input field                                       |
-| `debounceTime`       | `number`                  | `100`              | Debounce time in milliseconds for the search input                         |
-| `disabled`           | `boolean`                 | `false`            | Disables the component if `true`                                           |
-| `appearance`         | `'fill' \| 'outline'`     | `'fill'`           | Appearance style of the form field                                         |
-| `required`           | `boolean`                 | `false`            | Marks the field as required if `true`                                      |
-| `showCodes`          | `boolean`                 | `false`            | If `true`, shows alpha2/alpha3 codes in the autocomplete results           |
-| `color`              | `ThemePalette`            | `'primary'`        | Angular Material color palette to use (`'primary'`, `'accent'`, `'warn'`)  |
-| `includeCountries`   | `string[]`                | `[]`               | List of country codes to include in the dropdown (e.g., `['US', 'DE', 'FR']`) |
-| `excludeCountries`   | `string[]`                | `[]`               | List of country codes to exclude from the dropdown (e.g., `['US', 'DE', 'FR']`) |
-| `alpha2Only`         | `boolean`                 | `false`            | Show only alpha2 codes in the results                                      |
-| `alpha3Only`         | `boolean`                 | `false`            | Show only alpha3 codes in the results                                      |
-| `showFlag`           | `boolean`                 | `true`             | Whether the flag should be displayed                                       |
+| Parameter                             | Type                      | Default            | Description                                                                |
+|---------------------------------------|---------------------------|--------------------|----------------------------------------------------------------------------|
+| `defaultCountry`                      | `Country \| null`         | `null`             | Sets an initial preselected country                                        |
+| `formControl`                         | `FormControl<Country \| null`> | `null`        | Sets an initial preselected country (FormControl)                          |
+| `selectedCountry`                     | `Country \| null`         | -                  | Sets a country programmatically (after init)                               |
+| `selectedCountryByAlpha2`             | `string`                  | -                  | Set a country programmatically by its alpha2 code                          |
+| `selectedCountryByAlpha3`             | `string`                  | -                  | Set a country programmatically by its alpha3 code                          |
+| `selectedCountryByCurrentTranslation` |                           | -                  | Set a country programmatically by its name in the current language         |
+| `lang`                                | `string`                  | `'en'`             | Language for displaying country names (e.g., `en`, `de`, `fr`, `es`, `it`) |
+| `searchAllLanguages`                  | `boolean`                 | `false`            | If `true`, searching will match in **all** available translations          |
+| `placeholder`                         | `string`                  | `'Search country'` | Placeholder text for the input field                                       |
+| `debounceTime`                        | `number`                  | `100`              | Debounce time in milliseconds for the search input                         |
+| `disabled`                            | `boolean`                 | `false`            | Disables the component if `true`                                           |
+| `appearance`                          | `'fill' \| 'outline'`     | `'fill'`           | Appearance style of the form field                                         |
+| `required`                            | `boolean`                 | `false`            | Marks the field as required if `true`                                      |
+| `requiredErrorMessage`                | `boolean`                 | `A country is required` | The error message to show when the field does not have a value and is required |
+| `showRequiredErrorMessage`            | `boolean`                 | `false`            | Whether to show an error message when the field does not have a value and is required |
+| `showCodes`                           | `boolean`                 | `false`            | If `true`, shows alpha2/alpha3 codes in the autocomplete results           |
+| `color`                               | `ThemePalette`            | `'primary'`        | Angular Material color palette to use (`'primary'`, `'accent'`, `'warn'`)  |
+| `includeCountries`                    | `string[]`                | `[]`               | List of country codes to include in the dropdown (e.g., `['US', 'DE', 'FR']`) |
+| `excludeCountries`                    | `string[]`                | `[]`               | List of country codes to exclude from the dropdown (e.g., `['US', 'DE', 'FR']`) |
+| `alpha2Only`                          | `boolean`                 | `false`            | Show only alpha2 codes in the results                                      |
+| `alpha3Only`                          | `boolean`                 | `false`            | Show only alpha3 codes in the results                                      |
+| `showFlag`                            | `boolean`                 | `true`             | Whether the flag should be displayed                                       |
 
 ### 🚨 Outputs
 
@@ -145,6 +147,8 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
   [showCodes]="true"
   [debounceTime]="200"
   [required]="true"
+  [requiredErrorMessage]="'A country is required'"
+  [showRequiredErrorMessage]="true"
   [disabled]="false"
   [appearance]="'outline'"
   [placeholder]="'Search country'"

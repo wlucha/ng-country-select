@@ -1,20 +1,17 @@
-import {
-  Component, Input, Output, EventEmitter, ChangeDetectionStrategy,
-  OnInit,
-  forwardRef
-} from '@angular/core';
+import { ScrollingModule } from '@angular/cdk/scrolling';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy, OnInit, forwardRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormControl, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatInputModule } from '@angular/material/input';
+import { ThemePalette } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { Observable } from 'rxjs';
 import { map, startWith, debounceTime, tap } from 'rxjs/operators';
+
 import { Country } from './country.interface';
-import { MatIconModule } from '@angular/material/icon';
-import { ThemePalette } from '@angular/material/core';
 import { countries } from './data/COUNTRIES';
-import { ScrollingModule } from '@angular/cdk/scrolling';
 
 
 @Component({
@@ -151,6 +148,18 @@ export class CountrySelectComponent implements OnInit {
   @Input() public required = false;
 
   /**
+   * The error message to show when the field does not have a value and is required
+   * @default 'A country is required'
+   */
+  @Input() public requiredErrorMessage = 'A country is required';
+
+  /**
+   * Whether to show an error message when the field does not have a value and is required
+   * @default false
+   */
+  @Input() public showRequiredErrorMessage = false;
+
+  /**
    * Shows alpha2/alpha3 codes in the results
    * @default false
    */
@@ -274,6 +283,16 @@ export class CountrySelectComponent implements OnInit {
    */
   public trackByAlpha2(index: number, country: Country): string {
     return country.alpha2;
+  }
+
+  public isFieldValid(): boolean {
+    if (this.formControl.errors?.['required']) {
+      return false;
+    }
+
+    const value = this.formControl.value;
+
+    return !value || !value.alpha2;
   }
 
   /**

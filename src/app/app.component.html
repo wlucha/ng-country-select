@@ -242,10 +242,27 @@ ng add &#64;wlucha/ng-country-select
       </div>
     </div>
 
+    <!-- Example 12: Using required fields -->
+    <div class="example">
+      <h2>12. Using required fields</h2>
+      <div class="code">
+        <pre><code class="language-html">
+    &lt;ng-country-select
+      [required]="true"
+      [requiredErrorMessage]="'Please select a country'"
+      [showRequiredErrorMessage]="true"
+    &gt;&lt;/ng-country-select&gt;
+                    </code></pre>
+      </div>
+      <div class="preview">
+        <ng-country-select [required]="true" [requiredErrorMessage]="'Please select a country'" [showRequiredErrorMessage]="true"></ng-country-select>
+      </div>
+    </div>
 
-  <!-- Example 12: All Inputs and Outputs -->
+
+  <!-- Example 13: All Inputs and Outputs -->
   <div class="example">
-    <h2>12. All Inputs & Outputs</h2>
+    <h2>13. All Inputs & Outputs</h2>
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select
@@ -256,6 +273,8 @@ ng add &#64;wlucha/ng-country-select
   [searchAllLanguages]="true"
   [appearance]="'outline'"
   [required]="true"
+  [requiredErrorMessage]="'A country is required'"
+  [showRequiredErrorMessage]="true"
   [disabled]="false"
   [alpha2Only]="false"
   [alpha3Only]="false"

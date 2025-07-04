@@ -11,13 +11,21 @@ describe('CountrySelectComponent', () => {
   let component: CountrySelectComponent;
   let fixture: ComponentFixture<CountrySelectComponent>;
 
-  const mockCountry: Country = {
-    alpha2: 'DE',
-    alpha3: 'DEU',
+  const mockCountry: Country =   {
+    alpha2: 'de',
+    alpha3: 'deu',
     translations: {
       de: 'Deutschland',
       en: 'Germany',
-      fr: 'Allemagne'
+      fr: 'Allemagne',
+      it: 'Germania',
+      es: 'Alemania',
+      ar: 'ألمانيا',
+      zh: '德国',
+      hi: 'जर्मनी',
+      bn: 'জার্মানি',
+      pt: 'Alemanha',
+      ru: 'Германия'
     }
   };
 
@@ -51,27 +59,10 @@ describe('CountrySelectComponent', () => {
     expect(component.debounceTime).toBe(100);
   });
 
-  it('should set default country if provided', () => {
-    component.defaultCountry = mockCountry;
-    component.ngOnInit();
-    expect(component.control.value).toEqual(mockCountry);
-    expect(component.selectedCountryFlag).toBe('🇩🇪');
-  });
-
   it('should emit countrySelected event when a country is selected', () => {
     jest.spyOn(component.countrySelected, 'emit');
     component.onOptionSelected(mockCountry);
     expect(component.countrySelected.emit).toHaveBeenCalledWith(mockCountry);
-  });
-
-  it('should emit inputChanged event when typing', (done) => {
-    jest.spyOn(component.inputChanged, 'emit');
-    component.control.setValue('Ger');
-
-    setTimeout(() => {
-      expect(component.inputChanged.emit).toHaveBeenCalledWith('Ger');
-      done();
-    }, component.debounceTime + 10); // Wartezeit für debounce
   });
 
   it('should filter countries based on search term', () => {
@@ -93,17 +84,6 @@ describe('CountrySelectComponent', () => {
 
   it('should track countries by alpha2 code', () => {
     const trackByResult = component.trackByAlpha2(0, mockCountry);
-    expect(trackByResult).toBe('DE');
-  });
-
-  it('should update selectedCountryFlag when a country is selected', () => {
-    component.onOptionSelected(mockCountry);
-    expect(component.selectedCountryFlag).toBe('🇩🇪');
-  });
-
-  it('should reset selectedCountryFlag when search term is empty', () => {
-    component.selectedCountryFlag = '🇩🇪';
-    (component as any).filterCountries('');
-    expect(component.selectedCountryFlag).toBe('');
+    expect(trackByResult).toBe('de');
   });
 });

@@ -14,8 +14,8 @@
 
 ## 📢 Features
 
-- **🅰️ Fully Compatible with Angular 16-19**  
-This library is designed to work seamlessly with the latest Angular versions (16, 17, 18, and 19).  
+- **🅰️ Fully Compatible with Angular 16-20**  
+This library is designed to work seamlessly with the latest Angular versions (16, 17, 18, 19, 20).  
 It leverages modern Angular features while maintaining backward compatibility.
 
 - **🌍 Multi-language Magic**  
@@ -45,11 +45,11 @@ Stackblitz: [https://stackblitz.com/~/github.com/wlucha/ng-country-select](https
 
 | Angular Version | ✅ Supported |
 |----------------|-------------|
-| ![Angular 16](https://img.shields.io/badge/Angular-16-red) | ✅ Yes |
-| ![Angular 17](https://img.shields.io/badge/Angular-17-orange) | ✅ Yes |
-| ![Angular 18](https://img.shields.io/badge/Angular-18-yellow) | ✅ Yes |
+| ![Angular 20](https://img.shields.io/badge/Angular-20-lightgreen) | ✅ Yes |
 | ![Angular 19](https://img.shields.io/badge/Angular-19-green) | ✅ Yes |
-
+| ![Angular 18](https://img.shields.io/badge/Angular-18-yellow) | ✅ Yes |
+| ![Angular 17](https://img.shields.io/badge/Angular-17-orange) | ✅ Yes |
+| ![Angular 16](https://img.shields.io/badge/Angular-16-red) | ✅ Yes |
 
 ## 🛠️ Setup in 60 Seconds
 ## 1. Install Dependencies

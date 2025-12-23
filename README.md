@@ -14,8 +14,8 @@
 
 ## 📢 Features
 
-- **🅰️ Fully Compatible with Angular 16-20**  
-This library is designed to work seamlessly with the latest Angular versions (16, 17, 18, 19, 20).  
+- **🅰️ Fully Compatible with Angular 16-21**  
+This library is designed to work seamlessly with the latest Angular versions (16, 17, 18, 19, 20, 21).  
 It leverages modern Angular features while maintaining backward compatibility.
 
 - **🌍 Multi-language Magic**  
@@ -43,13 +43,14 @@ Stackblitz: [https://stackblitz.com/~/github.com/wlucha/ng-country-select](https
 
 ## 🌍 Compatibility
 
-| Angular Version | ✅ Supported |
-|----------------|-------------|
-| ![Angular 20](https://img.shields.io/badge/Angular-20-lightgreen) | ✅ Yes |
-| ![Angular 19](https://img.shields.io/badge/Angular-19-green) | ✅ Yes |
-| ![Angular 18](https://img.shields.io/badge/Angular-18-yellow) | ✅ Yes |
-| ![Angular 17](https://img.shields.io/badge/Angular-17-orange) | ✅ Yes |
-| ![Angular 16](https://img.shields.io/badge/Angular-16-red) | ✅ Yes |
+| Angular Version                                                   | ✅ Supported |
+|-------------------------------------------------------------------|--------------|
+| ![Angular 21](https://img.shields.io/badge/Angular-21-lightgreen) | ✅ Yes       |
+| ![Angular 20](https://img.shields.io/badge/Angular-20-green)      | ✅ Yes       |
+| ![Angular 19](https://img.shields.io/badge/Angular-19-yellow)     | ✅ Yes       |
+| ![Angular 18](https://img.shields.io/badge/Angular-18-orange)     | ✅ Yes       |
+| ![Angular 17](https://img.shields.io/badge/Angular-17-red)        | ✅ Yes       |
+| ![Angular 16](https://img.shields.io/badge/Angular-16-darkred)    | ✅ Yes       |
 
 ## 🛠️ Setup in 60 Seconds
 ## 1. Install Dependencies

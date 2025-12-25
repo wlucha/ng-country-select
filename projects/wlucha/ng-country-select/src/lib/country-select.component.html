@@ -1,6 +1,8 @@
 <mat-form-field [appearance]="appearance" [color]="color">
-  <mat-label>{{ placeholder }}</mat-label>
-  <input matInput [formControl]="formControl" [matAutocomplete]="auto" [disabled]="disabled" [required]="required">
+  @if (showLabel) {
+  <mat-label>{{ label || placeholder }}</mat-label>
+  }
+  <input matInput [formControl]="formControl" [matAutocomplete]="auto" [required]="required">
   @if (showFlag === true) {
   <mat-icon matSuffix class="flag-suffix fi" [ngClass]="'fi-' + formControl.value?.alpha2"></mat-icon>
   }
@@ -10,6 +12,9 @@
     {{ requiredErrorMessage }}
   </mat-error>
   }
+  <mat-error>
+    <ng-content select="[country-error]"></ng-content>
+  </mat-error>
 
   <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn.bind(this)"
     (optionSelected)="onOptionSelected($event.option.value)" (closed)="onAutocompleteClosed()">

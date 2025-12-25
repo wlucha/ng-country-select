@@ -94,7 +94,7 @@ ng add &#64;wlucha/ng-country-select
       <mat-tab label="HTML">
         <div class="code">
           <pre><code class="language-html">
-  &lt;ng-country-select
+ &lt;ng-country-select
     [lang]="selectedLang"
     [placeholder]="placeholderMap[selectedLang]"
     [defaultCountry]="presetCountry"
@@ -215,7 +215,7 @@ ng add &#64;wlucha/ng-country-select
     <h2>10. Set a country programmatically by Alpha2</h2>
     <div class="code">
       <pre><code class="language-html">
-  &lt;ng-country-select
+ &lt;ng-country-select
     [selectedCountryByAlpha2]="alpha2Country"
   &gt;&lt;/ng-country-select&gt;
                   </code></pre>
@@ -226,38 +226,39 @@ ng add &#64;wlucha/ng-country-select
     </div>
   </div>
 
-    <!-- Example 11: Set a country programmatically by Alpha3 -->
-    <div class="example">
-      <h2>11. Set a country programmatically by Alpha3</h2>
-      <div class="code">
-        <pre><code class="language-html">
-    &lt;ng-country-select
+  <!-- Example 11: Set a country programmatically by Alpha3 -->
+  <div class="example">
+    <h2>11. Set a country programmatically by Alpha3</h2>
+    <div class="code">
+      <pre><code class="language-html">
+  &lt;ng-country-select
       [selectedCountryByAlpha3]="alpha3Country"
     &gt;&lt;/ng-country-select&gt;
                     </code></pre>
-      </div>
-      <div class="preview">
-        <ng-country-select [selectedCountryByAlpha3]="alpha3Country"></ng-country-select>
-        <div> <button mat-raised-button (click)="setCountryByAlpha3()">Set Germany as country</button></div>
-      </div>
     </div>
+    <div class="preview">
+      <ng-country-select [selectedCountryByAlpha3]="alpha3Country"></ng-country-select>
+      <div> <button mat-raised-button (click)="setCountryByAlpha3()">Set Germany as country</button></div>
+    </div>
+  </div>
 
-    <!-- Example 12: Using required fields -->
-    <div class="example">
-      <h2>12. Using required fields</h2>
-      <div class="code">
-        <pre><code class="language-html">
-    &lt;ng-country-select
+  <!-- Example 12: Using required fields -->
+  <div class="example">
+    <h2>12. Using required fields</h2>
+    <div class="code">
+      <pre><code class="language-html">
+  &lt;ng-country-select
       [required]="true"
       [requiredErrorMessage]="'Please select a country'"
       [showRequiredErrorMessage]="true"
     &gt;&lt;/ng-country-select&gt;
                     </code></pre>
-      </div>
-      <div class="preview">
-        <ng-country-select [required]="true" [requiredErrorMessage]="'Please select a country'" [showRequiredErrorMessage]="true"></ng-country-select>
-      </div>
     </div>
+    <div class="preview">
+      <ng-country-select [required]="true" [requiredErrorMessage]="'Please select a country'"
+        [showRequiredErrorMessage]="true"></ng-country-select>
+    </div>
+  </div>
 
 
   <!-- Example 13: All Inputs and Outputs -->
@@ -279,10 +280,13 @@ ng add &#64;wlucha/ng-country-select
   [alpha2Only]="false"
   [alpha3Only]="false"
   [showFlag]="true"
+  [label]="'Custom Label'"
+  [showLabel]="true"
   [placeholder]="'Land auswählen'"
   [debounceTime]="200"
   (countrySelected)="onCountrySelected($event)"
   (inputChanged)="onInputChanged($event)"
+  (closed)="onClosed()"
 &gt;&lt;/ng-country-select&gt;
       </code></pre>
     </div>
@@ -290,12 +294,55 @@ ng add &#64;wlucha/ng-country-select
       <ng-country-select [lang]="'de'" [formControl]="countryControl" [defaultCountry]="presetCountry" [required]="true"
         [disabled]="false" [showCodes]="true" [color]="'primary'" [searchAllLanguages]="true" [appearance]="'outline'"
         [alpha2Only]="false" [alpha3Only]="false" [placeholder]="'Land auswählen'" [debounceTime]="200"
-        [showFlag]="true" (countrySelected)="onCountrySelected($event)"
-        (inputChanged)="onInputChanged($event)"></ng-country-select>
+        [showFlag]="true" [label]="'Custom Label'" [showLabel]="true" (countrySelected)="onCountrySelected($event)"
+        (inputChanged)="onInputChanged($event)" (closed)="onClosed()"></ng-country-select>
       <div>
         Selected: {{ countryControl.value | json }}
       </div>
     </div>
   </div>
 
+
+  <!-- Example 14: Custom Label & Error Handling -->
+  <div class="example">
+    <h2>14. Custom Label & Error Handling</h2>
+    <div class="code">
+      <pre><code class="language-html">
+&lt;ng-country-select
+  [formControl]="validatingControl"
+  [label]="'Select a Country'"
+  [required]="true"
+  [showRequiredErrorMessage]="false"
+&gt;
+  &lt;span country-error&gt;You must select a country!&lt;/span&gt;
+&lt;/ng-country-select&gt;
+      </code></pre>
+    </div>
+    <div class="preview">
+      <ng-country-select [formControl]="validatingControl" [label]="'Select a Country'" [required]="true"
+        [showRequiredErrorMessage]="false">
+        <span country-error>You must select a country!</span>
+      </ng-country-select>
+      <div style="margin-top: 10px;">
+        <button mat-raised-button (click)="validatingControl.markAsTouched()">Mark as Touched</button>
+        <button mat-raised-button (click)="validatingControl.reset()">Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Example 15: No Label -->
+  <div class="example">
+    <h2>15. No Label</h2>
+    <div class="code">
+      <pre><code class="language-html">
+&lt;ng-country-select
+  [showLabel]="false"
+  [placeholder]="'Just a placeholder'"
+&gt;&lt;/ng-country-select&gt;
+      </code></pre>
+    </div>
+    <div class="preview">
+      <ng-country-select [showLabel]="false" [placeholder]="'Just a placeholder'"></ng-country-select>
+    </div>
+  </div>
 </div>

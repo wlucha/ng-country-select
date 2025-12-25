@@ -1,17 +1,32 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ReactiveFormsModule } from '@angular/forms';
+import { Component } from '@angular/core';
+import { ReactiveFormsModule, FormControl, Validators } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { CountrySelectComponent } from './country-select.component';
 import { Country } from './country.interface';
+import { By } from '@angular/platform-browser';
+
+@Component({
+  standalone: true,
+  imports: [CountrySelectComponent, ReactiveFormsModule],
+  template: `
+    <ng-country-select [formControl]="control" required>
+      <span country-error>Test Error</span>
+    </ng-country-select>
+  `
+})
+class TestHostComponent {
+  control = new FormControl(null, Validators.required);
+}
 
 describe('CountrySelectComponent', () => {
   let component: CountrySelectComponent;
   let fixture: ComponentFixture<CountrySelectComponent>;
 
-  const mockCountry: Country =   {
+  const mockCountry: Country = {
     alpha2: 'de',
     alpha3: 'deu',
     translations: {
@@ -31,14 +46,14 @@ describe('CountrySelectComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [],
       imports: [
         ReactiveFormsModule,
         MatAutocompleteModule,
         MatInputModule,
         MatFormFieldModule,
         NoopAnimationsModule,
-        CountrySelectComponent
+        CountrySelectComponent,
+        TestHostComponent
       ]
     }).compileComponents();
 
@@ -85,5 +100,64 @@ describe('CountrySelectComponent', () => {
   it('should track countries by alpha2 code', () => {
     const trackByResult = component.trackByAlpha2(0, mockCountry);
     expect(trackByResult).toBe('de');
+  });
+
+  it('should set label and showLabel inputs', () => {
+    component.label = 'Custom Label';
+    component.showLabel = false;
+    expect(component.label).toBe('Custom Label');
+    expect(component.showLabel).toBe(false);
+  });
+
+  it('should disable formControl when disabled input is set to true', () => {
+    component.disabled = true;
+    expect(component.formControl.disabled).toBe(true);
+    component.disabled = false;
+    expect(component.formControl.enabled).toBe(true);
+  });
+
+  it('should implement setDisabledState', () => {
+    component.setDisabledState(true);
+    expect(component.disabled).toBe(true);
+    expect(component.formControl.disabled).toBe(true);
+    component.setDisabledState(false);
+    expect(component.disabled).toBe(false);
+    expect(component.formControl.enabled).toBe(true);
+  });
+
+  it('should call onChange when option is selected', () => {
+    const onChangeSpy = jest.fn();
+    component.registerOnChange(onChangeSpy);
+    component.onOptionSelected(mockCountry);
+    expect(onChangeSpy).toHaveBeenCalledWith(mockCountry);
+  });
+
+  it('should write value to formControl', () => {
+    component.writeValue(mockCountry);
+    expect(component.formControl.value).toEqual(mockCountry);
+  });
+
+  it('should project content with country-error attribute', () => {
+    const hostFixture = TestBed.createComponent(TestHostComponent);
+    hostFixture.detectChanges();
+
+    // Make the control touched to show the error
+    hostFixture.componentInstance.control.markAsTouched();
+    hostFixture.detectChanges();
+
+    // MatError is rendered inside mat-form-field -> mat-form-field-subscript-wrapper -> mat-error
+    // We can check if the projected content is present in the DOM
+    const hostElement = hostFixture.nativeElement;
+    const errorElement = hostElement.querySelector('[country-error]');
+
+    expect(errorElement).toBeTruthy();
+    expect(errorElement.textContent).toContain('Test Error');
+
+    // Optionally check if it is wrapped in mat-error
+    // Dependent on Material implementation details, but we can check if a parent or near ancestor is mat-error
+    // Note: Angular Material might project the error elsewhere in the DOM (subscript), but structure is maintained for querySelector
+    const matError = hostElement.querySelector('mat-error');
+    expect(matError).toBeTruthy();
+    expect(matError.contains(errorElement)).toBe(true);
   });
 });

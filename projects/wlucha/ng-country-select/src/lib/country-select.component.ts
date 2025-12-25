@@ -1,7 +1,7 @@
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy, OnInit, forwardRef } from '@angular/core';
+import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { FormControl, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { ThemePalette } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -37,7 +37,7 @@ import { countries } from './data/COUNTRIES';
     }
   ]
 })
-export class CountrySelectComponent implements OnInit {
+export class CountrySelectComponent implements OnInit, ControlValueAccessor {
 
   /**
    * Set initial default country
@@ -71,6 +71,17 @@ export class CountrySelectComponent implements OnInit {
    * @default 'Search country'
    */
   @Input() public placeholder = 'Search country';
+
+  /**
+   * Label for the form field
+   */
+  @Input() public label: string | undefined;
+
+  /**
+   * Whether to show the label
+   * @default true
+   */
+  @Input() public showLabel = true;
 
   /**
    * Set a country programmatically
@@ -139,7 +150,18 @@ export class CountrySelectComponent implements OnInit {
    * Disables the component
    * @default false
    */
-  @Input() public disabled = false;
+  @Input() public set disabled(value: boolean) {
+    this._disabled = value;
+    if (value) {
+      this.formControl.disable();
+    } else {
+      this.formControl.enable();
+    }
+  }
+  public get disabled(): boolean {
+    return this._disabled;
+  }
+  private _disabled = false;
 
   /**
    * Marks the field as required
@@ -241,11 +263,16 @@ export class CountrySelectComponent implements OnInit {
     this.onTouched = fn;
   }
 
+  public setDisabledState(isDisabled: boolean): void {
+    this.disabled = isDisabled;
+  }
+
   /**
    * Handle option selection
    */
   public onOptionSelected(country: Country): void {
     this.formControl.setValue(country);
+    this.onChange(country);
     this.countrySelected.emit(country);
   }
 

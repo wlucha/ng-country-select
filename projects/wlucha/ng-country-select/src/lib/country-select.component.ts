@@ -1,5 +1,5 @@
 import { ScrollingModule } from '@angular/cdk/scrolling';
-import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy, OnInit, forwardRef } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy, OnInit, forwardRef, inject } from '@angular/core';
 import { ControlValueAccessor, FormControl, NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
@@ -11,7 +11,8 @@ import { Observable } from 'rxjs';
 import { map, startWith, debounceTime, tap } from 'rxjs/operators';
 
 import { Country } from './country.interface';
-import { countries } from './data/COUNTRIES';
+import { countries as defaultCountries } from './data/COUNTRIES';
+import { COUNTRY_SELECT_CONFIG } from './country-select.config';
 
 
 @Component({
@@ -94,7 +95,7 @@ export class CountrySelectComponent implements OnInit, ControlValueAccessor {
    * Set a country programmatically by its alpha2 code
    */
   @Input() public set selectedCountryByAlpha2(alpha2: string) {
-    const country: Country | undefined = countries.find(c => c.alpha2 === alpha2);
+    const country: Country | undefined = this.countries.find(c => c.alpha2 === alpha2);
 
     if (country) {
       this.formControl.setValue(country);
@@ -105,7 +106,7 @@ export class CountrySelectComponent implements OnInit, ControlValueAccessor {
    * Set a country programmatically by its alpha3 code
    */
   @Input() public set selectedCountryByAlpha3(alpha3: string) {
-    const country: Country | undefined = countries.find(c => c.alpha3 === alpha3);
+    const country: Country | undefined = this.countries.find(c => c.alpha3 === alpha3);
 
     if (country) {
       this.formControl.setValue(country);
@@ -116,7 +117,7 @@ export class CountrySelectComponent implements OnInit, ControlValueAccessor {
    * Set a country programmatically by its name in the current language
    */
   @Input() public set selectedCountryByCurrentTranslation(name: string) {
-    const country: Country | undefined = countries.find((c: Country) => c.translations[this.lang] === name);
+    const country: Country | undefined = this.countries.find((c: Country) => c.translations[this.lang] === name);
 
     if (country) {
       this.formControl.setValue(country);
@@ -151,6 +152,9 @@ export class CountrySelectComponent implements OnInit, ControlValueAccessor {
    * @default false
    */
   @Input() public set disabled(value: boolean) {
+    if (this._disabled === value) {
+      return;
+    }
     this._disabled = value;
     if (value) {
       this.formControl.disable();
@@ -236,8 +240,9 @@ export class CountrySelectComponent implements OnInit, ControlValueAccessor {
   @Output() public closed = new EventEmitter<void>();
 
   public filteredCountries$: Observable<Country[]> | undefined;
-  private countries: Country[] = countries.slice();
   public height!: string;
+  private config = inject(COUNTRY_SELECT_CONFIG, { optional: true });
+  private countries: Country[] = this.buildCountryList();
   private onChange: any = () => { };
   private onTouched: any = () => { };
 
@@ -247,6 +252,37 @@ export class CountrySelectComponent implements OnInit, ControlValueAccessor {
     if (this.defaultCountry) {
       this.formControl.setValue(this.defaultCountry);
     }
+  }
+
+  /**
+   * Builds the country list from configuration.
+   * - If `config.countries` is provided, uses it directly.
+   * - If `config.extraTranslations` is provided, merges them into the default list.
+   * - Otherwise, uses the built-in default list.
+   */
+  private buildCountryList(): Country[] {
+    if (!this.config) {
+      return defaultCountries.slice();
+    }
+
+    if (this.config.countries) {
+      return this.config.countries.slice();
+    }
+
+    if (this.config.extraTranslations) {
+      return defaultCountries.map(country => {
+        const extra = this.config!.extraTranslations![country.alpha2];
+        if (extra) {
+          return {
+            ...country,
+            translations: { ...country.translations, ...extra }
+          };
+        }
+        return { ...country };
+      });
+    }
+
+    return defaultCountries.slice();
   }
 
   public writeValue(country: Country | null): void {

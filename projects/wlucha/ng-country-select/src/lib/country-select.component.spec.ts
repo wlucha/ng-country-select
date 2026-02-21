@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { CountrySelectComponent } from './country-select.component';
 import { Country } from './country.interface';
+import { provideCountrySelectConfig } from './country-select.config';
 import { By } from '@angular/platform-browser';
 
 @Component({
@@ -159,5 +160,85 @@ describe('CountrySelectComponent', () => {
     const matError = hostElement.querySelector('mat-error');
     expect(matError).toBeTruthy();
     expect(matError.contains(errorElement)).toBe(true);
+  });
+
+  describe('with custom config', () => {
+    it('should use default countries when no config is provided', () => {
+      const countries = (component as any).countries;
+      expect(countries.length).toBeGreaterThan(200);
+      expect(countries[0].translations['en']).toBeDefined();
+    });
+
+    it('should merge extra translations into countries', async () => {
+      await TestBed.resetTestingModule();
+      await TestBed.configureTestingModule({
+        imports: [
+          ReactiveFormsModule,
+          MatAutocompleteModule,
+          MatInputModule,
+          MatFormFieldModule,
+          NoopAnimationsModule,
+          CountrySelectComponent
+        ],
+        providers: [
+          provideCountrySelectConfig({
+            extraTranslations: {
+              de: { pl: 'Niemcy' },
+              at: { pl: 'Austria' }
+            }
+          })
+        ]
+      }).compileComponents();
+
+      const f = TestBed.createComponent(CountrySelectComponent);
+      const c = f.componentInstance;
+      f.detectChanges();
+
+      const countries: Country[] = (c as any).countries;
+      const germany = countries.find((co: Country) => co.alpha2 === 'de');
+      const austria = countries.find((co: Country) => co.alpha2 === 'at');
+      const france = countries.find((co: Country) => co.alpha2 === 'fr');
+
+      expect(germany?.translations['pl']).toBe('Niemcy');
+      expect(germany?.translations['en']).toBe('Germany');
+      expect(austria?.translations['pl']).toBe('Austria');
+      // Countries without extra translations should remain unchanged
+      expect(france?.translations['pl']).toBeUndefined();
+      expect(france?.translations['en']).toBe('France');
+    });
+
+    it('should replace entire country list when countries config is provided', async () => {
+      const customCountries: Country[] = [
+        {
+          alpha2: 'xx',
+          alpha3: 'xxx',
+          translations: { de: 'TestLand', en: 'TestCountry', fr: '', it: '', es: '', ar: '', zh: '', hi: '', bn: '', pt: '', ru: '' }
+        }
+      ];
+
+      await TestBed.resetTestingModule();
+      await TestBed.configureTestingModule({
+        imports: [
+          ReactiveFormsModule,
+          MatAutocompleteModule,
+          MatInputModule,
+          MatFormFieldModule,
+          NoopAnimationsModule,
+          CountrySelectComponent
+        ],
+        providers: [
+          provideCountrySelectConfig({ countries: customCountries })
+        ]
+      }).compileComponents();
+
+      const f = TestBed.createComponent(CountrySelectComponent);
+      const c = f.componentInstance;
+      f.detectChanges();
+
+      const countries: Country[] = (c as any).countries;
+      expect(countries.length).toBe(1);
+      expect(countries[0].alpha2).toBe('xx');
+      expect(countries[0].translations['en']).toBe('TestCountry');
+    });
   });
 });

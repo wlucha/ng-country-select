@@ -88,7 +88,7 @@ ng add &#64;wlucha/ng-country-select
 
   <!-- Example 6: Set language & placeholder -->
   <div class="example">
-    <h2>6. Set language & placeholder</h2>
+    <h2>6. Set language &amp; placeholder</h2>
 
     <mat-tab-group>
       <mat-tab label="HTML">
@@ -159,15 +159,61 @@ ng add &#64;wlucha/ng-country-select
             <mat-radio-button [value]="'bn'">বাংলা</mat-radio-button>
             <mat-radio-button [value]="'pt'">Português</mat-radio-button>
             <mat-radio-button [value]="'ru'">Русский</mat-radio-button>
+            <mat-radio-button [value]="'pl'">Polski</mat-radio-button>
           </div>
         </mat-radio-group>
       </div>
     </div>
   </div>
 
-  <!-- Example 7: Show alpha2/alpha3 codes -->
+  <!-- Example 7: Custom Language Support -->
   <div class="example">
-    <h2>7. Show Alpha2/Alpha3 Codes</h2>
+    <h2>7. Custom Language Support</h2>
+
+    <mat-tab-group>
+      <mat-tab label="app.config.ts">
+        <div class="code">
+          <pre><code class="language-typescript">
+import &#123; provideCountrySelectConfig &#125; from '&#64;wlucha/ng-country-select';
+
+export const appConfig: ApplicationConfig = &#123;
+  providers: [
+    provideCountrySelectConfig(&#123;
+      extraTranslations: &#123;
+        de: &#123; pl: 'Niemcy' &#125;,
+        at: &#123; pl: 'Austria' &#125;,
+        pl: &#123; pl: 'Polska' &#125;,
+        us: &#123; pl: 'Stany Zjednoczone' &#125;,
+        fr: &#123; pl: 'Francja' &#125;,
+        // ... more countries
+      &#125;
+    &#125;)
+  ]
+&#125;;
+          </code></pre>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="HTML">
+        <div class="code">
+          <pre><code class="language-html">
+&lt;ng-country-select
+  [lang]="'pl'"
+  [placeholder]="'Szukaj kraju'"
+&gt;&lt;/ng-country-select&gt;
+          </code></pre>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+
+    <div class="preview">
+      <ng-country-select [lang]="'pl'" [placeholder]="'Szukaj kraju'"></ng-country-select>
+    </div>
+  </div>
+
+  <!-- Example 8: Show alpha2/alpha3 codes -->
+  <div class="example">
+    <h2>8. Show Alpha2/Alpha3 Codes</h2>
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select
@@ -180,9 +226,9 @@ ng add &#64;wlucha/ng-country-select
     </div>
   </div>
 
-  <!-- Example 8: Hide flag -->
+  <!-- Example 9: Hide flag -->
   <div class="example">
-    <h2>8. Hide Flag</h2>
+    <h2>9. Hide Flag</h2>
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select
@@ -195,9 +241,9 @@ ng add &#64;wlucha/ng-country-select
     </div>
   </div>
 
-  <!-- Example 9: Show Alpha2 -->
+  <!-- Example 10: Show Alpha2 -->
   <div class="example">
-    <h2>9. Show Alpha2</h2>
+    <h2>10. Show Alpha2</h2>
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select
@@ -210,9 +256,9 @@ ng add &#64;wlucha/ng-country-select
     </div>
   </div>
 
-  <!-- Example 10: Set a country programmatically by Alpha2 -->
+  <!-- Example 11: Set a country programmatically by Alpha2 -->
   <div class="example">
-    <h2>10. Set a country programmatically by Alpha2</h2>
+    <h2>11. Set a country programmatically by Alpha2</h2>
     <div class="code">
       <pre><code class="language-html">
  &lt;ng-country-select
@@ -226,9 +272,9 @@ ng add &#64;wlucha/ng-country-select
     </div>
   </div>
 
-  <!-- Example 11: Set a country programmatically by Alpha3 -->
+  <!-- Example 12: Set a country programmatically by Alpha3 -->
   <div class="example">
-    <h2>11. Set a country programmatically by Alpha3</h2>
+    <h2>12. Set a country programmatically by Alpha3</h2>
     <div class="code">
       <pre><code class="language-html">
   &lt;ng-country-select
@@ -242,9 +288,9 @@ ng add &#64;wlucha/ng-country-select
     </div>
   </div>
 
-  <!-- Example 12: Using required fields -->
+  <!-- Example 13: Using required fields -->
   <div class="example">
-    <h2>12. Using required fields</h2>
+    <h2>13. Using required fields</h2>
     <div class="code">
       <pre><code class="language-html">
   &lt;ng-country-select
@@ -261,9 +307,9 @@ ng add &#64;wlucha/ng-country-select
   </div>
 
 
-  <!-- Example 13: All Inputs and Outputs -->
+  <!-- Example 14: All Inputs and Outputs -->
   <div class="example">
-    <h2>13. All Inputs & Outputs</h2>
+    <h2>14. All Inputs &amp; Outputs</h2>
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select
@@ -303,9 +349,9 @@ ng add &#64;wlucha/ng-country-select
   </div>
 
 
-  <!-- Example 14: Custom Label & Error Handling -->
+  <!-- Example 15: Custom Label & Error Handling -->
   <div class="example">
-    <h2>14. Custom Label & Error Handling</h2>
+    <h2>15. Custom Label &amp; Error Handling</h2>
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select
@@ -330,9 +376,9 @@ ng add &#64;wlucha/ng-country-select
     </div>
   </div>
 
-  <!-- Example 15: No Label -->
+  <!-- Example 16: No Label -->
   <div class="example">
-    <h2>15. No Label</h2>
+    <h2>16. No Label</h2>
     <div class="code">
       <pre><code class="language-html">
 &lt;ng-country-select

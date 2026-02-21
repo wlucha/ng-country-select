@@ -2,9 +2,100 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
 }
 
+// Hero Header
+.hero {
+  text-align: center;
+  padding: 48px 20px 32px;
+  margin-bottom: 16px;
+
+  h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 0 0 8px;
+    letter-spacing: -0.5px;
+  }
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0 0 24px;
+  font-weight: 400;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+
+  a {
+    display: inline-flex;
+    transition: opacity 0.2s, transform 0.2s;
+
+    &:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+  }
+
+  img {
+    height: 22px;
+  }
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+
+  svg {
+    flex-shrink: 0;
+  }
+
+  &--primary {
+    background: #cb3837;
+    color: #fff;
+
+    &:hover {
+      background: #a12e2d;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(203, 56, 55, 0.35);
+    }
+  }
+
+  &--secondary {
+    background: #24292f;
+    color: #fff;
+
+    &:hover {
+      background: #1a1e23;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(36, 41, 47, 0.35);
+    }
+  }
+}
+
+// Page heading (no longer used, kept for compatibility)
 h1 {
   text-align: center;
   color: #333;
@@ -72,13 +163,15 @@ t.two-column-layout {
 .right-column {
   flex: 2;
   display: flex;
-  flex-wrap: wrap; /* Erlaubt das Umbrücken der Spalten */
+  flex-wrap: wrap;
+  /* Erlaubt das Umbrücken der Spalten */
   gap: 20px;
 }
 
 .radio-group {
   display: flex;
-  flex-direction: row; /* Stellt sicher, dass wir die Radio Buttons horizontal anzeigen */
+  flex-direction: row;
+  /* Stellt sicher, dass wir die Radio Buttons horizontal anzeigen */
   flex-wrap: wrap;
   gap: 10px;
 }
@@ -87,5 +180,60 @@ t.two-column-layout {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 140px; /* Platz für 5 Radio Buttons in einer Spalte */
+  width: 140px;
+}
+
+// Footer
+.footer {
+  margin-top: 64px;
+  padding: 32px 0 24px;
+  border-top: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #555;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: #1a1a2e;
+      background: rgba(0, 0, 0, 0.05);
+      transform: translateY(-1px);
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+}
+
+.footer-credit {
+  font-size: 0.85rem;
+  color: #999;
+  margin: 0;
+
+  a {
+    color: #666;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+      color: #1a1a2e;
+    }
+  }
 }

@@ -45,11 +45,56 @@
 
   <!-- Installation instructions -->
   <div class="example">
-    <h2>Installation</h2>
+    <h2>🛠️ Setup in 60 Seconds</h2>
+
+    <h3>1. Install Dependencies</h3>
+    <mat-tab-group>
+      <mat-tab label="Quick Install (ng add)">
+        <div class="code">
+          <pre><code class="language-bash">
+ng add &#64;wlucha/ng-country-select
+          </code></pre>
+        </div>
+        <p class="setup-note">This command installs the library + all required dependencies automatically.</p>
+      </mat-tab>
+
+      <mat-tab label="Manual Install">
+        <div class="code">
+          <pre><code class="language-bash">
+npm install --save &#64;angular/material &#64;angular/cdk &#64;angular/animations flag-icons &#64;wlucha/ng-country-select
+          </code></pre>
+        </div>
+        <p class="setup-note">Then add the flag icon styles to your <strong>angular.json</strong> "styles" array:</p>
+        <div class="code">
+          <pre><code class="language-json">
+"styles": [
+  "flag-icons/css/flag-icons.min.css"
+]
+          </code></pre>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+
+    <h3>2. Import Component</h3>
+    <div class="code">
+      <pre><code class="language-typescript">
+import &#123; CountrySelectComponent &#125; from '&#64;wlucha/ng-country-select';
+
+&#64;Component(&#123;
+  // ...
+  imports: [CountrySelectComponent]
+&#125;)
+      </code></pre>
+    </div>
+
+    <h3>3. Add to Template</h3>
     <div class="code">
       <pre><code class="language-html">
-ng add &#64;wlucha/ng-country-select
-        </code></pre>
+&lt;ng-country-select
+  [lang]="'en'"
+  (countrySelected)="handleSelection($event)"
+&gt;&lt;/ng-country-select&gt;
+      </code></pre>
     </div>
   </div>
 

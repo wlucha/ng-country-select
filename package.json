@@ -39,7 +39,8 @@
     "publish": "npm run build:lib && npm run build:schematics && npm run cpy:readme && cd dist/wlucha/ng-country-select && npm publish",
     "publish:test": "npm --prefix projects/wlucha/ng-country-select version patch && npm run build:lib && npm run build:schematics && npm run cpy:readme && cd dist/wlucha/ng-country-select && npm publish --registry http://localhost:4873/",
     "gh-deploy": "ng deploy --base-href=/ng-country-select/ --repo=https://github.com/wlucha/ng-country-select.git",
-    "test": "jest"
+    "test": "jest",
+    "lint": "ng lint"
   },
   "private": true,
   "dependencies": {
@@ -66,12 +67,15 @@
     "@angular/compiler-cli": "^21.1.5",
     "@types/jest": "^30.0.0",
     "angular-cli-ghpages": "^3.0.2",
+    "angular-eslint": "21.2.0",
     "cpy-cli": "^7.0.0",
+    "eslint": "^9.39.2",
     "jest": "^30.2.0",
     "jest-environment-jsdom": "^30.2.0",
     "jest-preset-angular": "^16.0.0",
     "ng-packagr": "^21.1.0",
     "ts-node": "^10.9.2",
-    "typescript": "~5.9.3"
+    "typescript": "~5.9.3",
+    "typescript-eslint": "8.50.1"
   }
 }

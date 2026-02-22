@@ -102,6 +102,15 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy"
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -133,6 +142,15 @@
             "polyfills": [
               "zone.js",
               "zone.js/testing"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/wlucha/ng-country-select/**/*.ts",
+              "projects/wlucha/ng-country-select/**/*.html"
             ]
           }
         }

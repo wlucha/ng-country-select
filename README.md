@@ -19,7 +19,7 @@ This library is designed to work seamlessly with the latest Angular versions (16
 It leverages modern Angular features while maintaining backward compatibility.
 
 - **🌍 Multi-language Magic**  
-  Supports English, French, Spanish, Italian, German, Arabic, Chinese, Hindi, Bengali, Portuguese and Russian + easily extendable to any language
+  Supports English, French, Spanish, Italian, German, Arabic, Chinese, Hindi, Bengali, Portuguese, Russian — plus easily extendable to **any custom language** via `provideCountrySelectConfig()`
 
 - **🎌 Flag Images** 🇺🇸 🇩🇪 🇫🇷 🇪🇸 🇮🇹  
   OS & Browser independent flag images
@@ -106,38 +106,40 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 
 ### 🎚️ Inputs
 
-| Parameter                             | Type                      | Default            | Description                                                                |
-|---------------------------------------|---------------------------|--------------------|----------------------------------------------------------------------------|
-| `defaultCountry`                      | `Country \| null`         | `null`             | Sets an initial preselected country                                        |
-| `formControl`                         | `FormControl<Country \| null`> | `null`        | Sets an initial preselected country (FormControl)                          |
-| `selectedCountry`                     | `Country \| null`         | -                  | Sets a country programmatically (after init)                               |
-| `selectedCountryByAlpha2`             | `string`                  | -                  | Set a country programmatically by its alpha2 code                          |
-| `selectedCountryByAlpha3`             | `string`                  | -                  | Set a country programmatically by its alpha3 code                          |
-| `selectedCountryByCurrentTranslation` |                           | -                  | Set a country programmatically by its name in the current language         |
-| `lang`                                | `string`                  | `'en'`             | Language for displaying country names (e.g., `en`, `de`, `fr`, `es`, `it`) |
-| `searchAllLanguages`                  | `boolean`                 | `false`            | If `true`, searching will match in **all** available translations          |
-| `placeholder`                         | `string`                  | `'Search country'` | Placeholder text for the input field                                       |
-| `debounceTime`                        | `number`                  | `100`              | Debounce time in milliseconds for the search input                         |
-| `disabled`                            | `boolean`                 | `false`            | Disables the component if `true`                                           |
-| `appearance`                          | `'fill' \| 'outline'`     | `'fill'`           | Appearance style of the form field                                         |
-| `required`                            | `boolean`                 | `false`            | Marks the field as required if `true`                                      |
-| `requiredErrorMessage`                | `boolean`                 | `A country is required` | The error message to show when the field does not have a value and is required |
-| `showRequiredErrorMessage`            | `boolean`                 | `false`            | Whether to show an error message when the field does not have a value and is required |
-| `showCodes`                           | `boolean`                 | `false`            | If `true`, shows alpha2/alpha3 codes in the autocomplete results           |
-| `color`                               | `ThemePalette`            | `'primary'`        | Angular Material color palette to use (`'primary'`, `'accent'`, `'warn'`)  |
-| `includeCountries`                    | `string[]`                | `[]`               | List of country codes to include in the dropdown (e.g., `['US', 'DE', 'FR']`) |
-| `excludeCountries`                    | `string[]`                | `[]`               | List of country codes to exclude from the dropdown (e.g., `['US', 'DE', 'FR']`) |
-| `alpha2Only`                          | `boolean`                 | `false`            | Show only alpha2 codes in the results                                      |
-| `alpha3Only`                          | `boolean`                 | `false`            | Show only alpha3 codes in the results                                      |
-| `showFlag`                            | `boolean`                 | `true`             | Whether the flag should be displayed                                       |
+| Parameter                             | Type                         | Default               | Description                                                                              |
+|---------------------------------------|------------------------------|-----------------------|------------------------------------------------------------------------------------------|
+| `defaultCountry`                      | `Country \| null`            | `null`                | Sets an initial preselected country                                                      |
+| `formControl`                         | `FormControl<Country \| null>` | `new FormControl(null)` | Reactive form control for the country select                                           |
+| `selectedCountry`                     | `Country \| null`            | -                     | Sets a country programmatically (after init)                                             |
+| `selectedCountryByAlpha2`             | `string`                     | -                     | Set a country programmatically by its alpha2 code                                        |
+| `selectedCountryByAlpha3`             | `string`                     | -                     | Set a country programmatically by its alpha3 code                                        |
+| `selectedCountryByCurrentTranslation` | `string`                     | -                     | Set a country programmatically by its name in the current language                        |
+| `lang`                                | `string`                     | `'en'`                | Language for displaying country names — supports built-in and custom languages            |
+| `searchAllLanguages`                  | `boolean`                    | `false`               | If `true`, searching will match in **all** available translations                        |
+| `placeholder`                         | `string`                     | `'Search country'`    | Placeholder text for the input field                                                     |
+| `label`                               | `string \| undefined`        | `undefined`           | Custom label for the form field                                                          |
+| `showLabel`                           | `boolean`                    | `true`                | Whether to show the label (uses `label` or `placeholder` as fallback)                    |
+| `debounceTime`                        | `number`                     | `100`                 | Debounce time in milliseconds for the search input                                       |
+| `disabled`                            | `boolean`                    | `false`               | Disables the component if `true`                                                         |
+| `appearance`                          | `'fill' \| 'outline'`        | `'fill'`              | Appearance style of the form field                                                       |
+| `required`                            | `boolean`                    | `false`               | Marks the field as required if `true`                                                    |
+| `requiredErrorMessage`                | `string`                     | `'A country is required'` | Error message shown when the field is required and empty                              |
+| `showRequiredErrorMessage`            | `boolean`                    | `false`               | Whether to show the built-in required error message                                      |
+| `showCodes`                           | `boolean`                    | `false`               | If `true`, shows alpha2/alpha3 codes in the autocomplete results                         |
+| `color`                               | `ThemePalette`               | `'primary'`           | Angular Material color palette (`'primary'`, `'accent'`, `'warn'`)                       |
+| `includeCountries`                    | `string[]`                   | `[]`                  | List of alpha2 country codes to include (e.g., `['us', 'de', 'fr']`)                     |
+| `excludeCountries`                    | `string[]`                   | `[]`                  | List of alpha2 country codes to exclude (e.g., `['us', 'de', 'fr']`)                     |
+| `alpha2Only`                          | `boolean`                    | `false`               | Show only alpha2 codes in the results                                                    |
+| `alpha3Only`                          | `boolean`                    | `false`               | Show only alpha3 codes in the results                                                    |
+| `showFlag`                            | `boolean`                    | `true`                | Whether the flag should be displayed                                                     |
 
 ### 🚨 Outputs
 
-| Event               | Output              | Description                         |
-|---------------------|---------------------|-------------------------------------|
-| `countrySelected`   | `Country`           | Full country object on selection    |
-| `inputChanged`      | `string`            | Live search term updates            |
-| `closed`            | `void`              | When dropdown closes                |
+| Event               | Type              | Description                                |
+|---------------------|-------------------|--------------------------------------------|
+| `countrySelected`   | `Country`         | Emits the full country object on selection |
+| `inputChanged`      | `string`          | Emits the current search term on change    |
+| `closed`            | `void`            | Emits when the autocomplete panel closes   |
 
 ## 💻 Power User Setup
 ```html
@@ -163,6 +165,64 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 ></ng-country-select>
 ```
 
+## 🌐 Custom Language Support
+
+You can add custom translations or override existing ones using `provideCountrySelectConfig()`.
+
+### Adding extra translations (e.g. Polish)
+
+```typescript
+// app.config.ts
+import { provideCountrySelectConfig } from '@wlucha/ng-country-select';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideCountrySelectConfig({
+      extraTranslations: {
+        de: { pl: 'Niemcy', ja: 'ドイツ' },
+        at: { pl: 'Austria', ja: 'オーストリア' },
+        fr: { pl: 'Francja', ja: 'フランス' },
+        // ... add translations for all countries
+      }
+    })
+  ]
+};
+```
+
+Then use the custom language in your template:
+
+```html
+<ng-country-select
+  [lang]="'pl'"
+  [placeholder]="'Szukaj kraju'"
+></ng-country-select>
+```
+
+### Replacing the entire country list
+
+For full control, you can replace the built-in country list entirely:
+
+```typescript
+provideCountrySelectConfig({
+  countries: [
+    {
+      alpha2: 'de',
+      alpha3: 'deu',
+      translations: { en: 'Germany', pl: 'Niemcy', ja: 'ドイツ' }
+    },
+    // ... your custom list
+  ]
+})
+```
+
+### Exported symbols
+
+| Symbol                        | Type              | Description                              |
+|-------------------------------|-------------------|------------------------------------------|
+| `provideCountrySelectConfig`  | `function`        | Provider helper for app config           |
+| `COUNTRY_SELECT_CONFIG`       | `InjectionToken`  | Token for advanced DI scenarios          |
+| `CountrySelectConfig`         | `interface`       | Configuration type                       |
+
 ## 🌟 Support the Project
 
 **Love this component? Here's how you can help:**
@@ -185,7 +245,3 @@ git clone https://github.com/wlucha/ng-country-select.git
 
 Made with ❤️ & ☕ by Open Source Contributors
 
-## TODO
-- more languages
-- custom option template
-- semantic release

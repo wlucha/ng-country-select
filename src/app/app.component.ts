@@ -48,7 +48,8 @@ export class AppComponent {
     'hi': 'देश खोजें',
     'bn': 'দেশ অনুসন্ধান',
     'pt': 'Buscar país',
-    'ru': 'Поиск страны'
+    'ru': 'Поиск страны',
+    'pl': 'Szukaj kraju'
   };
 
   countryControl = new FormControl<Country>(this.presetCountry);

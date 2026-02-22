@@ -82,7 +82,7 @@ function addPeerDependencies(
 /**
  * Finds the default project or selects the first project in angular.json.
  */
-function getDefaultProject(angularJson: any): string | null {
+function getDefaultProject(angularJson: { defaultProject?: string; projects?: Record<string, unknown> }): string | null {
   // Check if defaultProject is explicitly defined
   if (angularJson.defaultProject) {
     return angularJson.defaultProject;

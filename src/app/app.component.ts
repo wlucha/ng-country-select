@@ -1,5 +1,5 @@
 import { JsonPipe } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { CountrySelectComponent, Country } from '@wlucha/ng-country-select';
 import hljs from 'highlight.js';
@@ -18,7 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
 
   presetCountry: Country = {
     alpha2: 'de',
@@ -38,7 +38,7 @@ export class AppComponent {
     }
   };
 
-  placeholderMap: any = {
+  placeholderMap: Record<string, string> = {
     'en': 'Search country',
     'de': 'Land suchen',
     'fr': 'Chercher un pays',
@@ -57,9 +57,9 @@ export class AppComponent {
 
   selectedCountry?: Country;
 
-  selectedLang: string = 'en';
-  alpha2Country: string = '';
-  alpha3Country: string = '';
+  selectedLang = 'en';
+  alpha2Country = '';
+  alpha3Country = '';
 
   // Lifecycle hook to highlight code blocks after view initialization
   ngAfterViewInit(): void {
@@ -90,7 +90,7 @@ export class AppComponent {
   // Method to highlight code blocks
   private highlightCodeBlocks(): void {
     document.querySelectorAll('pre code').forEach((block) => {
-      hljs.highlightElement(block as any);
+      hljs.highlightElement(block as HTMLElement);
     });
   }
 }

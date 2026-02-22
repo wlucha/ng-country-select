@@ -8,7 +8,6 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { CountrySelectComponent } from './country-select.component';
 import { Country } from './country.interface';
 import { provideCountrySelectConfig } from './country-select.config';
-import { By } from '@angular/platform-browser';
 
 @Component({
   standalone: true,
@@ -82,8 +81,10 @@ describe('CountrySelectComponent', () => {
   });
 
   it('should filter countries based on search term', () => {
-    (component as any).countries = [mockCountry];
-    const filtered = (component as any).filterCountries('Ger');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (component as unknown as Record<string, any>)['countries'] = [mockCountry];
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const filtered = (component as unknown as Record<string, any>)['filterCountries']('Ger') as Country[];
     expect(filtered.length).toBe(1);
     expect(filtered[0]).toEqual(mockCountry);
   });
@@ -164,7 +165,8 @@ describe('CountrySelectComponent', () => {
 
   describe('with custom config', () => {
     it('should use default countries when no config is provided', () => {
-      const countries = (component as any).countries;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const countries = (component as unknown as Record<string, any>)['countries'] as Country[];
       expect(countries.length).toBeGreaterThan(200);
       expect(countries[0].translations['en']).toBeDefined();
     });
@@ -194,7 +196,8 @@ describe('CountrySelectComponent', () => {
       const c = f.componentInstance;
       f.detectChanges();
 
-      const countries: Country[] = (c as any).countries;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const countries: Country[] = (c as unknown as Record<string, any>)['countries'] as Country[];
       const germany = countries.find((co: Country) => co.alpha2 === 'de');
       const austria = countries.find((co: Country) => co.alpha2 === 'at');
       const france = countries.find((co: Country) => co.alpha2 === 'fr');
@@ -235,7 +238,8 @@ describe('CountrySelectComponent', () => {
       const c = f.componentInstance;
       f.detectChanges();
 
-      const countries: Country[] = (c as any).countries;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const countries: Country[] = (c as unknown as Record<string, any>)['countries'] as Country[];
       expect(countries.length).toBe(1);
       expect(countries[0].alpha2).toBe('xx');
       expect(countries[0].translations['en']).toBe('TestCountry');

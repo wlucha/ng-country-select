@@ -243,8 +243,8 @@ export class CountrySelectComponent implements OnInit, ControlValueAccessor {
   public height!: string;
   private config = inject(COUNTRY_SELECT_CONFIG, { optional: true });
   private countries: Country[] = this.buildCountryList();
-  private onChange: any = () => { };
-  private onTouched: any = () => { };
+  private onChange: (value: Country | null) => void = () => { };
+  private onTouched: () => void = () => { };
 
   ngOnInit(): void {
     this.setupFilter();
@@ -291,11 +291,11 @@ export class CountrySelectComponent implements OnInit, ControlValueAccessor {
     }
   }
 
-  public registerOnChange(fn: any): void {
+  public registerOnChange(fn: (value: Country | null) => void): void {
     this.onChange = fn;
   }
 
-  public registerOnTouched(fn: any): void {
+  public registerOnTouched(fn: () => void): void {
     this.onTouched = fn;
   }
 

@@ -41,17 +41,6 @@ Live Demo: [**https://wlucha.github.io/ng-country-select**](https://wlucha.githu
 
 Stackblitz: [https://stackblitz.com/~/github.com/wlucha/ng-country-select](https://stackblitz.com/~/github.com/wlucha/ng-country-select)
 
-## 🌍 Compatibility
-
-| Angular Version                                                   | ✅ Supported |
-|-------------------------------------------------------------------|--------------|
-| ![Angular 21](https://img.shields.io/badge/Angular-21-lightgreen) | ✅ Yes       |
-| ![Angular 20](https://img.shields.io/badge/Angular-20-green)      | ✅ Yes       |
-| ![Angular 19](https://img.shields.io/badge/Angular-19-yellow)     | ✅ Yes       |
-| ![Angular 18](https://img.shields.io/badge/Angular-18-orange)     | ✅ Yes       |
-| ![Angular 17](https://img.shields.io/badge/Angular-17-red)        | ✅ Yes       |
-| ![Angular 16](https://img.shields.io/badge/Angular-16-darkred)    | ✅ Yes       |
-
 ## 🛠️ Setup in 60 Seconds
 ## 1. Install Dependencies
 ### Quick Installation (`ng add`)

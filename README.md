@@ -42,8 +42,8 @@ Live Demo: [**https://wlucha.github.io/ng-country-select**](https://wlucha.githu
 Stackblitz: [https://stackblitz.com/~/github.com/wlucha/ng-country-select](https://stackblitz.com/~/github.com/wlucha/ng-country-select)
 
 ## 🛠️ Setup in 60 Seconds
-## 1. Install Dependencies
-### Quick Installation (`ng add`)
+### 1. Install Dependencies
+#### Quick Installation (`ng add`)
 ```sh
 ng add @wlucha/ng-country-select
 ```

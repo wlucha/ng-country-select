@@ -41,7 +41,7 @@ Live Demo: [**https://wlucha.github.io/ng-country-select**](https://wlucha.githu
 
 Stackblitz: [https://stackblitz.com/~/github.com/wlucha/ng-country-select](https://stackblitz.com/~/github.com/wlucha/ng-country-select)
 
-## 🛠️ Setup in 60 Seconds
+## 🛠️ Setup
 ### 1. Install Dependencies
 #### Quick Installation (`ng add`)
 ```sh
@@ -91,7 +91,7 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 ></ng-country-select>
 ```
 
-## 🎛️ Parameters Worth Exploring
+## 🎛️ Parameters
 
 ### 🎚️ Inputs
 
@@ -130,7 +130,7 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 | `inputChanged`      | `string`          | Emits the current search term on change    |
 | `closed`            | `void`            | Emits when the autocomplete panel closes   |
 
-## 💻 Power User Setup
+### 💻 Power User Setup
 ```html
 <ng-country-select
   [lang]="'en'"
@@ -154,11 +154,11 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 ></ng-country-select>
 ```
 
-## 🌐 Custom Language Support
+### 🌐 Custom Language Support
 
 You can add custom translations or override existing ones using `provideCountrySelectConfig()`.
 
-### Adding extra translations (e.g. Polish)
+#### Adding extra translations (e.g. Polish)
 
 ```typescript
 // app.config.ts
@@ -187,7 +187,7 @@ Then use the custom language in your template:
 ></ng-country-select>
 ```
 
-### Replacing the entire country list
+#### Replacing the entire country list
 
 For full control, you can replace the built-in country list entirely:
 
@@ -204,7 +204,7 @@ provideCountrySelectConfig({
 })
 ```
 
-### Exported symbols
+#### Exported symbols
 
 | Symbol                        | Type              | Description                              |
 |-------------------------------|-------------------|------------------------------------------|

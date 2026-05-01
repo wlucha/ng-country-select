@@ -41,20 +41,9 @@ Live Demo: [**https://wlucha.github.io/ng-country-select**](https://wlucha.githu
 
 Stackblitz: [https://stackblitz.com/~/github.com/wlucha/ng-country-select](https://stackblitz.com/~/github.com/wlucha/ng-country-select)
 
-## 🌍 Compatibility
-
-| Angular Version                                                   | ✅ Supported |
-|-------------------------------------------------------------------|--------------|
-| ![Angular 21](https://img.shields.io/badge/Angular-21-lightgreen) | ✅ Yes       |
-| ![Angular 20](https://img.shields.io/badge/Angular-20-green)      | ✅ Yes       |
-| ![Angular 19](https://img.shields.io/badge/Angular-19-yellow)     | ✅ Yes       |
-| ![Angular 18](https://img.shields.io/badge/Angular-18-orange)     | ✅ Yes       |
-| ![Angular 17](https://img.shields.io/badge/Angular-17-red)        | ✅ Yes       |
-| ![Angular 16](https://img.shields.io/badge/Angular-16-darkred)    | ✅ Yes       |
-
-## 🛠️ Setup in 60 Seconds
-## 1. Install Dependencies
-### Quick Installation (`ng add`)
+## 🛠️ Setup
+### 1. Install Dependencies
+#### Quick Installation (`ng add`)
 ```sh
 ng add @wlucha/ng-country-select
 ```
@@ -102,7 +91,7 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 ></ng-country-select>
 ```
 
-## 🎛️ Parameters Worth Exploring
+## 🎛️ Parameters
 
 ### 🎚️ Inputs
 
@@ -141,7 +130,7 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 | `inputChanged`      | `string`          | Emits the current search term on change    |
 | `closed`            | `void`            | Emits when the autocomplete panel closes   |
 
-## 💻 Power User Setup
+### 💻 Power User Setup
 ```html
 <ng-country-select
   [lang]="'en'"
@@ -165,11 +154,11 @@ import { CountrySelectComponent } from '@wlucha/ng-country-select';
 ></ng-country-select>
 ```
 
-## 🌐 Custom Language Support
+### 🌐 Custom Language Support
 
 You can add custom translations or override existing ones using `provideCountrySelectConfig()`.
 
-### Adding extra translations (e.g. Polish)
+#### Adding extra translations (e.g. Polish)
 
 ```typescript
 // app.config.ts
@@ -198,7 +187,7 @@ Then use the custom language in your template:
 ></ng-country-select>
 ```
 
-### Replacing the entire country list
+#### Replacing the entire country list
 
 For full control, you can replace the built-in country list entirely:
 
@@ -215,7 +204,7 @@ provideCountrySelectConfig({
 })
 ```
 
-### Exported symbols
+#### Exported symbols
 
 | Symbol                        | Type              | Description                              |
 |-------------------------------|-------------------|------------------------------------------|

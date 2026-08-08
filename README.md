@@ -14,7 +14,7 @@
 
 ## 📢 Features
 
-- **🅰️ Fully Compatible with Angular 16-22*  
+- **🅰️ Fully Compatible with Angular 16-22**  
 This library is designed to work seamlessly with the latest Angular versions (16, 17, 18, 19, 20, 21, 22).  
 It leverages modern Angular features while maintaining backward compatibility.
 

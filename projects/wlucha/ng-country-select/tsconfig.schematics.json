@@ -9,6 +9,9 @@
         "module": "commonjs",
         "moduleResolution": "node",
         "target": "es2018",
+        "ignoreDeprecations": "6.0",
+        "types": ["node"],
+        "skipLibCheck": true,
     },
     "include": [
         "schematics/**/*.ts"
